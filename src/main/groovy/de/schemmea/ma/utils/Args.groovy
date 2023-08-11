@@ -13,11 +13,11 @@ class Args {
         this.durationInSeconds = durationInSeconds
     }
 
-    int getIteration() {
-        return iteration
+    Long getIteration() {
+        return iteration > 0 ? iteration : null
     }
 
-    void setIteration(int iteration) {
+    void setIteration(Long iteration) {
         this.iteration = iteration
     }
 
@@ -46,11 +46,11 @@ class Args {
     }
 
     @Parameter(names = ["--duration", "-d"], description = "How long should we run in maximum")
-    private int durationInSeconds = 360;
+    private int durationInSeconds = 3600;
 
 
     @Parameter(names = ["--iteration", "-i"], description = "How many tests should we perform")
-    private int iteration = 5;
+    private Long iteration = 0;
 
 
     @Parameter(names = ["--keepTestFile", "-k"], description = "Should keep testfile after run")

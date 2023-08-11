@@ -1,13 +1,15 @@
 # Project exclude paths
 /.gradle/
 /build/
-/.nextflow/
-/generatedflows/
-*/generatedflows/
-/2023-*
-.nextflow.log*
 .idea/
-/work
-*/work
+
 /.nextflow/
 */.nextflow/
+.nextflow.log*
+/work
+*/work
+
+/2023-*
+/fuzz-results/
+/generatedflows/
+*/generatedflows/
