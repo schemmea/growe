@@ -5,6 +5,7 @@ parentdir="$(dirname "$(pwd)")"
 jqf="$parentdir/JQF"
 
 sed -i -e 's/\r$//' $(pwd)/scripts/*
+sed -i -e 's/\r$//' $jqf/setup.sh
 sed -i -e 's/\r$//' $jqf/bin/*
 sed -i -e 's/\r$//' $jqf/scripts/*
 sed -i -e 's/\r$//' $jqf/scripts/experiments/ei/*

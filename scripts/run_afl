@@ -4,6 +4,8 @@ parentdir="$(dirname "$(pwd)")"
 
 
 DRIVER_PATH="$parentdir/JQF/bin/jqf-afl-fuzz"
+.
+#/usr/bin/env bash -c "$parentdir/JQF/setup.sh"
 
 EXEC_DIR="$(date +"%Y-%m-%d_%H-%M-%S")-afl"
 
