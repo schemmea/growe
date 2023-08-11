@@ -3,5 +3,11 @@
 /build/
 /.nextflow/
 /generatedflows/
+*/generatedflows/
 /2023-*
 .nextflow.log*
+.idea/
+/work
+*/work
+/.nextflow/
+*/.nextflow/
