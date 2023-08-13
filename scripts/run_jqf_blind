@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 #blind
-export JVM_OPTS="$JVM_OPTS -Djqf.ei.TOTALLY_RANDOM=true"
-
+export JVM_OPTS="$JVM_OPTS -Djqf.ei.TOTALLY_RANDOM=true -Djqf.ei.DISABLE_SAVE_NEW_COUNTS=true"
 #-k -> keeptestfiles
 #-g -> guidance ei or zest
 #-b -> basic generator

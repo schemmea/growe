@@ -19,7 +19,7 @@ EXEC_DIR="$(date +"%Y-%m-%d_%H-%M-%S")-${DURATIONHOURS}H"
 
 basic="-b"
 blind="TOTALLY_RANDOM=true"
-if [[ $@ == *"$basic"* ]]; then
+if [[ $* == *"$basic"* ]]; then
   EXEC_DIR+="-basic"
 fi
 if [[ $JVM_OPTS == *"$blind"* ]]; then
@@ -31,9 +31,15 @@ export JVM_OPTS="$JVM_OPTS -Djqf.logCoverage=true"
 export JVM_OPTS="$JVM_OPTS -Djqf.ei.QUIET_MODE=false"
 export JVM_OPTS="$JVM_OPTS -DuseFastNonCollidingCoverageInstrumentation=true"
 
-#ei guidance
-#export JVM_OPTS="$JVM_OPTS -Djqf.tracing.MATCH_CALLEE_NAMES=true -Djqf.tracing.TRACE_GENERATORS=true"
+# Do not let GC mess with fuzzing
+export JVM_OPTS="$JVM_OPTS -XX:-UseGCOverheadLimit -Djqf.tracing.MATCH_CALLEE_NAMES=true"
 
+
+#ei guidance
+#export JVM_OPTS="$JVM_OPTS -Djqf.tracing.TRACE_GENERATORS=true"
+
+#debug
+export JVM_OPTS="$JVM_OPTS -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005"
 
 function executeTest() {
 
@@ -45,7 +51,7 @@ function executeTest() {
   #-g -> guidance ei or zest
   #-b basic generator
 
-  /usr/bin/env bash -c "$DRIVER_PATH --illegal-access=permit -Xmx4G -jar $JAR_PATH -d $DURATIONSECONDS -i $ITERATIONS $@ | tee -a $LOGFILE 2>/dev/null"
+  /usr/bin/env bash -c "$DRIVER_PATH --illegal-access=permit -Xmx4G -jar $JAR_PATH -d $DURATIONSECONDS -i $ITERATIONS $* | tee -a $LOGFILE 2>/dev/null"
 
 }
 
@@ -53,7 +59,7 @@ function executeTest() {
 mkdir -p "$EXEC_DIR" || return 1
 cd "$EXEC_DIR" || return 1
 
-executeTest
+executeTest "$@"
 
 rm -r work/
 rm -r .nextflow/

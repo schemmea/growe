@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+parentdir="$(dirname "$(pwd)")"
+
+DRIVER_PATH="$parentdir/JQF/scripts/jqf-driver.sh"
+JAR_PATH="$(pwd)/build/libs/growe-1.0-SNAPSHOT-all.jar"
+
+
+function log() {
+  echo "$1" | tee -a "$LOGFILE"
+}
+
+print_usage() {
+  echo "Usage: $0 INPUT_PATH"
+}
+
+# Check arguments
+if [ $# -lt 1 ]; then
+  print_usage >&1
+  exit 1
+fi
+
+
+export JVM_OPTS="$JVM_OPTS -Djqf.ei.MAX_INPUT_SIZE=204800"
+export JVM_OPTS="$JVM_OPTS -Djqf.logCoverage=true"
+export JVM_OPTS="$JVM_OPTS -Djqf.ei.QUIET_MODE=false"
+
+export JVM_OPTS="-Djqf.repro.traceDir=. $JVM_OPTS"
+
+#ei guidance
+#export JVM_OPTS="$JVM_OPTS -Djqf.tracing.MATCH_CALLEE_NAMES=true -Djqf.tracing.TRACE_GENERATORS=true"
+
+parentdir="$(dirname "$1")"
+
+export JVM_OPTS="$JVM_OPTS -Djqf.repro.logUniqueBranches=true -Xmx6g"
+export JVM_OPTS="$JVM_OPTS -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005"
+
+/usr/bin/env bash -c "$DRIVER_PATH --illegal-access=permit -jar $JAR_PATH -g repro -r $1  | grep "^# Cov" | sort | uniq > ./$parentdir/cov-all.log"
+
+export JVM_OPTS="$JVM_OPTS -Djqf.repro.ignoreInvalidCoverage=true"
+
+/usr/bin/env bash -c "$DRIVER_PATH --illegal-access=permit -jar $JAR_PATH -g repro -r $1  | grep "^# Cov" | sort | uniq > ./$parentdir/cov-valid.log "
+
+

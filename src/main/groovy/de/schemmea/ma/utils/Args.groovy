@@ -45,6 +45,14 @@ class Args {
         this.useBaseline = useBaseline
     }
 
+    String getReproDir() {
+        return reproDir
+    }
+
+    void setReproDir(String reproDir) {
+        this.reproDir = reproDir
+    }
+
     @Parameter(names = ["--duration", "-d"], description = "How long should we run in maximum")
     private int durationInSeconds = 3600;
 
@@ -61,8 +69,11 @@ class Args {
     private boolean useBaseline = false;
 
 
-    @Parameter(names = ["--guidance", "-g"], description = "Use zest guidance or ei guidance")
+    @Parameter(names = ["--guidance", "-g"], description = "Use zest, ei, repro guidance")
     private String guidance = "zest";
+
+    @Parameter(names = ["--reproDir", "-r"], description = "path to jqfs errorDir/corpus")
+    private String reproDir = "";
 
 
 }

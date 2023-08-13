@@ -9,6 +9,7 @@ import de.schemmea.ma.utils.FileResourcesUtils
 import edu.berkeley.cs.jqf.fuzz.guidance.Guidance
 import edu.berkeley.cs.jqf.fuzz.guidance.Result
 import edu.berkeley.cs.jqf.fuzz.junit.*
+import edu.berkeley.cs.jqf.fuzz.repro.ReproGuidance
 import org.apache.commons.lang.StringUtils
 
 import java.nio.file.Paths
@@ -33,37 +34,64 @@ class TestExecutor {
 
         boolean iswindows = System.getProperty("os.name").toLowerCase().startsWith("windows");
         if (iswindows && !errorDir.startsWith("C:") && !errorDir.startsWith("/")) errorDir = "/" + errorDir;
-
-        println "Testing $testclass.name # $testname $ARGS.iteration times, duration: $ARGS.durationInSeconds s"
-
-        File errorDirectory = Paths.get(errorDir).toFile();
-        if (!errorDirectory.exists()) {
-            errorDirectory.mkdir();
-        }
-
-        new FileResourcesUtils().copyFilesToFolder(Configuration.SOURCE_PATH, Configuration.OUTPUT_PATH);
-        new FileResourcesUtils().copyFilesToFolder(Configuration.TEMPLATE_SOURCE_PATH, Configuration.OUTPUT_TEMPLATE_PATH);
-        new FileResourcesUtils().copyFilesToFolder(Configuration.DATA_SOURCE_PATH, Configuration.OUTPUT_DATA_PATH);
-
         Guidance guidance = null;
-        if (ARGS.guidance == "ei") {
-            guidance = new FileAwareExecutionIndexingGuidance(testname,
-                    Duration.ofSeconds(ARGS.durationInSeconds),
-                    ARGS.iteration,
-                    errorDirectory,
-                    new Random(),
-                    TestExecutor::handleResult)
+
+        if (ARGS.guidance == "repro") {
+            File[] testInputFiles = new File(ARGS.reproDir).listFiles();
+
+            String traceDirName = System.getProperty("jqf.repro.traceDir");
+            File traceDir = traceDirName != null ? new File(traceDirName) : null;
+
+            guidance = new ReproGuidance(testInputFiles, traceDir)
+
+            println "Repro $ARGS.reproDir"
+
+        } else {
+
+            println "Testing $testclass.name # $testname $ARGS.iteration times, duration: $ARGS.durationInSeconds s"
+
+            File errorDirectory = Paths.get(errorDir).toFile();
+            if (!errorDirectory.exists()) {
+                errorDirectory.mkdir();
+            }
+
+            new FileResourcesUtils().copyFilesToFolder(Configuration.SOURCE_PATH, Configuration.OUTPUT_PATH);
+            new FileResourcesUtils().copyFilesToFolder(Configuration.TEMPLATE_SOURCE_PATH, Configuration.OUTPUT_TEMPLATE_PATH);
+            new FileResourcesUtils().copyFilesToFolder(Configuration.DATA_SOURCE_PATH, Configuration.OUTPUT_DATA_PATH);
+
+            if (ARGS.guidance == "ei") {
+                guidance = new FileAwareExecutionIndexingGuidance(testname,
+                        Duration.ofSeconds(ARGS.durationInSeconds),
+                        ARGS.iteration,
+                        errorDirectory,
+                        new Random(),
+                        TestExecutor::handleResult)
+            } else { /*zest*/
+                guidance = new FileAwareZestGuidance(testname,
+                        Duration.ofSeconds(ARGS.durationInSeconds),
+                        ARGS.iteration,
+                        errorDirectory,
+                        new Random(),
+                        TestExecutor::handleResult)
+            }
         }
 
-        else {
-            guidance = new FileAwareZestGuidance(testname,
-                    Duration.ofSeconds(ARGS.durationInSeconds),
-                    ARGS.iteration,
-                    errorDirectory,
-                    new Random(),
-                    TestExecutor::handleResult)
-        }
+        /* ~~~~~~~~~~~~~~~ execution ~~~~~~~~~~~~~~~~ */
         GuidedFuzzing.run(testclass, testname, guidance, System.out)
+
+        if (ARGS.guidance == "repro") {
+
+            if (guidance.getBranchesCovered() != null) {
+                String cov = "";
+                for (String s : guidance.getBranchesCovered()) {
+                    cov += "# Covered: " + s + "\n";
+                }
+                final String finalFooter = cov;
+                System.out.println(finalFooter);
+            }
+
+        }
+
 
         System.out.println(String.format("Covered %d edges.", guidance.getTotalCoverage().getNonZeroCount()));
         println "Tested $testclass.name#$testname $ARGS.iteration times, duration: $ARGS.durationInSeconds s"

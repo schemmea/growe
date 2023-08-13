@@ -1,0 +1,388 @@
+Saving new input (at run 1): input #0 of size 4; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000000 random +count +cov +valid
+Saving new input (at run 2): input #1 of size 4; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000001 src:000000,havoc:28 +count +cov +valid
+Saving new input (at run 3): input #2 of size 4; reason = +count
+Saved - errorDir/corpus/id_000002 src:000000,havoc:8 +count
+Saving new input (at run 4): input #3 of size 4; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000003 src:000000,havoc:20 +count +cov +valid
+Saving new input (at run 5): input #4 of size 8; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000004 src:000000,havoc:6 +count +cov +valid
+Saving new input (at run 6): input #5 of size 8; reason = +count +cov
+Saved - errorDir/corpus/id_000005 src:000000,havoc:13 +count +cov
+Saving new input (at run 7): input #6 of size 8; reason = +count +cov
+Saved - errorDir/corpus/id_000006 src:000000,havoc:12 +count +cov
+Saving new input (at run 8): input #7 of size 4; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000007 src:000000,havoc:9 +count +cov +valid
+Saving new input (at run 9): input #8 of size 8; reason = +count +cov
+Saved - errorDir/corpus/id_000008 src:000000,havoc:27 +count +cov
+Saving new input (at run 11): input #9 of size 4; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000009 src:000000,havoc:4 +count +cov +valid
+Saving new input (at run 15): input #10 of size 8; reason = +count +cov
+Saved - errorDir/corpus/id_000010 src:000000,havoc:4 +count +cov
+Saving new input (at run 18): input #11 of size 8; reason = +count +cov
+Saved - errorDir/corpus/id_000011 src:000000,havoc:2 +count +cov
+Saving new input (at run 25): input #12 of size 105901; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000012 src:000000,havoc:6 +count +cov +valid
+Saving new input (at run 26): input #13 of size 8; reason = +count +cov
+Saved - errorDir/corpus/id_000013 src:000000,havoc:4 +count +cov
+Saving new input (at run 29): input #14 of size 8; reason = +count
+Saved - errorDir/corpus/id_000014 src:000000,havoc:34 +count
+Saving new input (at run 30): input #15 of size 8; reason = +count +cov
+Saved - errorDir/corpus/id_000015 src:000000,havoc:4 +count +cov
+Saving new input (at run 31): input #16 of size 4; reason = +valid
+Saved - errorDir/corpus/id_000016 src:000000,havoc:6 +valid
+Saving new input (at run 34): input #17 of size 8; reason = +count +cov
+Saved - errorDir/corpus/id_000017 src:000000,havoc:2 +count +cov
+Saving new input (at run 35): input #18 of size 106109; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000018 src:000000,havoc:24 +count +cov +valid
+Saving new input (at run 37): input #19 of size 8; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000019 src:000000,havoc:11 +count +cov +valid
+Saving new input (at run 41): input #20 of size 8; reason = +count
+Saved - errorDir/corpus/id_000020 src:000000,havoc:1 +count
+Saving new input (at run 45): input #21 of size 8; reason = +count
+Saved - errorDir/corpus/id_000021 src:000000,havoc:5 +count
+Saving new input (at run 52): input #22 of size 105693; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000022 src:000000,havoc:12 +count +cov +valid
+Saving new input (at run 74): input #23 of size 8; reason = +valid
+Saved - errorDir/corpus/id_000023 src:000000,havoc:8 +valid
+Saving new input (at run 75): input #24 of size 104989; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000024 src:000000,havoc:16 +count +cov +valid
+Saving new input (at run 76): input #25 of size 8; reason = +count
+Saved - errorDir/corpus/id_000025 src:000000,havoc:20 +count
+Saving new input (at run 77): input #26 of size 8; reason = +count
+Saved - errorDir/corpus/id_000026 src:000000,havoc:32 +count
+Saving new input (at run 98): input #27 of size 105601; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000027 src:000001,havoc:2 +count +cov +valid
+Saving new input (at run 101): input #28 of size 105965; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000028 src:000001,havoc:1 +count +cov +valid
+Saving new input (at run 103): input #29 of size 8; reason = +count +cov
+Saved - errorDir/corpus/id_000029 src:000001,havoc:3 +count +cov
+Saving new input (at run 107): input #30 of size 8; reason = +count
+Saved - errorDir/corpus/id_000030 src:000001,havoc:8 +count
+Saving new input (at run 108): input #31 of size 105465; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000031 src:000001,havoc:7 +count +cov +valid
+Found crash: class nextflow.exception.AbortRunException - 
+Saved - errorDir/failures/id_000000 src:000001,havoc:6 +crash
+Saving new input (at run 121): input #32 of size 8; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000032 src:000001,havoc:2 +count +cov +valid
+Saving new input (at run 122): input #33 of size 8; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000033 src:000002,havoc:13 +count +cov +valid
+Saving new input (at run 127): input #34 of size 104641; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000034 src:000003,havoc:8 +count +cov +valid
+Saving new input (at run 128): input #35 of size 104837; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000035 src:000003,havoc:5 +count +cov +valid
+Saving new input (at run 130): input #36 of size 105481; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000036 src:000003,havoc:1 +count +cov +valid
+Saving new input (at run 132): input #37 of size 105277; reason = +count
+Saved - errorDir/corpus/id_000037 src:000003,havoc:4 +count
+Saving new input (at run 134): input #38 of size 105133; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000038 src:000003,havoc:2 +count +cov +valid
+Saving new input (at run 141): input #39 of size 105381; reason = +count
+Saved - errorDir/corpus/id_000039 src:000003,havoc:6 +count
+Saving new input (at run 142): input #40 of size 106517; reason = +count
+Saved - errorDir/corpus/id_000040 src:000003,havoc:11 +count
+Saving new input (at run 149): input #41 of size 105685; reason = +count
+Saved - errorDir/corpus/id_000041 src:000003,havoc:15 +count
+Saving new input (at run 180): input #42 of size 105813; reason = +count
+Saved - errorDir/corpus/id_000042 src:000004,havoc:17 +count
+Saving new input (at run 188): input #43 of size 105013; reason = +count
+Saved - errorDir/corpus/id_000043 src:000004,havoc:13 +count
+Saving new input (at run 200): input #44 of size 105337; reason = +count
+Saved - errorDir/corpus/id_000044 src:000004,havoc:14 +count
+Saving new input (at run 206): input #45 of size 105377; reason = +count
+Saved - errorDir/corpus/id_000045 src:000004,havoc:7 +count
+Saving new input (at run 210): input #46 of size 8; reason = +count
+Saved - errorDir/corpus/id_000046 src:000004,havoc:3 +count
+Saving new input (at run 225): input #47 of size 106525; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000047 src:000005,havoc:1 +count +cov +valid
+Saving new input (at run 227): input #48 of size 105513; reason = +count
+Saved - errorDir/corpus/id_000048 src:000005,havoc:8 +count
+Saving new input (at run 232): input #49 of size 105261; reason = +count
+Saved - errorDir/corpus/id_000049 src:000005,havoc:3 +count
+Saving new input (at run 247): input #50 of size 104997; reason = +count
+Saved - errorDir/corpus/id_000050 src:000005,havoc:8 +count
+Saving new input (at run 253): input #51 of size 105725; reason = +count
+Saved - errorDir/corpus/id_000051 src:000005,havoc:6 +count
+Saving new input (at run 271): input #52 of size 105981; reason = +count
+Saved - errorDir/corpus/id_000052 src:000005,havoc:2 +count
+Saving new input (at run 273): input #53 of size 105637; reason = +count
+Saved - errorDir/corpus/id_000053 src:000005,havoc:1 +count
+Saving new input (at run 274): input #54 of size 105005; reason = +count
+Saved - errorDir/corpus/id_000054 src:000005,havoc:7 +count
+Saving new input (at run 288): input #55 of size 8; reason = +count
+Saved - errorDir/corpus/id_000055 src:000006,havoc:4 +count
+Saving new input (at run 309): input #56 of size 104741; reason = +count
+Saved - errorDir/corpus/id_000056 src:000006,havoc:15 +count
+Saving new input (at run 310): input #57 of size 104549; reason = +count
+Saved - errorDir/corpus/id_000057 src:000006,havoc:3 +count
+Saving new input (at run 316): input #58 of size 105541; reason = +count
+Saved - errorDir/corpus/id_000058 src:000006,havoc:18 +count
+Saving new input (at run 331): input #59 of size 106277; reason = +count
+Saved - errorDir/corpus/id_000059 src:000006,havoc:6 +count
+Saving new input (at run 349): input #60 of size 104365; reason = +count
+Saved - errorDir/corpus/id_000060 src:000007,havoc:18 +count
+Saving new input (at run 351): input #61 of size 105353; reason = +count
+Saved - errorDir/corpus/id_000061 src:000007,havoc:1 +count
+Saving new input (at run 364): input #62 of size 105277; reason = +count
+Saved - errorDir/corpus/id_000062 src:000007,havoc:5 +count
+Saving new input (at run 383): input #63 of size 105241; reason = +count
+Saved - errorDir/corpus/id_000063 src:000007,havoc:2 +count
+Saving new input (at run 386): input #64 of size 104641; reason = +count
+Saved - errorDir/corpus/id_000064 src:000008,havoc:13 +count
+Saving new input (at run 391): input #65 of size 8; reason = +count
+Saved - errorDir/corpus/id_000065 src:000008,havoc:4 +count
+Saving new input (at run 396): input #66 of size 104937; reason = +count
+Saved - errorDir/corpus/id_000066 src:000008,havoc:1 +count
+Saving new input (at run 400): input #67 of size 104937; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000067 src:000008,havoc:9 +count +cov +valid
+Saving new input (at run 404): input #68 of size 105361; reason = +count
+Saved - errorDir/corpus/id_000068 src:000008,havoc:30 +count
+Saving new input (at run 411): input #69 of size 105949; reason = +count
+Saved - errorDir/corpus/id_000069 src:000008,havoc:18 +count
+Saving new input (at run 426): input #70 of size 104889; reason = +count
+Saved - errorDir/corpus/id_000070 src:000009,havoc:4 +count
+Saving new input (at run 439): input #71 of size 106569; reason = +count
+Saved - errorDir/corpus/id_000071 src:000009,havoc:9 +count
+Saving new input (at run 440): input #72 of size 105625; reason = +count
+Saved - errorDir/corpus/id_000072 src:000009,havoc:3 +count
+Saving new input (at run 461): input #73 of size 105897; reason = +count
+Saved - errorDir/corpus/id_000073 src:000009,havoc:2 +count
+Saving new input (at run 466): input #74 of size 105109; reason = +count
+Saved - errorDir/corpus/id_000074 src:000010,havoc:2 +count
+Saving new input (at run 470): input #75 of size 105545; reason = +count
+Saved - errorDir/corpus/id_000075 src:000010,havoc:30 +count
+Saving new input (at run 489): input #76 of size 105833; reason = +count
+Saved - errorDir/corpus/id_000076 src:000010,havoc:5 +count
+Saving new input (at run 523): input #77 of size 105193; reason = +count
+Saved - errorDir/corpus/id_000077 src:000010,havoc:12 +count
+Saving new input (at run 526): input #78 of size 106649; reason = +count
+Saved - errorDir/corpus/id_000078 src:000011,havoc:2 +count
+Saving new input (at run 533): input #79 of size 105393; reason = +count
+Saved - errorDir/corpus/id_000079 src:000011,havoc:9 +count
+Saving new input (at run 544): input #80 of size 104841; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000080 src:000011,havoc:1 +count +cov +valid
+Saving new input (at run 564): input #81 of size 105793; reason = +count
+Saved - errorDir/corpus/id_000081 src:000012,havoc:3 +count
+Saving new input (at run 565): input #82 of size 105481; reason = +count
+Saved - errorDir/corpus/id_000082 src:000012,havoc:2 +count
+Saving new input (at run 566): input #83 of size 105617; reason = +count
+Saved - errorDir/corpus/id_000083 src:000012,havoc:2 +count
+Saving new input (at run 567): input #84 of size 105541; reason = +count
+Saved - errorDir/corpus/id_000084 src:000012,havoc:8 +count
+Saving new input (at run 568): input #85 of size 106165; reason = +count
+Saved - errorDir/corpus/id_000085 src:000012,havoc:10 +count
+Saving new input (at run 569): input #86 of size 105453; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000086 src:000012,havoc:1 +count +cov +valid
+Saving new input (at run 570): input #87 of size 106445; reason = +count
+Saved - errorDir/corpus/id_000087 src:000012,havoc:4 +count
+Saving new input (at run 575): input #88 of size 105905; reason = +count
+Saved - errorDir/corpus/id_000088 src:000012,havoc:2 +count
+Saving new input (at run 577): input #89 of size 105813; reason = +count
+Saved - errorDir/corpus/id_000089 src:000012,havoc:2 +count
+Saving new input (at run 578): input #90 of size 105417; reason = +count
+Saved - errorDir/corpus/id_000090 src:000012,havoc:8 +count
+Saving new input (at run 579): input #91 of size 105813; reason = +count
+Saved - errorDir/corpus/id_000091 src:000012,havoc:23 +count
+Found crash: class nextflow.exception.ScriptCompilationException - Script compilation error
+- file : /home/alena/growe/2023-08-11_20-36-39-2H-basic/generatedflows/out1691787214747.nf
+- cause: Unexpected input: '{' @ line 46, column 12.
+    process do{ 
+              ^
+
+1 error
+
+Saved - errorDir/failures/id_000001 src:000012,havoc:17 +crash
+Saving new input (at run 581): input #92 of size 105417; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000092 src:000012,havoc:7 +count +cov +valid
+Saving new input (at run 582): input #93 of size 105149; reason = +count
+Saved - errorDir/corpus/id_000093 src:000012,havoc:13 +count
+Saving new input (at run 583): input #94 of size 105761; reason = +count
+Saved - errorDir/corpus/id_000094 src:000012,havoc:15 +count
+Saving new input (at run 587): input #95 of size 106089; reason = +count
+Saved - errorDir/corpus/id_000095 src:000012,havoc:3 +count
+Saving new input (at run 588): input #96 of size 106085; reason = +count
+Saved - errorDir/corpus/id_000096 src:000012,havoc:7 +count
+Saving new input (at run 590): input #97 of size 105949; reason = +count
+Saved - errorDir/corpus/id_000097 src:000012,havoc:4 +count
+Saving new input (at run 593): input #98 of size 105737; reason = +count
+Saved - errorDir/corpus/id_000098 src:000012,havoc:4 +count
+Saving new input (at run 598): input #99 of size 105909; reason = +count
+Saved - errorDir/corpus/id_000099 src:000012,havoc:14 +count
+Saving new input (at run 599): input #100 of size 105493; reason = +count
+Saved - errorDir/corpus/id_000100 src:000012,havoc:8 +count
+Saving new input (at run 600): input #101 of size 106089; reason = +count
+Saved - errorDir/corpus/id_000101 src:000012,havoc:2 +count
+Saving new input (at run 601): input #102 of size 105753; reason = +count +cov +valid
+Saved - errorDir/corpus/id_000102 src:000012,havoc:4 +count +cov +valid
+Saving new input (at run 603): input #103 of size 105985; reason = +count
+Saved - errorDir/corpus/id_000103 src:000012,havoc:1 +count
+Saving new input (at run 605): input #104 of size 105061; reason = +count
+Saved - errorDir/corpus/id_000104 src:000012,havoc:7 +count
+Saving new input (at run 606): input #105 of size 105829; reason = +count
+Saved - errorDir/corpus/id_000105 src:000012,havoc:1 +count
+Saving new input (at run 607): input #106 of size 105953; reason = +count
+Saved - errorDir/corpus/id_000106 src:000012,havoc:16 +count
+Saving new input (at run 608): input #107 of size 106089; reason = +count
+Saved - errorDir/corpus/id_000107 src:000012,havoc:4 +count
+Saving new input (at run 611): input #108 of size 105989; reason = +count
+Saved - errorDir/corpus/id_000108 src:000012,havoc:4 +count
+Saving new input (at run 615): input #109 of size 105901; reason = +count
+Saved - errorDir/corpus/id_000109 src:000012,havoc:35 +count
+Saving new input (at run 617): input #110 of size 106129; reason = +count
+Saved - errorDir/corpus/id_000110 src:000012,havoc:6 +count
+Saving new input (at run 618): input #111 of size 105869; reason = +count
+Saved - errorDir/corpus/id_000111 src:000012,havoc:4 +count
+Saving new input (at run 619): input #112 of size 106017; reason = +count
+Saved - errorDir/corpus/id_000112 src:000012,havoc:2 +count
+Saving new input (at run 625): input #113 of size 105425; reason = +count
+Saved - errorDir/corpus/id_000113 src:000012,havoc:10 +count
+Saving new input (at run 626): input #114 of size 105581; reason = +count
+Saved - errorDir/corpus/id_000114 src:000012,havoc:8 +count
+Saving new input (at run 627): input #115 of size 106037; reason = +count
+Saved - errorDir/corpus/id_000115 src:000012,havoc:7 +count
+Saving new input (at run 628): input #116 of size 105793; reason = +count
+Saved - errorDir/corpus/id_000116 src:000012,havoc:10 +count
+Saving new input (at run 629): input #117 of size 105921; reason = +count
+Saved - errorDir/corpus/id_000117 src:000012,havoc:3 +count
+Saving new input (at run 630): input #118 of size 106169; reason = +count
+Saved - errorDir/corpus/id_000118 src:000012,havoc:1 +count
+Saving new input (at run 631): input #119 of size 106061; reason = +count
+Saved - errorDir/corpus/id_000119 src:000012,havoc:2 +count
+Saving new input (at run 632): input #120 of size 106261; reason = +count
+Saved - errorDir/corpus/id_000120 src:000012,havoc:4 +count
+Saving new input (at run 633): input #121 of size 105693; reason = +count
+Saved - errorDir/corpus/id_000121 src:000012,havoc:3 +count
+Saving new input (at run 634): input #122 of size 105673; reason = +count
+Saved - errorDir/corpus/id_000122 src:000012,havoc:1 +count
+Saving new input (at run 647): input #123 of size 105481; reason = +count
+Saved - errorDir/corpus/id_000123 src:000012,havoc:3 +count
+Saving new input (at run 648): input #124 of size 105825; reason = +count
+Saved - errorDir/corpus/id_000124 src:000012,havoc:2 +count
+Saving new input (at run 649): input #125 of size 106117; reason = +count
+Saved - errorDir/corpus/id_000125 src:000012,havoc:3 +count
+Saving new input (at run 650): input #126 of size 105413; reason = +count
+Saved - errorDir/corpus/id_000126 src:000012,havoc:8 +count
+Saving new input (at run 652): input #127 of size 105953; reason = +count
+Saved - errorDir/corpus/id_000127 src:000012,havoc:23 +count
+Saving new input (at run 670): input #128 of size 105689; reason = +count
+Saved - errorDir/corpus/id_000128 src:000012,havoc:1 +count
+Saving new input (at run 675): input #129 of size 105657; reason = +count
+Saved - errorDir/corpus/id_000129 src:000012,havoc:1 +count
+Saving new input (at run 676): input #130 of size 105245; reason = +count
+Saved - errorDir/corpus/id_000130 src:000012,havoc:1 +count
+Saving new input (at run 679): input #131 of size 105385; reason = +count
+Saved - errorDir/corpus/id_000131 src:000012,havoc:11 +count
+Saving new input (at run 685): input #132 of size 105793; reason = +count
+Saved - errorDir/corpus/id_000132 src:000012,havoc:2 +count
+Saving new input (at run 687): input #133 of size 106053; reason = +count
+Saved - errorDir/corpus/id_000133 src:000012,havoc:6 +count
+Saving new input (at run 699): input #134 of size 105457; reason = +count
+Saved - errorDir/corpus/id_000134 src:000012,havoc:7 +count
+Saving new input (at run 700): input #135 of size 105701; reason = +count
+Saved - errorDir/corpus/id_000135 src:000012,havoc:17 +count
+Saving new input (at run 710): input #136 of size 105493; reason = +count
+Saved - errorDir/corpus/id_000136 src:000012,havoc:17 +count
+Saving new input (at run 724): input #137 of size 105449; reason = +count
+Saved - errorDir/corpus/id_000137 src:000012,havoc:3 +count
+Saving new input (at run 727): input #138 of size 105613; reason = +count
+Saved - errorDir/corpus/id_000138 src:000012,havoc:7 +count
+Saving new input (at run 730): input #139 of size 105757; reason = +count
+Saved - errorDir/corpus/id_000139 src:000012,havoc:16 +count
+Saving new input (at run 738): input #140 of size 105793; reason = +count
+Saved - errorDir/corpus/id_000140 src:000012,havoc:9 +count
+Saving new input (at run 747): input #141 of size 105569; reason = +count
+Saved - errorDir/corpus/id_000141 src:000012,havoc:9 +count
+Saving new input (at run 752): input #142 of size 105241; reason = +count
+Saved - errorDir/corpus/id_000142 src:000012,havoc:4 +count
+Saving new input (at run 755): input #143 of size 105593; reason = +count
+Saved - errorDir/corpus/id_000143 src:000012,havoc:2 +count
+Saving new input (at run 756): input #144 of size 105945; reason = +count
+Saved - errorDir/corpus/id_000144 src:000012,havoc:2 +count
+Saving new input (at run 758): input #145 of size 105861; reason = +count
+Saved - errorDir/corpus/id_000145 src:000012,havoc:1 +count
+Saving new input (at run 759): input #146 of size 105905; reason = +count
+Saved - errorDir/corpus/id_000146 src:000012,havoc:5 +count
+Saving new input (at run 760): input #147 of size 105449; reason = +count
+Saved - errorDir/corpus/id_000147 src:000012,havoc:21 +count
+Saving new input (at run 761): input #148 of size 105993; reason = +count
+Saved - errorDir/corpus/id_000148 src:000012,havoc:6 +count
+Saving new input (at run 764): input #149 of size 105841; reason = +count
+Saved - errorDir/corpus/id_000149 src:000012,havoc:6 +count
+Saving new input (at run 768): input #150 of size 105301; reason = +count
+Saved - errorDir/corpus/id_000150 src:000012,havoc:4 +count
+Saving new input (at run 775): input #151 of size 105681; reason = +count
+Saved - errorDir/corpus/id_000151 src:000012,havoc:5 +count
+Saving new input (at run 786): input #152 of size 105321; reason = +count
+Saved - errorDir/corpus/id_000152 src:000012,havoc:8 +count
+Saving new input (at run 791): input #153 of size 106005; reason = +count
+Saved - errorDir/corpus/id_000153 src:000012,havoc:6 +count
+Saving new input (at run 825): input #154 of size 105485; reason = +count
+Saved - errorDir/corpus/id_000154 src:000012,havoc:2 +count
+Saving new input (at run 827): input #155 of size 105737; reason = +count
+Saved - errorDir/corpus/id_000155 src:000012,havoc:11 +count
+Saving new input (at run 842): input #156 of size 105753; reason = +count
+Saved - errorDir/corpus/id_000156 src:000012,havoc:17 +count
+Saving new input (at run 845): input #157 of size 105069; reason = +count
+Saved - errorDir/corpus/id_000157 src:000012,havoc:22 +count
+Saving new input (at run 849): input #158 of size 105481; reason = +count
+Saved - errorDir/corpus/id_000158 src:000012,havoc:3 +count
+Saving new input (at run 850): input #159 of size 105021; reason = +count
+Saved - errorDir/corpus/id_000159 src:000012,havoc:7 +count
+Saving new input (at run 866): input #160 of size 105645; reason = +count
+Saved - errorDir/corpus/id_000160 src:000012,havoc:4 +count
+Saving new input (at run 871): input #161 of size 105537; reason = +count
+Saved - errorDir/corpus/id_000161 src:000012,havoc:9 +count
+Saving new input (at run 875): input #162 of size 105905; reason = +count
+Saved - errorDir/corpus/id_000162 src:000012,havoc:2 +count
+Saving new input (at run 908): input #163 of size 106193; reason = +count
+Saved - errorDir/corpus/id_000163 src:000012,havoc:16 +count
+Saving new input (at run 910): input #164 of size 105413; reason = +count
+Saved - errorDir/corpus/id_000164 src:000012,havoc:2 +count
+Saving new input (at run 913): input #165 of size 105561; reason = +count
+Saved - errorDir/corpus/id_000165 src:000012,havoc:15 +count
+Saving new input (at run 922): input #166 of size 105833; reason = +count
+Saved - errorDir/corpus/id_000166 src:000012,havoc:13 +count
+Saving new input (at run 948): input #167 of size 105665; reason = +count
+Saved - errorDir/corpus/id_000167 src:000012,havoc:2 +count
+Saving new input (at run 971): input #168 of size 105813; reason = +count
+Saved - errorDir/corpus/id_000168 src:000012,havoc:7 +count
+Found crash: class nextflow.exception.ScriptCompilationException - Script compilation error
+- file : /home/alena/growe/2023-08-11_20-36-39-2H-basic/generatedflows/out1691791764457.nf
+- cause: Identifier `ms` is already used by another definition @ line 87, column 10.
+    process ms{ 
+            ^
+
+1 error
+
+Saved - errorDir/failures/id_000002 src:000012,havoc:9 +crash
+Saving new input (at run 973): input #169 of size 105241; reason = +count
+Saved - errorDir/corpus/id_000169 src:000012,havoc:4 +count
+Saving new input (at run 1013): input #170 of size 105793; reason = +count
+Saved - errorDir/corpus/id_000170 src:000012,havoc:5 +count
+Saving new input (at run 1014): input #171 of size 105241; reason = +count
+Saved - errorDir/corpus/id_000171 src:000012,havoc:8 +count
+Saving new input (at run 1015): input #172 of size 105921; reason = +count
+Saved - errorDir/corpus/id_000172 src:000012,havoc:11 +count
+Saving new input (at run 1016): input #173 of size 105549; reason = +count
+Saved - errorDir/corpus/id_000173 src:000012,havoc:3 +count
+Saving new input (at run 1017): input #174 of size 105957; reason = +count
+Saved - errorDir/corpus/id_000174 src:000012,havoc:8 +count
+Saving new input (at run 1018): input #175 of size 105737; reason = +count
+Saved - errorDir/corpus/id_000175 src:000012,havoc:2 +count
+Saving new input (at run 1019): input #176 of size 105909; reason = +count
+Saved - errorDir/corpus/id_000176 src:000012,havoc:8 +count
+Saving new input (at run 1021): input #177 of size 105969; reason = +count
+Saved - errorDir/corpus/id_000177 src:000012,havoc:11 +count
+Saving new input (at run 1031): input #178 of size 105805; reason = +count
+Saved - errorDir/corpus/id_000178 src:000012,havoc:9 +count
+Saving new input (at run 1064): input #179 of size 105781; reason = +count
+Saved - errorDir/corpus/id_000179 src:000012,havoc:6 +count
+Found crash: class groovy.lang.MissingPropertyException - No such property: process for class: Script_427b1722
+Saved - errorDir/failures/id_000003 src:000012,havoc:30 +crash
+Saving new input (at run 1109): input #180 of size 105481; reason = +count
+Saved - errorDir/corpus/id_000180 src:000012,havoc:4 +count
+Saving new input (at run 1120): input #181 of size 105793; reason = +count
+Saved - errorDir/corpus/id_000181 src:000012,havoc:1 +count
+Saving new input (at run 1124): input #182 of size 106153; reason = +count
+Saved - errorDir/corpus/id_000182 src:000012,havoc:6 +count
