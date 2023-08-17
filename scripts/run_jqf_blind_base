@@ -5,4 +5,4 @@
 #-g -> guidance ei or zest
 #-b -> basic generator
 
-/usr/bin/env bash -c "./scripts/run_jqf_blind -b $@"
+/usr/bin/env bash -c "./scripts/run_jqf_blind $@ -b"

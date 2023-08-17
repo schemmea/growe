@@ -9,9 +9,8 @@
 <processheader> ::= "process" <space> <identifier>
 <processbody> ::=  <input> <output> <script>
 <input> ::= "input:" <newline> <inputvar> <newline>
-<inputvar> ::= <inputvartype> <space> "variable" <newline>
-<iotype> ::=  "val" | "path" | "env" | "tuple"
-<inputvartype> ::=  <iotype> | "each"
+<inputvar> ::= <iotype> <space> "variable" <newline>
+<iotype> ::=  "val" |  "tuple"
 <output> ::= "output:" <newline> <outputvar> <newline>
 <outputvar> ::= <iotype> <space> "variable" <newline>
 <script> ::= "script:" <newline> "template '" <magicstring> "'"

@@ -12,19 +12,22 @@ function log() {
 }
 
 DURATIONHOURS=2
-DURATIONSECONDS=$((DURATIONHOURS * 60 * 60))
+DURATIONSECONDS=$((2 * 60))
+#DURATIONSECONDS=$((DURATIONHOURS * 60 * 60))
 ITERATIONS=0 #max
 
-EXEC_DIR="$(date +"%Y-%m-%d_%H-%M-%S")-${DURATIONHOURS}H"
+print_usage() {
+  echo "Usage: $0 NAME ITERATION other(jqf), got $@"
+}
 
-basic="-b"
-blind="TOTALLY_RANDOM=true"
-if [[ $* == *"$basic"* ]]; then
-  EXEC_DIR+="-basic"
+# Check arguments
+if [ $# -lt 2 ]; then
+  print_usage >&1
+  exit 1
 fi
-if [[ $JVM_OPTS == *"$blind"* ]]; then
-  EXEC_DIR+="-blind"
-fi
+
+
+EXEC_DIR="nextflow-$1-$2"
 
 export JVM_OPTS="$JVM_OPTS -Djqf.ei.MAX_INPUT_SIZE=204800"
 export JVM_OPTS="$JVM_OPTS -Djqf.logCoverage=true"
@@ -39,7 +42,7 @@ export JVM_OPTS="$JVM_OPTS -XX:-UseGCOverheadLimit -Djqf.tracing.MATCH_CALLEE_NA
 #export JVM_OPTS="$JVM_OPTS -Djqf.tracing.TRACE_GENERATORS=true"
 
 #debug
-export JVM_OPTS="$JVM_OPTS -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005"
+#export JVM_OPTS="$JVM_OPTS -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005"
 
 function executeTest() {
 
@@ -50,8 +53,13 @@ function executeTest() {
   #-k -> keeptestfiles
   #-g -> guidance ei or zest
   #-b basic generator
+  OPTS="\"$JVM_OPTS -Djqf.ei.TOTALLY_RANDOM=true -Djqf.ei.DISABLE_SAVE_NEW_COUNTS=true\""
 
-  /usr/bin/env bash -c "$DRIVER_PATH --illegal-access=permit -Xmx4G -jar $JAR_PATH -d $DURATIONSECONDS -i $ITERATIONS $* | tee -a $LOGFILE 2>/dev/null"
+  if [[ $1 == *"blind"* ]]; then
+    /usr/bin/env bash -c "JVM_OPTS=$OPTS $DRIVER_PATH --illegal-access=permit -Xmx4G -jar $JAR_PATH -d $DURATIONSECONDS -i $ITERATIONS ${@: 3} | tee -a $LOGFILE 2>/dev/null"
+  else
+    /usr/bin/env bash -c "$DRIVER_PATH --illegal-access=permit -Xmx4G -jar $JAR_PATH -d $DURATIONSECONDS -i $ITERATIONS ${@: 3} | tee -a $LOGFILE 2>/dev/null"
+  fi
 
 }
 

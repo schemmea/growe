@@ -8,10 +8,14 @@ import seaborn as sns
 
 
 def p2f(value: str) -> float:
-    return float(value.strip('%'))
+    #return float(value.strip('%'))
+    return float(value)
 
 def process_plot_data(path: str) -> pd.DataFrame:
-    data = pd.read_csv(os.path.join(path, "plot_data"), sep=",", skipinitialspace=True,
+    ps=os.path.join(path, 'plot_data')
+    
+    print(ps)
+    data = pd.read_csv(ps, sep=";", skipinitialspace=True,
                        converters={"valid_cov": p2f, "map_size": p2f})
     data['# unix_time'] -= data["# unix_time"][0]
     data['total_inputs'] = data['valid_inputs'] + data['invalid_inputs']

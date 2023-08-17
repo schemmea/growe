@@ -8,9 +8,9 @@ from visualize import *
 from pytablewriter import MarkdownTableWriter
 
 
-DATASET = ["ant", "maven", "bcel", "rhino", "closure"]
+DATASET = ["nextflow"]
 
-ALGORITHM = ["zest-fast", "ei-fast", "zest-no-count", "ei-no-count"]
+ALGORITHM = ["normal", "blind", "base", "baseblind"]
 
 def generate_cov_table(base_path: str):
     cov_all_data = []
@@ -20,7 +20,7 @@ def generate_cov_table(base_path: str):
         cov_valid_algo_data = []
         for algorithm in ALGORITHM:
             for idx in range(0, 10):
-                path = os.path.join(base_path, f"{dataset}-{algorithm}-results-{idx}")
+                path = os.path.join(base_path, f"{dataset}-{algorithm}-{idx}", "errorDir")
                 if not os.path.exists(path):
                     break
                 print(f"processing: {os.path.basename(path)}")
@@ -56,11 +56,12 @@ def generate_graph(base_path: str):
         for algorithm in ALGORITHM:
             time_based_data_per_algo = []
             count_based_data_per_algo = []
-            for idx in range(0, 10):
-                path = os.path.join(base_path, f"{dataset}-{algorithm}-results-{idx}")
+            for idx in range(0, 1):
+                path = os.path.join(base_path, f"{dataset}-{algorithm}-{idx}", "errorDir")
+
                 if not os.path.exists(path):
                     break
-                print(f"processing: {os.path.basename(path)}")
+                print(f"processing: {base_path} {os.path.basename(path)}")
 
                 time_based_data, count_based_data = process_plot_data(path)
                 time_based_data_per_algo.append(time_based_data)

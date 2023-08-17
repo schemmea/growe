@@ -36,6 +36,10 @@ class TestExecutor {
         if (iswindows && !errorDir.startsWith("C:") && !errorDir.startsWith("/")) errorDir = "/" + errorDir;
         Guidance guidance = null;
 
+        new FileResourcesUtils().copyFilesToFolder(Configuration.SOURCE_PATH, Configuration.OUTPUT_PATH);
+        new FileResourcesUtils().copyFilesToFolder(Configuration.TEMPLATE_SOURCE_PATH, Configuration.OUTPUT_TEMPLATE_PATH);
+        new FileResourcesUtils().copyFilesToFolder(Configuration.DATA_SOURCE_PATH, Configuration.OUTPUT_DATA_PATH);
+
         if (ARGS.guidance == "repro") {
             File[] testInputFiles = new File(ARGS.reproDir).listFiles();
 
@@ -54,10 +58,6 @@ class TestExecutor {
             if (!errorDirectory.exists()) {
                 errorDirectory.mkdir();
             }
-
-            new FileResourcesUtils().copyFilesToFolder(Configuration.SOURCE_PATH, Configuration.OUTPUT_PATH);
-            new FileResourcesUtils().copyFilesToFolder(Configuration.TEMPLATE_SOURCE_PATH, Configuration.OUTPUT_TEMPLATE_PATH);
-            new FileResourcesUtils().copyFilesToFolder(Configuration.DATA_SOURCE_PATH, Configuration.OUTPUT_DATA_PATH);
 
             if (ARGS.guidance == "ei") {
                 guidance = new FileAwareExecutionIndexingGuidance(testname,
@@ -90,10 +90,14 @@ class TestExecutor {
                 System.out.println(finalFooter);
             }
 
+            System.out.println(String.format("Covered %d edges.", guidance.getCoverage().getNonZeroCount()));
+
+        } else {
+            System.out.println(String.format("Covered %d edges.", guidance.getTotalCoverage().getNonZeroCount()));
+
         }
 
 
-        System.out.println(String.format("Covered %d edges.", guidance.getTotalCoverage().getNonZeroCount()));
         println "Tested $testclass.name#$testname $ARGS.iteration times, duration: $ARGS.durationInSeconds s"
     }
 
