@@ -6,6 +6,4 @@ do
     echo "file - Iteration \$i"
     du -a "$variable"
 done
-} || {
-  echo "error"
 }

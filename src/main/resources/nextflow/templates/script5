@@ -6,6 +6,4 @@
       echo "Running Processes - Iteration \$i"
       ps aux | grep "$variable" &&
   done
-} || {
-  echo "error"
 }

@@ -10,6 +10,4 @@
         echo "All Network Interface Information"
         ip -$variable &&
     fi
-} || {
-  echo "error"
 }

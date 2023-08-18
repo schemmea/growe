@@ -10,6 +10,4 @@
          ls -l
       fi
   done
-} || {
-  echo "error"
 }

@@ -1,9 +1,8 @@
 #!/bin/bash
 
+
 # Print memory usage
 {
     echo "Memory Usage"
     free -m | grep "$variable" &&
-} || {
-  echo "error"
 }
