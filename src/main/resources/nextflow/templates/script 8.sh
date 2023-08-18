@@ -1,5 +1,5 @@
 #!/bin/bash
-{
+
   # Loop to display file permissions every second for 5 seconds
   for ((i=0; i<5; i++))
   do
@@ -10,4 +10,3 @@
          ls -l
       fi
   done
-}

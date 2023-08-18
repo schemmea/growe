@@ -1,5 +1,5 @@
 #!/bin/bash
-{
+
     # Check network interface information and perform action based on the random parameter
     if [[ "$variable" =~ ^[0-9]+\$ ]]; then
         # Print specific network interface information
@@ -10,4 +10,3 @@
         echo "All Network Interface Information"
         ip -$variable &&
     fi
-}
