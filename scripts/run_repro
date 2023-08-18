@@ -20,17 +20,6 @@ if [ $# -lt 1 ]; then
   exit 1
 fi
 
-
-export JVM_OPTS="$JVM_OPTS -Djqf.ei.MAX_INPUT_SIZE=204800"
-export JVM_OPTS="$JVM_OPTS -Djqf.logCoverage=true"
-export JVM_OPTS="$JVM_OPTS -Djqf.ei.QUIET_MODE=false"
-export JVM_OPTS="$JVM_OPTS -Djqf.ei.GENERATE_EOF_WHEN_OUT=false"
-
-
-
-#ei guidance
-#export JVM_OPTS="$JVM_OPTS -Djqf.tracing.MATCH_CALLEE_NAMES=true -Djqf.tracing.TRACE_GENERATORS=true"
-
 corpus="$(pwd)/$1/errorDir/corpus"
 errordir="$(pwd)/$1/errorDir"
 echo $errordir
@@ -44,15 +33,19 @@ export JVM_OPTS="-Djqf.repro.traceDir=$errordir $JVM_OPTS"
 
 export JVM_OPTS="$JVM_OPTS -Djqf.repro.logUniqueBranches=true -Xmx6g"
 
-#export JVM_OPTS="$JVM_OPTS -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005"
-
-/usr/bin/env bash -c "$DRIVER_PATH --illegal-access=permit -jar $JAR_PATH -g repro -r $corpus  | grep '^# Cov' | sort | uniq > ${errordir}/cov-all.log"
+export JVM_OPTS="$JVM_OPTS -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005"
+echo "======= run repro cov-all ======="
+/usr/bin/env bash -c "$DRIVER_PATH --illegal-access=permit -jar $JAR_PATH -g repro -r $corpus " #  | grep '^# Cov' | sort | uniq > ${errordir}/cov-all.log"
 
 
 #export JVM_OPTS="$JVM_OPTS -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005"
 
 export JVM_OPTS="$JVM_OPTS -Djqf.repro.ignoreInvalidCoverage=true"
+echo "======= run repro cov-valid ======="
+#/usr/bin/env bash -c "$DRIVER_PATH --illegal-access=permit -jar $JAR_PATH -g repro -r $corpus  | grep '^# Cov' | sort | uniq > ${errordir}/cov-valid.log"
 
-/usr/bin/env bash -c "$DRIVER_PATH --illegal-access=permit -jar $JAR_PATH -g repro -r $corpus  | grep '^# Cov' | sort | uniq > ${errordir}/cov-valid.log"
 
-
+rm -r work/
+rm -r .nextflow/
+rm -r generatedflows/
+rm .nextflow.log*

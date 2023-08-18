@@ -1,0 +1,4 @@
+<nextflow> ::= <chars> <number>
+<chars> ::= <char> | <chars> <char>
+<char> ::= a
+<number> ::= 0|1

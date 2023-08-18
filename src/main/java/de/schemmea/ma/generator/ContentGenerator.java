@@ -73,9 +73,8 @@ public class ContentGenerator extends Generator<String> {
             return genTest;
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            e.printStackTrace();
+            throw e;
         }
-        return "";
     }
 
     private String replaceProcesscallsPlaceholder(String testCase, SourceOfRandomness sourceOfRandomness) {
@@ -139,7 +138,7 @@ public class ContentGenerator extends Generator<String> {
         if (filteredScripts.size() > 0) {
             int count = replaced.split(scriptMagicString).length - 1;
             for (int i = 0; i < count; i++) {
-                //todo call script inline and not with template ? -> needs adaption in bnf
+                //call script inline and not with template
 
                 String filename = sourceOfRandomness.choose(filteredScripts);
                 if (putFileContent) {

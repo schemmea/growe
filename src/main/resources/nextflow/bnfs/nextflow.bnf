@@ -59,7 +59,7 @@
 <channelitem> ::= <compchannelitem> | <digit> <points> <digit> | <quote> <char> <quote> <points> <quote> <char> <quote>
 <compchannelitem> ::= <number> | <quote> <identifier> <quote>
 
-<identifier> ::= <char> <char> | <identifier> <char>
+<identifier> ::= <char>| <identifier> <char>
 <identifier2> ::= <identifier> <processwithtwovars>
 <char> ::= a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z
 <uint> ::= 1|2|3|4|5|6|7|8|9

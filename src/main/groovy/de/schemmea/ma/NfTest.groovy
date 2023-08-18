@@ -27,6 +27,9 @@ public class NfTest {
 
     static int iteration = 0;
 
+    static int getIteration() { return iteration; }
+
+    static void setIteration(int value) { iteration = value; }
 
     @Before
     public void setup() {
@@ -35,47 +38,61 @@ public class NfTest {
 
     @Fuzz
     public void testNFCommand(@From(GroovyGenerator.class) String[] command) {
-
-        println Configuration.newline + "ITERATION " + ++iteration + Configuration.newline
+        NfTest.setIteration(NfTest.getIteration() + 1); //for java debugging
+        println Configuration.newline + "ITERATION " + NfTest.iteration + Configuration.newline
         println command
 
-        if (command[0] == "run") {
-            //avoid try catch (Throwable) in Launcher
-            Launcher launcher = new Launcher().command(command)
+        try {
 
-            CmdRun myRunner = new CmdRun();
-            myRunner.setArgs(command.tail().toList());
-            myRunner.setLauncher(launcher);
+            if (command[0] == "run") {
+                //avoid try catch (Throwable) in Launcher
+                Launcher launcher = new Launcher().command(command)
 
-            myRunner.run();
+                CmdRun myRunner = new CmdRun();
+                myRunner.setArgs(command.tail().toList());
+                myRunner.setLauncher(launcher);
 
-        } else {
-            int status = new Launcher().command(command).run();
-            println "status " + status
-            Assume.assumeTrue(status==0)
+                myRunner.run();
+
+            } else {
+                int status = new Launcher().command(command).run();
+                println "status " + status
+                Assume.assumeTrue(status == 0)
+            }
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (Throwable t) {
+            Assume.assumeNoException(t);
+        } finally {
+
         }
+
     }
 
 
     @Fuzz
-    public void testTest(@From(StringGenerator.class) String inputFile) {
-        print Configuration.newline + "ITERATION " + ++iteration + Configuration.newline
+    public void testTest(@From(WorkflowFileGenerator.class) File inputFile) {
+        NfTest.setIteration(NfTest.getIteration() + 1); //for java debugging
+        println Configuration.newline + "ITERATION " + NfTest.iteration + Configuration.newline
 
         try {
-            String filename = "/home/alena/source/ma_test2/src/main/resources/test/out1691656718885.nf";
+            String filename = inputFile.getAbsoluteFile();
             String[] orig_args2 = new String[]{"run", filename};
             def args2 = [filename]
 
             int status = new Launcher().command(orig_args2).run();
-            Assume.assumeTrue(status==0)
+            Assume.assumeTrue(status == 0)
+            Assume.assumeTrue(status == 0)
 
         } catch (Exception ex) {
-            println "EXCEPTION"
-            ex.printStackTrace()
-
+            println "EXCEPTION " + ex.getMessage()
+            Assume.assumeNoException(ex)
         } catch (Error e) {
-            println "ERROR"
+            println "ERROR " + e.getMessage()
             println e.getCause()
+            Assume.assumeNoException(e)
+
         }
         //nextflow clean ? <
     }
@@ -87,7 +104,7 @@ public class NfTest {
         Plugins.stop()
 
         //nextflow clean -f
-       // this makes interesting things
+        // this makes interesting things
         // int status = new Launcher().command(new String[]{"clean","-f"}).run();
     }
 

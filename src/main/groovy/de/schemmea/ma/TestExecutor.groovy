@@ -27,7 +27,7 @@ class TestExecutor {
 
         var commander = new JCommander(ARGS, args)
 
-        String testname = "testNFCommand"
+        String testname = "testTest"
         Class testclass = NfTest.class
 
         String errorDir = Configuration.ERROR_DIR;
@@ -41,7 +41,7 @@ class TestExecutor {
         new FileResourcesUtils().copyFilesToFolder(Configuration.DATA_SOURCE_PATH, Configuration.OUTPUT_DATA_PATH);
 
         if (ARGS.guidance == "repro") {
-            File[] testInputFiles = new File(ARGS.reproDir).listFiles();
+            File[] testInputFiles = new File(ARGS.reproDir).listFiles().sort();
 
             String traceDirName = System.getProperty("jqf.repro.traceDir");
             File traceDir = traceDirName != null ? new File(traceDirName) : null;
