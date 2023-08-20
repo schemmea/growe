@@ -9,3 +9,4 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 $SCRIPT_DIR/run_jqf_all $@
 $SCRIPT_DIR/run_repro_all $@
+
