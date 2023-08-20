@@ -83,8 +83,6 @@ public class NfTest {
 
             int status = new Launcher().command(orig_args2).run();
             Assume.assumeTrue(status == 0)
-            Assume.assumeTrue(status == 0)
-
         } catch (Exception ex) {
             println "EXCEPTION " + ex.getMessage()
             Assume.assumeNoException(ex)

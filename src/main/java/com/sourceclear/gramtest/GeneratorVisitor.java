@@ -8,6 +8,8 @@ import com.pholser.junit.quickcheck.random.SourceOfRandomness;
 
 import java.util.*;
 
+import static java.util.Collections.swap;
+
 /**
  *
  */
@@ -109,15 +111,15 @@ public class GeneratorVisitor extends bnfBaseVisitor {
                 int rand = 0;
                 int choices = rhs.alternatives().alternative().size();
 
-               try {
-                   rand = sourceOfRandomness.nextInt(choices);
-               }catch (Exception e){
-                  // e.printStackTrace();
-                   System.out.println("~~~~~ End of Random ~~~~");
-                   System.out.println("~~~~~ Choices Made: " + choicesMade + " ~~~~");
-                   choicesMade++;
-                   return result;
-               }
+                try {
+                    rand = sourceOfRandomness.nextInt(choices);
+                } catch (Exception e) {
+                    // e.printStackTrace();
+                    System.out.println("~~~~~ End of Random ~~~~");
+                    System.out.println("~~~~~ Choices Made: " + choicesMade + " ~~~~");
+                    choicesMade++;
+                    return result;
+                }
                 choicesMade++;
                 result = visitAlternative(rhs.alternatives().alternative(rand));
                 if (!prodHist.empty()) prodHist.pop();
@@ -145,7 +147,14 @@ public class GeneratorVisitor extends bnfBaseVisitor {
     public List<String> visitAlternatives(bnfParser.AlternativesContext ctx) {
         List<String> altStrs = new LinkedList<>();
         List<bnfParser.AlternativeContext> acList = ctx.alternative();
-        Collections.shuffle(acList, sourceOfRandomness.toJDKRandom());
+        try {
+            shuffle(acList, sourceOfRandomness);
+        } catch (Exception e) {
+            // e.printStackTrace();
+            System.out.println("~~~~~ End of Random in shuffle~~~~");
+            System.out.println("~~~~~ Choices Made: " + choicesMade + " ~~~~");
+
+        }
         for (bnfParser.AlternativeContext ac : acList) {
             altStrs.addAll(visitAlternative(ac));
         }
@@ -241,6 +250,38 @@ public class GeneratorVisitor extends bnfBaseVisitor {
             if (ec.text() == null && ec.captext() == null) return false;
         }
         return true;
+    }
+
+    private static void swap(Object[] arr, int i, int j) {
+        Object tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
+    }
+
+    public static void shuffle(List<?> list, SourceOfRandomness rnd) {
+        int size = list.size();
+        if (size >= 5 && !(list instanceof RandomAccess)) {
+            Object[] arr = list.toArray();
+
+            for (int i = size; i > 1; --i) {
+                swap(arr, i - 1, rnd.nextInt(i));
+            }
+
+            ListIterator it = list.listIterator();
+            Object[] var5 = arr;
+            int var6 = arr.length;
+
+            for (int var7 = 0; var7 < var6; ++var7) {
+                Object e = var5[var7];
+                it.next();
+                it.set(e);
+            }
+        } else {
+            for (int i = size; i > 1; --i) {
+                Collections.swap(list, i - 1, rnd.nextInt(i));
+            }
+        }
+
     }
     //---------------------------- Property Methods -----------------------------
 

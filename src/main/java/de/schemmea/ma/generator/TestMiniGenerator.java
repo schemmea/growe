@@ -55,6 +55,10 @@ public class TestMiniGenerator extends Generator<String> {
 
             String genTest = generatedTests.get(0);
 
+            char t1 = sourceOfRandomness.nextChar('a','z');
+            char t2 = sourceOfRandomness.nextChar('a','z');
+            genTest= genTest.replace(t1,t2);
+
             return genTest;
         } catch (Exception e) {
             System.out.println(e.getMessage());
