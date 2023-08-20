@@ -119,7 +119,7 @@ public class FileAwareZestGuidance extends ZestGuidance {
             System.out.printf("Valid coverage:       %,d branches (%.2f%% of map)\n", nonZeroValidCount, nonZeroValidFraction);
         }
 
-        String plotData = String.format("%d; %d; %d; %d; %d; %d; %.2f; %d; %d; %d; %.2f; %d; %d; %.2f, %d; %d",
+        String plotData = String.format("%d, %d, %d, %d, %d, %d, %.2f, %d, %d, %d, %.2f, %d, %d, %.2f, %d, %d",
                 TimeUnit.MILLISECONDS.toSeconds(now.getTime()), cyclesCompleted, currentParentInputIdx,
                 numSavedInputs, 0, 0, nonZeroFraction, uniqueFailures.size(), 0, 0, intervalExecsPerSecDouble,
                 numValid, numTrials - numValid, nonZeroValidFraction, nonZeroCount, nonZeroValidCount);

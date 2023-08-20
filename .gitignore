@@ -8,9 +8,13 @@
 .nextflow.log*
 /work
 */work
+*/work
 
 /2023-*
 /fuzz-results/
 /generatedflows/
 */generatedflows/
 /nextflow-*/
+/experiments_repro/
+/experiments.tar.gz
+/experiments_repro.tar.gz

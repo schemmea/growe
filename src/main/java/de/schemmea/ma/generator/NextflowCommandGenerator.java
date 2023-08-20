@@ -22,16 +22,17 @@ public class NextflowCommandGenerator extends Generator<String[]> {
     }
 
 
-    //    static String[] commands = new String[]{"clean", "code", "config", "console", "drop", "help", "info", "list", "log", "pull", "run", "secrets", "view"};
-    static String[] commands = new String[]{"help", "info", "run", "clean", "config", "list", "log", "drop", "secrets"};
+    //    static String[] commands = new String[]{"clean",  "config", "console", "drop", "help", "info", "list", "log", "pull", "run", "secrets", "view"};
+    static String[] commands = new String[]{"help", "info", "run", "clean", "list", "log", "drop", "secrets"};
     //static String[] commands = new String[]{"run"}; // "help", "info", "run"};
 
 
     static String[] runOptions = new String[]{"-with-docker", "-with-report",
             "-with-trace", "-with-timeline"};
+    //"-with-charliecloud", "-with-podman", "-with-singularity", "-with-apptainer",
     static String[] secretsOptions = new String[]{"delete", "list", "get", "put", "set"};
 
-    //"-with-charliecloud", "-with-podman", "-with-singularity", "-with-apptainer",
+
     @Override
     public String[] generate(SourceOfRandomness sourceOfRandomness, GenerationStatus generationStatus) {
         var command = sourceOfRandomness.choose(commands);
@@ -44,12 +45,15 @@ public class NextflowCommandGenerator extends Generator<String[]> {
                     return new String[]{command, baseGenerator.generate(sourceOfRandomness, generationStatus).getAbsolutePath()};
                 }
             case "secrets":
-                return new String[]{command, sourceOfRandomness.choose(secretsOptions)};
-
+                String option = sourceOfRandomness.choose(secretsOptions);
+                if (option == "set" || option == "put")
+                    return new String[]{command, option, String.valueOf(sourceOfRandomness.nextChar('a', 'z')), "\"" + sourceOfRandomness.nextChar('a', 'z') + "\""};
+                else if (option != "list")
+                    return new String[]{command, option};
+                else
+                    return new String[]{command, option, String.valueOf(sourceOfRandomness.nextChar('a', 'z'))};
             case "pull":
             case "drop":
-            case "code":
-            case "config":
             case "console":
             case "log":
             case "clean":

@@ -12,6 +12,8 @@ DATASET = ["nextflow"]
 
 ALGORITHM = ["normal", "blind", "base", "baseblind"]
 
+RANGE=10
+
 def generate_cov_table(base_path: str):
     cov_all_data = []
     cov_valid_data = []
@@ -19,11 +21,11 @@ def generate_cov_table(base_path: str):
         cov_all_algo_data = []
         cov_valid_algo_data = []
         for algorithm in ALGORITHM:
-            for idx in range(0, 10):
+            for idx in range(0, RANGE):
                 path = os.path.join(base_path, f"{dataset}-{algorithm}-{idx}", "errorDir")
                 if not os.path.exists(path):
                     break
-                print(f"processing: {os.path.basename(path)}")
+                print(f"processing: {path}")
 
 
                 cov_all = process_cov_data(os.path.join(path, "cov-all.log"))
@@ -56,14 +58,14 @@ def generate_graph(base_path: str):
         for algorithm in ALGORITHM:
             time_based_data_per_algo = []
             count_based_data_per_algo = []
-            for idx in range(0, 1):
+            for idx in range(0, RANGE):
                 path = os.path.join(base_path, f"{dataset}-{algorithm}-{idx}", "errorDir")
 
                 if not os.path.exists(path):
                     break
                 print(f"processing: {base_path} {os.path.basename(path)}")
 
-                time_based_data, count_based_data = process_plot_data(path)
+                time_based_data, count_based_data = process_plot_data(path,algorithm)
                 time_based_data_per_algo.append(time_based_data)
                 count_based_data_per_algo.append(count_based_data)
 
@@ -95,7 +97,8 @@ def generate_graph(base_path: str):
 
 
 def main():
-    path = sys.argv[1]
+    path = "/home/alena/source/growe/experiments_repro/"
+    # path = sys.argv[1]
     # generate_cov_table(path)
     generate_graph(path)
 
