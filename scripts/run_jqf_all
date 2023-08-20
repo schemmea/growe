@@ -7,28 +7,25 @@ fi
 
 id1=$1
 id2=$2
-time=$((2*60))
+time=$((1*60*60))
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 for id in $(seq $id1 $id2); do
 
-  $SCRIPT_DIR/run_jqf "normal" $id
-  #sleep $time #if running with screen
-  sleep 10
+  screen -S "normal-$id" -dm -t "normal-$id"
+  screen -S "normal-$id" -p "normal-$id" -X stuff "$SCRIPT_DIR/run_jqf \"normal\" $id^M"
 
-  $SCRIPT_DIR/run_jqf "base" $id -b
-  #sleep $time
-  sleep 10
+  screen -S "base-$id" -dm -t "base-$id"
+  screen -S "base-$id" -p "base-$id" -X stuff "$SCRIPT_DIR/run_jqf \"base\" $id -b^M"
 
+  screen -S "blind-$id" -dm -t "blind-$id"
+  screen -S "blind-$id" -p "blind-$id" -X stuff "$SCRIPT_DIR/run_jqf \"blind\" $id^M"
 
-  $SCRIPT_DIR/run_jqf "blind" $id
+  screen -S "baseblind-$id" -dm -t "baseblind-$id"
+  screen -S "baseblind-$id" -p "baseblind-$id" -X stuff "$SCRIPT_DIR/run_jqf \"baseblind\" $id -b^M"
 
-  #sleep $time
-  sleep 10
-
-  $SCRIPT_DIR/run_jqf "baseblind" $id -b
-  #sleep $time
+  sleep $time
   sleep 10
 
 done
