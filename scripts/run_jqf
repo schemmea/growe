@@ -59,9 +59,11 @@ function executeTest() {
   OPTS="\"$JVM_OPTS -Djqf.ei.TOTALLY_RANDOM=true -Djqf.ei.DISABLE_SAVE_NEW_COUNTS=true\""
 
   if [[ $1 == *"blind"* ]]; then
-    /usr/bin/env bash -c "JVM_OPTS=$OPTS timeout $timeouts $DRIVER_PATH --illegal-access=permit -Xmx8G -jar $JAR_PATH -d $DURATIONSECONDS -i $ITERATIONS ${@: 3} | tee -a $LOGFILE 2>/dev/null"
+    /usr/bin/env bash -c "JVM_OPTS=$OPTS $DRIVER_PATH --illegal-access=permit -Xmx8G -jar $JAR_PATH -d $DURATIONSECONDS -i $ITERATIONS ${@: 3} | tee -a $LOGFILE 2>/dev/null"
+    #/usr/bin/env bash -c "JVM_OPTS=$OPTS timeout $timeouts $DRIVER_PATH --illegal-access=permit -Xmx8G -jar $JAR_PATH -d $DURATIONSECONDS -i $ITERATIONS ${@: 3} | tee -a $LOGFILE 2>/dev/null"
   else
-    /usr/bin/env bash -c "timeout $timeouts $DRIVER_PATH --illegal-access=permit -Xmx8G -jar $JAR_PATH -d $DURATIONSECONDS -i $ITERATIONS ${@: 3} | tee -a $LOGFILE 2>/dev/null"
+    /usr/bin/env bash -c "$DRIVER_PATH --illegal-access=permit -Xmx8G -jar $JAR_PATH -d $DURATIONSECONDS -i $ITERATIONS ${@: 3} | tee -a $LOGFILE 2>/dev/null"
+    #/usr/bin/env bash -c "timeout $timeouts $DRIVER_PATH --illegal-access=permit -Xmx8G -jar $JAR_PATH -d $DURATIONSECONDS -i $ITERATIONS ${@: 3} | tee -a $LOGFILE 2>/dev/null"
   fi
 
 }

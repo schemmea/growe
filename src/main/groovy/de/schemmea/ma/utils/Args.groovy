@@ -53,6 +53,14 @@ class Args {
         this.reproDir = reproDir
     }
 
+    boolean getDebug() {
+        return debug
+    }
+
+    void setDebug(boolean debug) {
+        this.debug = debug
+    }
+
     @Parameter(names = ["--duration", "-d"], description = "How long should we run in maximum")
     private int durationInSeconds = 3600;
 
@@ -72,8 +80,13 @@ class Args {
     @Parameter(names = ["--guidance", "-g"], description = "Use zest, ei, repro guidance")
     private String guidance = "zest";
 
+
     @Parameter(names = ["--reproDir", "-r"], description = "path to jqfs errorDir/corpus")
     private String reproDir = "";
+
+
+    @Parameter(names = ["debug"], description = "debug")
+    private boolean debug = false;
 
 
 }

@@ -47,9 +47,10 @@
 <filechannel2> ::= "Channel.fromFilePairs" <open> <quote> <data> <slash> <asterisk> <curlyopen> 1 <comma> 2 <curlyclose> <asterisk> <dot> <filetype> <quote> <close>
 <data> ::= "data"
 <filetype> ::= "txt" | "fa" | "fq" | "fastq" | "csv"
-<branchedchannel> ::= <channel> <branchtotwo>
+<branchedchannel> ::= <channel> <multimap>
 <setchannelnameone> ::= ".set" <curlyopen> <channelnameone> <curlyclose>
 <setchannelnametwo> ::= ".set" <curlyopen> <channelnametwo> <curlyclose>
+<multimap> ::= ".multiMap { it -> one: two: it }"
 <branchtotwo> ::= ".branch " <curlyopen> <newline> <branchone> <branchtwo>  <curlyclose>
 <branchone> ::= "one" <colon> <booleanexpression> <newline>
 <branchtwo> ::= "two" <colon> <booleanexpression> <newline>

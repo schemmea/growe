@@ -72,12 +72,12 @@ public class NfTest {
 
 
     @Fuzz
-    public void testTest(@From(WorkflowFileGenerator.class) File inputFile) {
+    public void testTest() {
         NfTest.setIteration(NfTest.getIteration() + 1); //for java debugging
         println Configuration.newline + "ITERATION " + NfTest.iteration + Configuration.newline
 
         try {
-            String filename = inputFile.getAbsoluteFile();
+            String filename = "/home/alena/source/growe/src/main/resources/test/test.nf";
             String[] orig_args2 = new String[]{"run", filename};
             def args2 = [filename]
 
