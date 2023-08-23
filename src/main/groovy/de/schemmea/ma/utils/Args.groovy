@@ -85,7 +85,7 @@ class Args {
     private String reproDir = "";
 
 
-    @Parameter(names = ["debug"], description = "debug")
+    @Parameter(names = ["-debug"], description = "debug")
     private boolean debug = false;
 
 

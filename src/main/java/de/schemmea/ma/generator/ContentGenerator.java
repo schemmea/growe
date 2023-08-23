@@ -22,8 +22,8 @@ import java.util.stream.Collectors;
 
 public class ContentGenerator extends Generator<String> {
     private static final int generateNumber = 1;
-    private static final int depth = 4;
-    private static final int max = 4;
+    private static final int depth = 10;
+    private static final int max = 10;
     private static final int min = 1;
 
     List<String> scripts;
@@ -42,8 +42,6 @@ public class ContentGenerator extends Generator<String> {
 
     public ContentGenerator() throws IOException {
         super(String.class);
-        System.out.println("Generator - ctor");
-        System.out.println("Working Directory = " + System.getProperty("user.dir"));
 
         scripts = loadScriptFiles();
         InputStream bnfFile = new FileResourcesUtils().getResourceFileAsStream("/nextflow/bnfs/nextflow.bnf");
@@ -55,8 +53,6 @@ public class ContentGenerator extends Generator<String> {
     }
 
     public String generate(SourceOfRandomness sourceOfRandomness, GenerationStatus generationStatus) {
-
-        System.out.println("\nGenerator - generate");
 
         try {
             GeneratorVisitor extractor = new GeneratorVisitor(generateNumber, depth, min, max, true, sourceOfRandomness);

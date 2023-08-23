@@ -4,5 +4,5 @@
   for ((i=0; i<4; i++))
   do
       echo "Running Processes - Iteration \$i"
-      ps aux | grep "$variable" &&
+      ps aux | grep "$variable"
   done

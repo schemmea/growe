@@ -31,7 +31,8 @@ public class GeneratorVisitor extends bnfBaseVisitor {
     private final Stack<String> prodHist = new Stack<>();
 
     private SourceOfRandomness sourceOfRandomness;
-    private int choicesMade = 0;
+    private Map<String, Integer> choicesMade;
+    private Map<String, Integer> shuffled;
 
     /////////////////////////////// Constructors \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -45,6 +46,8 @@ public class GeneratorVisitor extends bnfBaseVisitor {
         this.maxSize = max;
         this.useMinimalGenerator = useMinimalGenerator;
         this.sourceOfRandomness = sourceOfRandomness;
+        this.choicesMade = new HashMap<>();
+        this.shuffled = new HashMap<>();
     }
 
     ////////////////////////////////// Methods \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -110,17 +113,18 @@ public class GeneratorVisitor extends bnfBaseVisitor {
             } else {
                 int rand = 0;
                 int choices = rhs.alternatives().alternative().size();
-
-                try {
-                    rand = sourceOfRandomness.nextInt(choices);
-                } catch (Exception e) {
-                    // e.printStackTrace();
-                    System.out.println("~~~~~ End of Random ~~~~");
-                    System.out.println("~~~~~ Choices Made: " + choicesMade + " ~~~~");
-                    choicesMade++;
-                    return result;
+                if (choices > 1) {
+                    try {
+                        rand = sourceOfRandomness.nextInt(choices);
+                        int c = choicesMade.getOrDefault(lhs, 0);
+                        choicesMade.put(lhs, ++c);
+                    } catch (Exception e) {
+                        // e.printStackTrace();
+                        System.out.println("~~~~~ End of Random ~~~~~ Choices Made: " + choicesMade + " ~~~~");
+                        return result;
+                    }
                 }
-                choicesMade++;
+
                 result = visitAlternative(rhs.alternatives().alternative(rand));
                 if (!prodHist.empty()) prodHist.pop();
                 return result;
@@ -147,13 +151,16 @@ public class GeneratorVisitor extends bnfBaseVisitor {
     public List<String> visitAlternatives(bnfParser.AlternativesContext ctx) {
         List<String> altStrs = new LinkedList<>();
         List<bnfParser.AlternativeContext> acList = ctx.alternative();
-        try {
-            shuffle(acList, sourceOfRandomness);
-        } catch (Exception e) {
-            // e.printStackTrace();
-            System.out.println("~~~~~ End of Random in shuffle~~~~");
-            System.out.println("~~~~~ Choices Made: " + choicesMade + " ~~~~");
-
+        if (acList.size() > 1) {
+            try {
+                shuffle(acList, sourceOfRandomness);
+                int c = shuffled.getOrDefault(ctx.getText(), 0);
+                shuffled.put(ctx.getText(), ++c);
+            } catch (Exception e) {
+                // e.printStackTrace();
+                System.out.println("~~~~~ End of Random in shuffle~~~~");
+                System.out.println("~~~~~ Choices Made: " + choicesMade + " ~~~~");
+            }
         }
         for (bnfParser.AlternativeContext ac : acList) {
             altStrs.addAll(visitAlternative(ac));
@@ -204,8 +211,14 @@ public class GeneratorVisitor extends bnfBaseVisitor {
     //---------------------------- Utility Methods ------------------------------
 
     private String unquote(String s) {
-        if (s != null && ((s.startsWith("\"") && s.endsWith("\"")) || (s.startsWith("'") && s.endsWith("'")))) {
-            s = s.substring(1, s.length() - 1);
+        try {
+            if (s != null &&
+                    ((s.startsWith("\"") && s.endsWith("\"")) ||
+                            (s.startsWith("'") && s.endsWith("'")))) {
+                s = s.substring(1, s.length() - 1);
+            }
+        } catch (Exception e) {
+            System.out.println(s);
         }
         return s;
     }
@@ -286,7 +299,10 @@ public class GeneratorVisitor extends bnfBaseVisitor {
     //---------------------------- Property Methods -----------------------------
 
     public List<String> getTests() {
-        System.out.println("~~~~~ Tests: " + tests.size() + ", Choices Made: " + choicesMade + " ~~~~");
+        // int sum = choicesMade.values().stream().mapToInt(Integer::intValue).sum() +
+        //         shuffled.values().stream().mapToInt(Integer::intValue).sum();
+        // System.out.println("~~~~~ Choices Made: " + choicesMade +
+        //         ", \nShuffled: " + shuffled + "\nSum: " + sum +" ~~~~");
         return tests;
     }
 

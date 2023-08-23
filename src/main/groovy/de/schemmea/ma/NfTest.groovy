@@ -3,6 +3,7 @@ package de.schemmea.ma
 import com.pholser.junit.quickcheck.From
 import com.pholser.junit.quickcheck.generator.java.lang.StringGenerator
 import de.schemmea.ma.generator.Configuration
+import de.schemmea.ma.generator.ContentGenerator
 import de.schemmea.ma.generator.NextflowCommandGenerator
 import de.schemmea.ma.generator.WorkflowFileGenerator
 import edu.berkeley.cs.jqf.fuzz.Fuzz
@@ -72,7 +73,7 @@ public class NfTest {
 
 
     @Fuzz
-    public void testTest() {
+    public void debugTest() {
         NfTest.setIteration(NfTest.getIteration() + 1); //for java debugging
         println Configuration.newline + "ITERATION " + NfTest.iteration + Configuration.newline
 
@@ -95,6 +96,35 @@ public class NfTest {
         //nextflow clean ? <
     }
 
+
+    @Fuzz
+    public void testFile(@From(WorkflowFileGenerator) File inputFile) {
+        NfTest.setIteration(NfTest.getIteration() + 1); //for java debugging
+        println Configuration.newline + "ITERATION " + NfTest.iteration + Configuration.newline
+
+        try {
+            String filename = inputFile.absolutePath;
+            String[] orig_args2 = new String[]{"run", filename};
+            def args2 = [filename]
+
+            int status = new Launcher().command(orig_args2).run();
+            Assume.assumeTrue(status == 0)
+        } catch (Exception ex) {
+            println "EXCEPTION " + ex.getMessage()
+            Assume.assumeNoException(ex)
+        } catch (Error e) {
+            println "ERROR " + e.getMessage()
+            println e.getCause()
+            Assume.assumeNoException(e)
+
+        }
+        //nextflow clean ? <
+    }
+
+    @Fuzz
+    public void debugContent(@From(ContentGenerator) String inputFile) {
+       print inputFile
+    }
 
     @After
     public void cleanUp() {
