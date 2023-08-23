@@ -15,15 +15,26 @@ for id in $(seq $id1 $id2); do
 
   screen -S "normal-$id" -dm -t "normal-$id"
   screen -S "normal-$id" -p "normal-$id" -X stuff "$SCRIPT_DIR/run_jqf \"normal\" $id^M"
+    sleep $time
+    sleep 10
+  #$SCRIPT_DIR/run_jqf "normal" $id
 
   screen -S "base-$id" -dm -t "base-$id"
   screen -S "base-$id" -p "base-$id" -X stuff "$SCRIPT_DIR/run_jqf \"base\" $id -b^M"
+   sleep $time
+   sleep 10
+  #$SCRIPT_DIR/run_jqf "base" $id -b
 
   screen -S "blind-$id" -dm -t "blind-$id"
   screen -S "blind-$id" -p "blind-$id" -X stuff "$SCRIPT_DIR/run_jqf \"blind\" $id^M"
+   sleep $time
+   sleep 10
+    #$SCRIPT_DIR/run_jqf "blind" $id
 
   screen -S "baseblind-$id" -dm -t "baseblind-$id"
   screen -S "baseblind-$id" -p "baseblind-$id" -X stuff "$SCRIPT_DIR/run_jqf \"baseblind\" $id -b^M"
+
+  #SCRIPT_DIR/run_jqf "baseblind" $id -b
 
   sleep $time
   sleep 10
