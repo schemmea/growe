@@ -38,7 +38,7 @@ public class NfTest {
 
 
     @Fuzz
-    public void testNFCommand(@From(GroovyGenerator.class) String[] command) {
+    public void testNFCommand(@From(NextflowCommandGenerator.class) String[] command) {
         NfTest.setIteration(NfTest.getIteration() + 1); //for java debugging
         println Configuration.newline + "ITERATION " + NfTest.iteration + Configuration.newline
         println command
