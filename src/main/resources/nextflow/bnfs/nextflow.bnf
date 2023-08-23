@@ -19,12 +19,9 @@
 <script2> ::= 'script:' <nl> <quotes> <nl> 'scriptplaceholder2magicstring' <nl> <quotes>
 
 <workflowbody> ::= "{" <nl> <onevarchannel> <nl> <twovarchannel> <nl> "}"
-<onevarchannel> ::= <singlechannel> ".set{namedchannel1}" <nl> "namedchannel1 prozessscallmagicstring"
+<onevarchannel> ::= <channel> ".set{namedchannel1}" <nl> "namedchannel1 prozessscallmagicstring"
 <twovarchannel> ::= <branchedchannel> ".set{namedchannel2}" <nl> "namedchannel2 prozesss2callmagicstring"
 <channel> ::= "Channel.of" <open> <channellist> <close>
-<singlechannel> ::= <channel> | <filechannel>
-<filechannel> ::= 'Channel.fromPath' <open> '"' 'data/*.' <filetype> '"' <close>
-<filetype> ::= "txt" | "fa" | "fq" | "fastq" | "csv"
 <branchedchannel> ::= <channel> ".multiMap { it -> one: two: it }"
 
 <channellist> ::= <channelitem> "," <channelitem> | <channellist> "," <channelitem>
