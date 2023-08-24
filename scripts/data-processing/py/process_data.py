@@ -63,7 +63,7 @@ def generate_graph(base_path: str):
 
                 if not os.path.exists(path):
                     break
-                print(f"processing: {base_path} {os.path.basename(path)}")
+                print(f"processing: {path}")
 
                 time_based_data, count_based_data = process_plot_data(path,algorithm)
                 time_based_data_per_algo.append(time_based_data)
@@ -97,8 +97,8 @@ def generate_graph(base_path: str):
 
 
 def main():
-    path = "/home/alena/source/growe/experiments_repro/"
-    # path = sys.argv[1]
+    # path = "/home/alena/source/growe/experiments_repro/"
+    path = sys.argv[1]
     # generate_cov_table(path)
     generate_graph(path)
 
