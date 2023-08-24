@@ -9,8 +9,11 @@ import javassist.bytecode.stackmap.BasicBlock;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.time.Duration;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -28,6 +31,21 @@ public class FileAwareZestGuidance extends ZestGuidance {
     @Override
     public void handleResult(Result result, Throwable error) throws GuidanceException {
         super.handleResult(result, error);
+     //  long totalIntegers = this.savedInputs.stream()
+     //          .map(obj -> {
+     //              try {
+     //                  Field integerListField = obj.getClass().getDeclaredField("values");
+     //                  integerListField.setAccessible(true);
+     //                  return (List<Integer>) integerListField.get(obj);
+     //              } catch (Exception e) {
+     //                  return Collections.emptyList();
+     //              }
+     //          })
+     //          .flatMap(List::stream)
+     //          .count();
+
+     //  System.out.println("~~~~ handleresult: integers so far " + totalIntegers + " ~~~~");
+
         conditionallySynchronize(multiThreaded, () -> {
             if (listener != null) {
                 try {
