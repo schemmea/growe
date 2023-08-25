@@ -36,6 +36,30 @@ public class NfTest {
     public void setup() {
     }
 
+    @Fuzz
+    public void debugTest() {
+        NfTest.setIteration(NfTest.getIteration() + 1); //for java debugging
+        println Configuration.newline + "ITERATION " + NfTest.iteration + Configuration.newline
+
+        try {
+            String filename = "/home/alena/source/growe/src/main/resources/test/test.nf";
+            String[] orig_args2 = new String[]{"run", filename};
+            def args2 = [filename]
+
+            int status = new Launcher().command(orig_args2).run();
+            Assume.assumeTrue(status == 0)
+        } catch (Exception ex) {
+            println "EXCEPTION " + ex.getMessage()
+            Assume.assumeNoException(ex)
+        } catch (Error e) {
+            println "ERROR " + e.getMessage()
+            println e.getCause()
+            Assume.assumeNoException(e)
+
+        }
+        //nextflow clean ? <
+    }
+
 
     @Fuzz
     public void testNFCommand(@From(NextflowCommandGenerator.class) String[] command) {
@@ -71,29 +95,49 @@ public class NfTest {
 
     }
 
+    private void serializeInputStream(InputStream instream, String filename) throws IOException {
+        Path path = Paths.get(filename);
+        try (BufferedWriter out = Files.newBufferedWriter(path)) {
+            int b;
+            while ((b = instream.read()) != -1) {
+                out.write(b);
+            }
+        }
+    }
 
     @Fuzz
-    public void debugTest() {
-        NfTest.setIteration(NfTest.getIteration() + 1); //for java debugging
-        println Configuration.newline + "ITERATION " + NfTest.iteration + Configuration.newline
-
+    public void testAFL(InputStream inputStream) throws IOException {
+        /*
+         * install afl
+         * https://medium.com/@ayushpriya10/fuzzing-applications-with-american-fuzzy-lop-afl-54facc65d102
+         * https://www.dannyvanheumen.nl/post/java-fuzzing-with-afl-and-jqf/
+         */
+        String filename = getFileName();
         try {
-            String filename = "/home/alena/source/growe/src/main/resources/test/test.nf";
+            serializeInputStream(inputStream, filename);
+
+            List<String> args2 = List.of(filename);
             String[] orig_args2 = new String[]{"run", filename};
-            def args2 = [filename]
 
-            int status = new Launcher().command(orig_args2).run();
-            Assume.assumeTrue(status == 0)
-        } catch (Exception ex) {
-            println "EXCEPTION " + ex.getMessage()
-            Assume.assumeNoException(ex)
-        } catch (Error e) {
-            println "ERROR " + e.getMessage()
-            println e.getCause()
-            Assume.assumeNoException(e)
+            Launcher launcher = new Launcher().command(orig_args2);//.run();
 
+            CmdRun myRunner = new CmdRun();
+            myRunner.setArgs(args2);
+            myRunner.setLauncher(launcher);
+
+            myRunner.run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (Throwable t) {
+            Assume.assumeNoException(t);
+        } finally {
+
+            //instead of @After
+            Plugins.stop();
+            Files.delete(Paths.get(filename));
+            //nextflow clean -f does not work?!
+            //  int status = new Launcher().command(new String[]{"clean", "-f"}).run();
         }
-        //nextflow clean ? <
     }
 
 
@@ -123,7 +167,7 @@ public class NfTest {
 
     @Fuzz
     public void debugContent(@From(ContentGenerator) String inputFile) {
-       print inputFile
+        print inputFile
     }
 
     @After
