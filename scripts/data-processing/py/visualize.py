@@ -15,16 +15,19 @@ def process_plot_data(path: str, algorithm: str) -> pd.DataFrame:
     ps=os.path.join(path, 'plot_data')
     
     print(ps)
+    time_axis = "# unix_time"
+    threshhold=2000 #seconds	
     data = pd.read_csv(ps, sep=",", skipinitialspace=True,
                        converters={"valid_cov": p2f, "map_size": p2f})
-    data['# unix_time'] -= data['# unix_time'][0]
+    data[time_axis] -= data[time_axis][0]
     data['total_inputs'] = data['valid_inputs'] + data['invalid_inputs']
     data['total_inputs'] -= data["total_inputs"][0]
     x_axis = "total_inputs"
     # experiment_name = os.path.basename(path)
     #algorithm = "-".join(experiment_name.split('-')[1:-2])
 
-    x_axis = "# unix_time"
+    data = data[data[time_axis] < threshhold]
+    x_axis = time_axis
     time_based_data = data.copy().drop_duplicates(
         keep='first', subset=[x_axis])
     time_based_data = time_based_data.set_index(x_axis).reindex(

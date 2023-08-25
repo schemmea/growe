@@ -12,7 +12,7 @@ DATASET = ["nextflow"]
 
 ALGORITHM = ["normal", "blind", "base", "baseblind"]
 
-RANGE=10
+RANGE=20
 
 def generate_cov_table(base_path: str):
     cov_all_data = []
@@ -83,7 +83,7 @@ def generate_graph(base_path: str):
             count_based_plot_data.extend([d for d in time_based_data_per_algo])
         if not time_based_plot_data:
             continue
-        out_folder = os.path.join(base_path, "figs")
+        out_folder = os.path.join(base_path, "figs3")
         if not os.path.exists(out_folder):
             os.mkdir(out_folder)
         time_based_plot_data = pd.concat(time_based_plot_data, ignore_index=True, sort=False)

@@ -18,3 +18,5 @@
 /experiments_repro/
 /experiments.tar.gz
 /experiments_repro.tar.gz
+
+scripts/data-processing/py/__pycache__/
