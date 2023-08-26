@@ -17,7 +17,7 @@ dict="$(pwd)/build/resource/main/dictionaries/nextflow.dict"
 mkdir -p "$EXEC_DIR" || return 1
 cd "$EXEC_DIR" || return 1
 
-/usr/bin/env bash -c "$DRIVER_PATH -v -c $classpath de.schemmea.ma.NfTest testAFL -i $seeds -x $dict"
+/usr/bin/env bash -c "$DRIVER_PATH -v -c $classpath de.schemmea.ma.NfAFLTest testAFL -i $seeds -x $dict"
 
 #remove nextflow generated shit
 rm -r work/
