@@ -62,7 +62,7 @@ public class NfTest {
 
 
     @Fuzz
-    public void testNFCommand(@From(NextflowCommandGenerator.class) String[] command) {
+    public void testNFCommandTryCatch(@From(NextflowCommandGenerator.class) String[] command) {
         NfTest.setIteration(NfTest.getIteration() + 1); //for java debugging
         println Configuration.newline + "ITERATION " + NfTest.iteration + Configuration.newline
         println command
@@ -70,15 +70,7 @@ public class NfTest {
         try {
 
             if (command[0] == "run") {
-                //avoid try catch (Throwable) in Launcher
-                Launcher launcher = new Launcher().command(command)
-
-                CmdRun myRunner = new CmdRun();
-                myRunner.setArgs(command.tail().toList());
-                myRunner.setLauncher(launcher);
-
-                myRunner.run();
-
+                runNF(command)
             } else {
                 int status = new Launcher().command(command).run();
                 println "status " + status
@@ -92,54 +84,34 @@ public class NfTest {
         } finally {
 
         }
-
-    }
-
-    private void serializeInputStream(InputStream instream, String filename) throws IOException {
-        Path path = Paths.get(filename);
-        try (BufferedWriter out = Files.newBufferedWriter(path)) {
-            int b;
-            while ((b = instream.read()) != -1) {
-                out.write(b);
-            }
-        }
     }
 
     @Fuzz
-    public void testAFL(InputStream inputStream) throws IOException {
-        /*
-         * install afl
-         * https://medium.com/@ayushpriya10/fuzzing-applications-with-american-fuzzy-lop-afl-54facc65d102
-         * https://www.dannyvanheumen.nl/post/java-fuzzing-with-afl-and-jqf/
-         */
-        String filename = getFileName();
-        try {
-            serializeInputStream(inputStream, filename);
+    public void testNFCommand(@From(NextflowCommandGenerator.class) String[] command) {
+        NfTest.setIteration(NfTest.getIteration() + 1); //for java debugging
+        println Configuration.newline + "ITERATION " + NfTest.iteration + Configuration.newline
+        println command
 
-            List<String> args2 = List.of(filename);
-            String[] orig_args2 = new String[]{"run", filename};
-
-            Launcher launcher = new Launcher().command(orig_args2);//.run();
-
-            CmdRun myRunner = new CmdRun();
-            myRunner.setArgs(args2);
-            myRunner.setLauncher(launcher);
-
-            myRunner.run();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (Throwable t) {
-            Assume.assumeNoException(t);
-        } finally {
-
-            //instead of @After
-            Plugins.stop();
-            Files.delete(Paths.get(filename));
-            //nextflow clean -f does not work?!
-            //  int status = new Launcher().command(new String[]{"clean", "-f"}).run();
+        if (command[0] == "run") {
+            runNF(command)
+        } else {
+            int status = new Launcher().command(command).run();
+            println "status " + status
+            Assume.assumeTrue(status == 0)
         }
     }
 
+
+    private void runNF(String[] command) {
+        //avoid try catch (Throwable) in Launcher
+        Launcher launcher = new Launcher().command(command)
+
+        CmdRun myRunner = new CmdRun();
+        myRunner.setArgs(command.tail().toList());
+        myRunner.setLauncher(launcher);
+
+        myRunner.run();
+    }
 
     @Fuzz
     public void testFile(@From(WorkflowFileGenerator) File inputFile) {
@@ -172,12 +144,13 @@ public class NfTest {
 
     @After
     public void cleanUp() {
+        println("cleaning up $iteration")
         //plugins won't stop after sriptcompilation exception
-        Plugins.stop()
+         Plugins.stop()
 
         //nextflow clean -f
-        // this makes interesting things
-        // int status = new Launcher().command(new String[]{"clean","-f"}).run();
+        // this makes interesting things ?
+         int status = new Launcher().command(new String[]{"clean","-f"}).run();
     }
 
 }

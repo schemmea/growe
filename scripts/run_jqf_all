@@ -7,34 +7,34 @@ fi
 
 id1=$1
 id2=$2
-time=$((1*30*60))
+time=$((1*60*60))
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 for id in $(seq $id1 $id2); do
 
-  screen -S "normal-$id" -dm -t "normal-$id"
-  screen -S "normal-$id" -p "normal-$id" -X stuff "$SCRIPT_DIR/run_jqf \"normal\" $id^M"
+  screen -S "semantic-zest-$id" -dm -t "semantic-zest-$id"
+  screen -S "semantic-zest-$id" -p "semantic-zest-$id" -X stuff "$SCRIPT_DIR/run_jqf \"semantic-zest\" $id^M"
 #    sleep $time
  #   sleep 10
-  #$SCRIPT_DIR/run_jqf "normal" $id
+  #$SCRIPT_DIR/run_jqf "semantic-zest" $id
 
-  screen -S "base-$id" -dm -t "base-$id"
-  screen -S "base-$id" -p "base-$id" -X stuff "$SCRIPT_DIR/run_jqf \"base\" $id -b^M"
+  screen -S "syntactic-zest-$id" -dm -t "syntactic-zest-$id"
+  screen -S "syntactic-zest-$id" -p "syntactic-zest-$id" -X stuff "$SCRIPT_DIR/run_jqf \"syntactic-zest\" $id -b^M"
   # sleep $time
   # sleep 10
-  #$SCRIPT_DIR/run_jqf "base" $id -b
+  #$SCRIPT_DIR/run_jqf "syntactic-zest" $id -b
 
-  screen -S "blind-$id" -dm -t "blind-$id"
-  screen -S "blind-$id" -p "blind-$id" -X stuff "$SCRIPT_DIR/run_jqf \"blind\" $id^M"
+  screen -S "semantic-noguidance-$id" -dm -t "semantic-noguidance-$id"
+  screen -S "semantic-noguidance-$id" -p "semantic-noguidance-$id" -X stuff "$SCRIPT_DIR/run_jqf \"semantic-noguidance\" $id^M"
    #sleep $time
    #sleep 10
-    #$SCRIPT_DIR/run_jqf "blind" $id
+    #$SCRIPT_DIR/run_jqf "semantic-noguidance" $id
 
-  screen -S "baseblind-$id" -dm -t "baseblind-$id"
-  screen -S "baseblind-$id" -p "baseblind-$id" -X stuff "$SCRIPT_DIR/run_jqf \"baseblind\" $id -b^M"
+  screen -S "syntactic-noguidance-$id" -dm -t "syntactic-noguidance-$id"
+  screen -S "syntactic-noguidance-$id" -p "syntactic-noguidance-$id" -X stuff "$SCRIPT_DIR/run_jqf \"syntactic-noguidance\" $id -b^M"
 
-  #SCRIPT_DIR/run_jqf "baseblind" $id -b
+  #SCRIPT_DIR/run_jqf "syntactic-noguidance" $id -b
 
   sleep $time
   sleep 10
