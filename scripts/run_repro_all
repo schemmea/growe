@@ -9,22 +9,27 @@ id1=$1
 id2=$2
 
 time=$((1 * 20 * 60))
+timeouts=$((time + 30))
 
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 for id in $(seq $id1 $id2); do
 
+  echo"repro-semantic-zest-$id  timeout ${timeouts}s"
   screen -S "repro-semantic-zest-$id" -dm -t "repro-semantic-zest-$id"
-  screen -S "repro-semantic-zest-$id" -p "repro-semantic-zest-$id" -X stuff "$SCRIPT_DIR/run_repro \"nextflow-semantic-zest-${id}\"^M"
+  screen -S "repro-semantic-zest-$id" -p "repro-semantic-zest-$id" -X stuff "timeout ${timeouts}s $SCRIPT_DIR/run_repro \"nextflow-semantic-zest-${id}\"^M"
 
+  echo "repro-syntactic-zest-$id"
   screen -S "repro-syntactic-zest-$id" -dm -t "repro-syntactic-zest-$id"
-  screen -S "repro-syntactic-zest-$id" -p "repro-syntactic-zest-$id" -X stuff "$SCRIPT_DIR/run_repro \"nextflow-syntactic-zest-${id}\" -b^M"
+  screen -S "repro-syntactic-zest-$id" -p "repro-syntactic-zest-$id" -X stuff "timeout ${timeouts}s $SCRIPT_DIR/run_repro \"nextflow-syntactic-zest-${id}\" -b^M"
 
+  echo "repro-semantic-noguidance-$id"
   screen -S "repro-semantic-noguidance-$id" -dm -t "repro-semantic-noguidance-$id"
-  screen -S "repro-semantic-noguidance-$id" -p "repro-semantic-noguidance-$id" -X stuff "$SCRIPT_DIR/run_repro \"nextflow-semantic-noguidance-${id}\"^M"
+  screen -S "repro-semantic-noguidance-$id" -p "repro-semantic-noguidance-$id" -X stuff "timeout ${timeouts}s $SCRIPT_DIR/run_repro \"nextflow-semantic-noguidance-${id}\"^M"
 
+  echo "repro-syntactic-noguidance-$id"
   screen -S "repro-syntactic-noguidance-$id" -dm -t "repro-syntactic-noguidance-$id"
-  screen -S "repro-syntactic-noguidance-$id" -p "repro-syntactic-noguidance-$id" -X stuff "$SCRIPT_DIR/run_repro \"nextflow-syntactic-noguidance-${id}\" -b^M"
+  screen -S "repro-syntactic-noguidance-$id" -p "repro-syntactic-noguidance-$id" -X stuff "timeout ${timeouts}s $SCRIPT_DIR/run_repro \"nextflow-syntactic-noguidance-${id}\" -b^M"
 
   sleep $time
 
