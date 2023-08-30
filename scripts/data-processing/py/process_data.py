@@ -10,7 +10,7 @@ from pytablewriter import MarkdownTableWriter
 
 DATASET = ["nextflow"]
 
-ALGORITHM = ["afl", "normal", "blind", "base", "baseblind"]
+ALGORITHM = ["afl", "semantic-zest", "syntactic-zest", "semantic-noguidance", "syntactic-noguidance"]
 
 RANGE=7
 

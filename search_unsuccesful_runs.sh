@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base_names=("normal" "base" "blind" "base")
+base_names=("semantic-zest" "syntactic-zest" "semantic-noguidance" "syntactic-noguidance")
 search_file="===== DONE ====="  # Replace with the specific file you're looking for
 
 
