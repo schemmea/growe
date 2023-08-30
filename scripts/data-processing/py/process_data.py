@@ -23,8 +23,8 @@ def generate_cov_table(base_path: str):
         for algorithm in ALGORITHM:
             for idx in range(0, RANGE):
                 path = os.path.join(base_path, f"{dataset}-{algorithm}-{idx}", "errorDir")
-		if algorithm == "afl":
-		    path = os.path.join(base_path, f"{dataset}-{algorithm}-{idx}","fuzz-results")
+                if algorithm == "afl":
+                    path = os.path.join(base_path, f"{dataset}-{algorithm}-{idx}","fuzz-results")
                 if not os.path.exists(path):
                     continue
                 print(f"processing: {path}")
@@ -61,8 +61,8 @@ def generate_graph(base_path: str):
             count_based_data_per_algo = []
             for idx in range(0, RANGE):
                 path = os.path.join(base_path, f"{dataset}-{algorithm}-{idx}", "errorDir")
-		if algorithm == "afl":
-		    path = os.path.join(base_path, f"{dataset}-{algorithm}-{idx}","fuzz-results")
+                if algorithm == "afl":
+                    path = os.path.join(base_path, f"{dataset}-{algorithm}-{idx}","fuzz-results")
                 if not os.path.exists(path):
                     continue
                 print(f"processing: {path}")
