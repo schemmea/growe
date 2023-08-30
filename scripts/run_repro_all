@@ -15,19 +15,19 @@ SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 for id in $(seq $id1 $id2); do
 
-  echo"repro-semantic-zest-$id  timeout ${timeouts}s"
+  echo "repro-semantic-zest-$id  timeout ${timeouts}s"
   screen -S "repro-semantic-zest-$id" -dm -t "repro-semantic-zest-$id"
   screen -S "repro-semantic-zest-$id" -p "repro-semantic-zest-$id" -X stuff "timeout ${timeouts}s $SCRIPT_DIR/run_repro \"nextflow-semantic-zest-${id}\"^M"
 
-  echo "repro-syntactic-zest-$id"
+  echo "repro-syntactic-zest-$id timeout ${timeouts}s"
   screen -S "repro-syntactic-zest-$id" -dm -t "repro-syntactic-zest-$id"
   screen -S "repro-syntactic-zest-$id" -p "repro-syntactic-zest-$id" -X stuff "timeout ${timeouts}s $SCRIPT_DIR/run_repro \"nextflow-syntactic-zest-${id}\" -b^M"
 
-  echo "repro-semantic-noguidance-$id"
+  echo "repro-semantic-noguidance-$id timeout ${timeouts}s"
   screen -S "repro-semantic-noguidance-$id" -dm -t "repro-semantic-noguidance-$id"
   screen -S "repro-semantic-noguidance-$id" -p "repro-semantic-noguidance-$id" -X stuff "timeout ${timeouts}s $SCRIPT_DIR/run_repro \"nextflow-semantic-noguidance-${id}\"^M"
 
-  echo "repro-syntactic-noguidance-$id"
+  echo "repro-syntactic-noguidance-$id timeout ${timeouts}s"
   screen -S "repro-syntactic-noguidance-$id" -dm -t "repro-syntactic-noguidance-$id"
   screen -S "repro-syntactic-noguidance-$id" -p "repro-syntactic-noguidance-$id" -X stuff "timeout ${timeouts}s $SCRIPT_DIR/run_repro \"nextflow-syntactic-noguidance-${id}\" -b^M"
 
