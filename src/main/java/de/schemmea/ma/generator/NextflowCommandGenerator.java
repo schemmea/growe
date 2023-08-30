@@ -39,10 +39,11 @@ public class NextflowCommandGenerator extends Generator<String[]> {
 
         switch (command) {
             case "run":
+                String file = baseGenerator.generate(sourceOfRandomness, generationStatus).getAbsolutePath();
                 if (sourceOfRandomness.nextBoolean()) {
-                    return new String[]{command, baseGenerator.generate(sourceOfRandomness, generationStatus).getAbsolutePath(), sourceOfRandomness.choose(runOptions)};
+                    return new String[]{command, file, sourceOfRandomness.choose(runOptions), "-cache", "false"};
                 } else {
-                    return new String[]{command, baseGenerator.generate(sourceOfRandomness, generationStatus).getAbsolutePath()};
+                    return new String[]{command, file, "-cache" , "false"};
                 }
             case "secrets":
                 String option = sourceOfRandomness.choose(secretsOptions);

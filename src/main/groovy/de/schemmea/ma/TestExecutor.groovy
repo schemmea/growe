@@ -10,6 +10,7 @@ import edu.berkeley.cs.jqf.fuzz.guidance.Guidance
 import edu.berkeley.cs.jqf.fuzz.guidance.Result
 import edu.berkeley.cs.jqf.fuzz.junit.*
 import edu.berkeley.cs.jqf.fuzz.repro.ReproGuidance
+import groovy.io.FileType
 import org.apache.commons.lang.StringUtils
 
 import java.nio.file.Paths
@@ -27,8 +28,8 @@ class TestExecutor {
 
         var commander = new JCommander(ARGS, args)
 
-        String testname = "testNFCommand"//"testNFCommand" //"testMini"
-        Class testclass = NfTest.class
+        String testname = "testAFL"//"testNFCommand" //"testMini"
+        Class testclass = NfAFLTest.class
 
         String errorDir = Configuration.ERROR_DIR;
 
@@ -41,12 +42,15 @@ class TestExecutor {
         new FileResourcesUtils().copyFilesToFolder(Configuration.DATA_SOURCE_PATH, Configuration.OUTPUT_DATA_PATH);
 
         if (ARGS.guidance == "repro") {
-            File[] testInputFiles = new File(ARGS.reproDir).listFiles().sort();
+            def testInputFiles = []
+            new File(ARGS.reproDir).eachFile FileType.FILES, {
+                testInputFiles << it
+            }
 
             String traceDirName = System.getProperty("jqf.repro.traceDir");
             File traceDir = traceDirName != null ? new File(traceDirName) : null;
 
-            guidance = new ReproGuidance(testInputFiles, traceDir)
+            guidance = new ReproGuidance(testInputFiles as File[], traceDir)
 
             println "Repro $ARGS.reproDir"
 
