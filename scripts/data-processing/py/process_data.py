@@ -10,9 +10,9 @@ from pytablewriter import MarkdownTableWriter
 
 DATASET = ["nextflow"]
 
-ALGORITHM = ["normal", "blind", "base", "baseblind"]
+ALGORITHM = ["afl", "normal", "blind", "base", "baseblind"]
 
-RANGE=20
+RANGE=36
 
 def generate_cov_table(base_path: str):
     cov_all_data = []
@@ -23,10 +23,11 @@ def generate_cov_table(base_path: str):
         for algorithm in ALGORITHM:
             for idx in range(0, RANGE):
                 path = os.path.join(base_path, f"{dataset}-{algorithm}-{idx}", "errorDir")
+		if algorithm == "afl":
+		    path = os.path.join(base_path, f"{dataset}-{algorithm}-{idx}","fuzz-results")
                 if not os.path.exists(path):
-                    break
+                    continue
                 print(f"processing: {path}")
-
 
                 cov_all = process_cov_data(os.path.join(path, "cov-all.log"))
                 cov_valid = process_cov_data(os.path.join(path, "cov-valid.log"))
@@ -60,9 +61,10 @@ def generate_graph(base_path: str):
             count_based_data_per_algo = []
             for idx in range(0, RANGE):
                 path = os.path.join(base_path, f"{dataset}-{algorithm}-{idx}", "errorDir")
-
+		if algorithm == "afl":
+		    path = os.path.join(base_path, f"{dataset}-{algorithm}-{idx}","fuzz-results")
                 if not os.path.exists(path):
-                    break
+                    continue
                 print(f"processing: {path}")
 
                 time_based_data, count_based_data = process_plot_data(path,algorithm)
