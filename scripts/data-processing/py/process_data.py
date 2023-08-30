@@ -67,9 +67,10 @@ def generate_graph(base_path: str):
                     continue
                 print(f"processing: {path}")
 
-                time_based_data, count_based_data = process_plot_data(path,algorithm)
-                time_based_data_per_algo.append(time_based_data)
-                count_based_data_per_algo.append(count_based_data)
+                if not algorithm == "afl":
+                    time_based_data, count_based_data = process_plot_data(path,algorithm)
+                    time_based_data_per_algo.append(time_based_data)
+                    count_based_data_per_algo.append(count_based_data)
 
                 cov_all = process_cov_data(os.path.join(path, "cov-all.log"))
                 cov_valid = process_cov_data(os.path.join(path, "cov-valid.log"))
