@@ -12,7 +12,7 @@ DATASET = ["nextflow"]
 
 ALGORITHM = ["afl", "normal", "blind", "base", "baseblind"]
 
-RANGE=36
+RANGE=7
 
 def generate_cov_table(base_path: str):
     cov_all_data = []
@@ -47,7 +47,7 @@ def generate_cov_table(base_path: str):
     )
     writer.write_table()
 
-def generate_graph(base_path: str):
+def generate_graph(base_path: str, outdirname: str):
     for dataset in DATASET:
         time_based_plot_data = []
         count_based_plot_data = []
@@ -86,7 +86,8 @@ def generate_graph(base_path: str):
             count_based_plot_data.extend([d for d in time_based_data_per_algo])
         if not time_based_plot_data:
             continue
-        out_folder = os.path.join(base_path, "figs3")
+        out_folder = os.path.join(base_path, outdirname)
+        print(out_folder)
         if not os.path.exists(out_folder):
             os.mkdir(out_folder)
         time_based_plot_data = pd.concat(time_based_plot_data, ignore_index=True, sort=False)
@@ -102,8 +103,11 @@ def generate_graph(base_path: str):
 def main():
     # path = "/home/alena/source/growe/experiments_repro/"
     path = sys.argv[1]
+    outdirname="figs"
+    if len(sys.argv) >= 3:
+        outdirname = sys.argv[2]
     # generate_cov_table(path)
-    generate_graph(path)
+    generate_graph(path, outdirname)
 
 if __name__ == "__main__":
     main()

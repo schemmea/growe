@@ -16,7 +16,7 @@ def process_plot_data(path: str, algorithm: str) -> pd.DataFrame:
     
     print(ps)
     time_axis = "# unix_time"
-    threshhold=2000 #seconds	
+    threshhold=3600 #seconds	
     if algorithm == "afl2":
         data = pd.read_csv(ps, sep=",", skipinitialspace=True,
                        converters={"valid_cov": p2f, "map_size": p2f})
@@ -54,8 +54,8 @@ def process_cov_data(path: str) -> List[str]:
 
 def generate_plot_data_base(path: str, data: pd.DataFrame, x_axis: str, y_axis: str, step=1):
     print(x_axis, y_axis)
-    axis = sns.lineplot(x=x_axis, y=y_axis, hue='algorithm', errorbar=("sd", 95),
-                        hue_order=sorted(data['algorithm'].unique()), data=data)
+    axis = sns.lineplot(x=x_axis, y=y_axis, hue='algorithm', errorbar="se", hue_order=sorted(data['algorithm'].unique()), data=data)
+    # axis = sns.lineplot(x=x_axis, y=y_axis, hue='algorithm', hue_order=sorted(data['algorithm'].unique()), data=data)    
     fig = axis.get_figure()
     fig.savefig(path)
     fig.clf()
