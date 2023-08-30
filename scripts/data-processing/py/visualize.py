@@ -18,10 +18,10 @@ def process_plot_data(path: str, algorithm: str) -> pd.DataFrame:
     time_axis = "# unix_time"
     threshhold=2000 #seconds	
     if algorithm == "afl2":
-        data = pd.read_csv(ps, sep=";", skipinitialspace=True,
+        data = pd.read_csv(ps, sep=",", skipinitialspace=True,
                        converters={"valid_cov": p2f, "map_size": p2f})
     else:
-        data = pd.read_csv(ps, sep=";", skipinitialspace=True)
+        data = pd.read_csv(ps, sep=",", skipinitialspace=True)
     data[time_axis] -= data[time_axis][0]
     data['total_inputs'] = data['valid_inputs'] + data['invalid_inputs']
     data['total_inputs'] -= data["total_inputs"][0]
