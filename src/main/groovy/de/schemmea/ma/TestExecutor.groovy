@@ -28,8 +28,8 @@ class TestExecutor {
 
         var commander = new JCommander(ARGS, args)
 
-        String testname = "testAFL"//"testNFCommand" //"testMini"
-        Class testclass = NfAFLTest.class
+        String testname = "testNFCommand"//"testNFCommand" //"testMini"
+        Class testclass = NfTest.class
 
         String errorDir = Configuration.ERROR_DIR;
 
