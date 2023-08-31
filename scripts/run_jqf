@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
-parentdir="$(dirname "$(pwd)")"
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-DRIVER_PATH="$parentdir/JQF/scripts/jqf-driver.sh"
-JAR_PATH="$(pwd)/build/libs/growe-1.0-SNAPSHOT-all.jar"
+parentdir="$(dirname "$SCRIPT_DIR")"
+sourcedir="$(dirname "$parentdir")"
+
+DRIVER_PATH="$sourcedir/JQF/scripts/jqf-driver.sh"
+JAR_PATH="$parentdir/build/libs/growe-1.0-SNAPSHOT-all.jar"
 
 LOGFILE="./executor.log"
 LOGFILE="./executor.log"
