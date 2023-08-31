@@ -8,7 +8,7 @@ sourcedir="$(dirname "$parentdir")"
 
 
 DRIVER_PATH="$sourcedir/JQF/scripts/jqf-driver.sh"
-JAR_PATH="$parentdir/build/libs/growe_afl-1.0-SNAPSHOT-all.jar"
+JAR_PATH="$parentdir/build/libs/growe-1.0-SNAPSHOT-all.jar"
 
 function log() {
   echo "$1" | tee -a "$LOGFILE"
