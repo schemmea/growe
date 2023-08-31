@@ -19,6 +19,7 @@
 /experiments_repro/
 /experiments.tar.gz
 /experiments_repro.tar.gz
+exp*
 
 scripts/data-processing/py/__pycache__/
 figs*
