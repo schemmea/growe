@@ -35,6 +35,7 @@ public class NfTest {
 
     @Before
     public void setup() {
+        Plugins.stop()
     }
 
     @Fuzz
@@ -143,15 +144,14 @@ public class NfTest {
         print inputFile
     }
 
-    @After
     public void cleanUp() {
         println("cleaning up $iteration")
         //plugins won't stop after sriptcompilation exception
-         Plugins.stop()
+//         Plugins.stop()
 
         //nextflow clean -f
-        // this makes interesting things ?
-         int status = new Launcher().command(new String[]{"clean","-f"}).run();
+        // this makes interesting things in syntactic?
+        // int status = new Launcher().command(new String[]{"clean","-f"}).run();
     }
 
 }

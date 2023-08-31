@@ -4,8 +4,7 @@
 <processes> ::= <process>  |  <process>  <newline> <processes>
 <magicstring> ::= "script1" | "script2.sh" | "script3" | "script4.txt" | "script5"
 
-<process> ::= "process " <identifier> "{" <newline> <processbody> <newline> "}" <newline>
-<processbody> ::=  <input> <output> <script>
+<process> ::= "process " <identifier> "{" <newline> "debug true" <newline> <input> <output> <script> <newline> "}" <newline>
 
 <iotype> ::=  "val" |  "tuple"
 <input> ::= "input:" <newline> <iotype>  " variable" <newline>
