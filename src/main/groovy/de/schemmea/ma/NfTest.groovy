@@ -2,6 +2,7 @@ package de.schemmea.ma
 
 import com.pholser.junit.quickcheck.From
 import com.pholser.junit.quickcheck.generator.java.lang.StringGenerator
+import de.schemmea.ma.generator.BaselineGenerator
 import de.schemmea.ma.generator.Configuration
 import de.schemmea.ma.generator.ContentGenerator
 import de.schemmea.ma.generator.NextflowCommandGenerator
@@ -114,7 +115,7 @@ public class NfTest {
     }
 
     @Fuzz
-    public void testFile(@From(WorkflowFileGenerator) File inputFile) {
+    public void testFile(@From(BaselineGenerator.class) File inputFile) {
         NfTest.setIteration(NfTest.getIteration() + 1); //for java debugging
         println Configuration.newline + "ITERATION " + NfTest.iteration + Configuration.newline
 

@@ -56,10 +56,10 @@ public class NextflowCommandGenerator extends Generator<String[]> {
             case "pull":
             case "drop":
             case "console":
-            case "log":
             case "clean":
             case "view":
                 return new String[]{command, sourceOfRandomness.nextChar('a', 'z') + ""};
+            case "log":
             case "list":
             case "info":
             case "help":

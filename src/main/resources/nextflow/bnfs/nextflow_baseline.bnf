@@ -1,32 +1,29 @@
-<nextflow> ::= <shebang> <newline> <processes> <workflow>
+<nextflow> ::= "#!/usr/bin/env nextflow" <newline> <processes> <workflow>
+<newline> ::= "\n"
 
-<shebang> ::= "#!/usr/bin/env nextflow"
+<processes> ::= <process>  |  <process>  <newline> <processes>
 <magicstring> ::= "script1" | "script2.sh" | "script3" | "script4.txt" | "script5"
 
-<processes> ::= <process> | <processes> <process>
-<process> ::= <processheader> "{" <newline> <processbody> <newline> "}" <newline>
-
-<processheader> ::= "process " <identifier>
+<process> ::= "process " <identifier> "{" <newline> <processbody> <newline> "}" <newline>
 <processbody> ::=  <input> <output> <script>
-<input> ::= "input:" <newline> <inputvar> <newline>
-<inputvar> ::= <iotype>  " variable" <newline>
+
 <iotype> ::=  "val" |  "tuple"
-<output> ::= "output:" <newline> <outputvar> <newline>
-<outputvar> ::= <iotype> " variable" <newline>
-<script> ::= "script:" <newline> "template '" <magicstring> "'"
+<input> ::= "input:" <newline> <iotype>  " variable" <newline>
+<output> ::= "output:" <newline> <iotype> " variable" <newline>
 
-<processcalls> ::= <identifier> " | " <identifier> | <identifier> " | " <processcalls>
+<script> ::= "script:" <newline> "template " <tick>  <magicstring> <tick>
 
+<processcalls> ::= <identifier> <pipe> <identifier> | <identifier> <pipe> <processcalls>
 <workflow> ::= " workflow " <workflowbody>
+<workflowbody> ::= "{" <newline> <channel> <pipe> <processcalls> <newline> "}"
+
 <channel> ::= "Channel.of" <open> <channellist> <close>
-<channellist> ::= <channelitem> | <channellist> "," <channelitem>
+<channellist> ::= <channelitem> "," <channelitem> | <channelitem> "," <channellist>
 <channelitem> ::= <uint> | '"' <identifier> '"'
-<workflowbody> ::="{" <newline> <channel> " | " <processcalls> <newline> "}"
 
 <identifier> ::= a|b|c|d|e
 <uint> ::= 1|2|3|4|5|6|7|8|9
 <open> ::= "("
 <close> ::= ")"
-<newline> ::= " \n "
-
-
+<pipe> ::= "|"
+<tick> ::= "'"

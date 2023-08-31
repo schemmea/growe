@@ -106,28 +106,33 @@ public class GeneratorVisitor extends bnfBaseVisitor {
             String lhs = ctx.id().getText();
             prodHist.push(lhs);
             bnfParser.RhsContext rhs = productionsMap.get(lhs);
-            if (rhs.alternatives() == null ||
-                    rhs.alternatives().alternative().stream().allMatch(ac -> isTerminalContext(ac.element())) ||
-                    prodHist.size() < productionsMap.size()) {
-                return visitRhs(productionsMap.get(lhs));
-            } else {
-                int rand = 0;
-                int choices = rhs.alternatives().alternative().size();
-                if (choices > 1) {
-                    try {
-                        rand = sourceOfRandomness.nextInt(choices);
-                        int c = choicesMade.getOrDefault(lhs, 0);
-                        choicesMade.put(lhs, ++c);
-                    } catch (Exception e) {
-                        // e.printStackTrace();
-                        System.out.println("~~~~~ End of Random ~~~~~ Choices Made: " + choicesMade + " ~~~~");
-                        return result;
-                    }
-                }
+            try {
 
-                result = visitAlternative(rhs.alternatives().alternative(rand));
-                if (!prodHist.empty()) prodHist.pop();
-                return result;
+                if (rhs.alternatives() == null ||
+                        rhs.alternatives().alternative().stream().allMatch(ac -> isTerminalContext(ac.element())) ||
+                        prodHist.size() < productionsMap.size()) {
+                    return visitRhs(productionsMap.get(lhs));
+                } else {
+                    int rand = 0;
+                    int choices = rhs.alternatives().alternative().size();
+                    if (choices > 1) {
+                        try {
+                            rand = sourceOfRandomness.nextInt(choices);
+                            int c = choicesMade.getOrDefault(lhs, 0);
+                            choicesMade.put(lhs, ++c);
+                        } catch (Exception e) {
+                            // e.printStackTrace();
+                            System.out.println("~~~~~ End of Random ~~~~~ Choices Made: " + choicesMade + " ~~~~");
+                            return result;
+                        }
+                    }
+
+                    result = visitAlternative(rhs.alternatives().alternative(rand));
+                    if (!prodHist.empty()) prodHist.pop();
+                    return result;
+                }
+            } catch (Exception e) {
+                System.out.println(rhs.getText() + "\n" + e.getCause().toString());
             }
         }
         return result;

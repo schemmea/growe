@@ -29,9 +29,6 @@ public class BaselineGenerator extends Generator<File> {
     public BaselineGenerator() throws IOException {
         super(File.class);
 
-        System.out.println("Generator - ctor");
-        System.out.println("Working Directory = " + System.getProperty("user.dir"));
-
         InputStream bnfFile = new FileResourcesUtils().getResourceFileAsStream("/nextflow/bnfs/nextflow_baseline.bnf");
 
         Lexer lexer = new bnfLexer(new ANTLRInputStream(bnfFile));
