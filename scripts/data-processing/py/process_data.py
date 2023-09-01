@@ -120,7 +120,7 @@ def main():
         errorbarname = sys.argv[2]
         outdirname+=f"_{errorbarname}"        
     if len(sys.argv) >= 4:
-        reindexsteps = sys.argv[3]
+        reindexsteps = int(sys.argv[3])
         outdirname+=f"_{reindexsteps}steps"        
 
     # generate_cov_table(path)
