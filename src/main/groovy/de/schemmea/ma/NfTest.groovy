@@ -65,7 +65,7 @@ public class NfTest {
 
 
     @Fuzz
-    public void testNFCommandTryCatch(@From(NextflowCommandGenerator.class) String[] command) {
+    public void testNFCommandTryCatch(@From(GroovyWrapperGenerator.class) String[] command) {
         NfTest.setIteration(NfTest.getIteration() + 1); //for java debugging
         println Configuration.newline + "ITERATION " + NfTest.iteration + Configuration.newline
         println command
@@ -73,7 +73,14 @@ public class NfTest {
         try {
 
             if (command[0] == "run") {
-                runNF(command)
+//avoid try catch (Throwable) in Launcher
+                Launcher launcher = new Launcher().command(command)
+
+                CmdRun myRunner = new CmdRun();
+                myRunner.setArgs(command.tail().toList());
+                myRunner.setLauncher(launcher);
+
+                myRunner.run();
             } else {
                 int status = new Launcher().command(command).run();
                 println "status " + status
@@ -92,13 +99,20 @@ public class NfTest {
     }
 
     @Fuzz
-    public void testNFCommand(@From(NextflowCommandGenerator.class) String[] command) {
+    public void testNFCommand(@From(GroovyWrapperGenerator.class) String[] command) {
         NfTest.setIteration(NfTest.getIteration() + 1); //for java debugging
         println Configuration.newline + "ITERATION " + NfTest.iteration + Configuration.newline
         println command
 
         if (command[0] == "run") {
-            runNF(command)
+//avoid try catch (Throwable) in Launcher
+            Launcher launcher = new Launcher().command(command)
+
+            CmdRun myRunner = new CmdRun();
+            myRunner.setArgs(command.tail().toList());
+            myRunner.setLauncher(launcher);
+
+            myRunner.run();
         } else {
             int status = new Launcher().command(command).run();
             println "status " + status
@@ -106,17 +120,6 @@ public class NfTest {
         }
     }
 
-
-    private void runNF(String[] command) {
-        //avoid try catch (Throwable) in Launcher
-        Launcher launcher = new Launcher().command(command)
-
-        CmdRun myRunner = new CmdRun();
-        myRunner.setArgs(command.tail().toList());
-        myRunner.setLauncher(launcher);
-
-        myRunner.run();
-    }
 
     @Fuzz
     public void testFile(@From(BaselineGenerator.class) File inputFile) {
@@ -157,7 +160,7 @@ public class NfTest {
         }
         Global.cleanUp()
         //plugins won't stop after sriptcompilation exception
-         Plugins.stop()
+        Plugins.stop()
 
         //nextflow clean -f
         // this makes interesting things in syntactic?
