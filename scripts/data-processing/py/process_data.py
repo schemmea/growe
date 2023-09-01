@@ -29,10 +29,16 @@ def generate_cov_table(base_path: str):
                     continue
                 print(f"processing: {path}")
 
-                cov_all = process_cov_data(os.path.join(path, "cov-all.log"))
-                cov_valid = process_cov_data(os.path.join(path, "cov-valid.log"))
-                cov_all_algo_data.append(len(cov_all))
-                cov_valid_algo_data.append(len(cov_valid))
+                cov_all_path = os.path.join(path, "cov-all.log")
+                if os.path.exists(cov_all_path):
+                    cov_all = process_cov_data(cov_all_path)
+                    cov_all_algo_data.append(len(cov_all))
+                
+                cov_valid_path = os.path.join(path, "cov-valid.log")
+                if os.path.exists(cov_valid_path):
+                    cov_valid = process_cov_data(cov_valid_path)
+                    cov_valid_algo_data.append(len(cov_valid))
+        
         cov_all_data.append([dataset, *cov_all_algo_data])
         cov_valid_data.append([dataset, *cov_valid_algo_data])
     writer = MarkdownTableWriter(
@@ -67,20 +73,25 @@ def generate_graph(base_path: str, outdirname: str):
                     continue
                 print(f"processing: {path}")
 
+                # plot_data from jqf afl run differs from other 
                 if not algorithm == "afl":
                     time_based_data, count_based_data = process_plot_data(path,algorithm)
                     time_based_data_per_algo.append(time_based_data)
                     count_based_data_per_algo.append(count_based_data)
 
-                cov_all = process_cov_data(os.path.join(path, "cov-all.log"))
-                cov_valid = process_cov_data(os.path.join(path, "cov-valid.log"))
-
-                cov_data["algo"].append(algorithm)
-                cov_data["type"].append("all")
-                cov_data["value"].append(len(cov_all))
-                cov_data["algo"].append(algorithm)
-                cov_data["type"].append("valid")
-                cov_data["value"].append(len(cov_valid))
+                cov_all_path = os.path.join(path, "cov-all.log")
+                if os.path.exists(cov_all_path):
+                    cov_all = process_cov_data(cov_all_path)
+                    cov_data["algo"].append(algorithm)
+                    cov_data["type"].append("all")
+                    cov_data["value"].append(len(cov_all))
+                
+                cov_valid_path = os.path.join(path, "cov-valid.log")
+                if os.path.exists(cov_valid_path):
+                    cov_valid = process_cov_data(cov_valid_path)
+                    cov_data["algo"].append(algorithm)
+                    cov_data["type"].append("valid")
+                    cov_data["value"].append(len(cov_valid))
 
             time_based_plot_data.extend([d for d in time_based_data_per_algo])
             count_based_plot_data.extend([d for d in time_based_data_per_algo])
