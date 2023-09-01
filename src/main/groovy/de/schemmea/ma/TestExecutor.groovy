@@ -52,6 +52,8 @@ class TestExecutor {
 
             guidance = new ReproGuidance(testInputFiles as File[], traceDir)
 
+            testname = "testNFCommandTryCatch"
+
             println "Repro $ARGS.reproDir"
 
         } else {

@@ -9,6 +9,8 @@ import de.schemmea.ma.generator.NextflowCommandGenerator
 import de.schemmea.ma.generator.WorkflowFileGenerator
 import edu.berkeley.cs.jqf.fuzz.Fuzz
 import edu.berkeley.cs.jqf.fuzz.JQF
+import nextflow.Global
+import nextflow.Session
 import nextflow.cli.CmdRun
 import nextflow.cli.Launcher
 import nextflow.plugin.Plugins
@@ -33,9 +35,8 @@ public class NfTest {
 
     static void setIteration(int value) { iteration = value; }
 
-    @Before
     public void setup() {
-        Plugins.stop()
+        //    Plugins.stop()
     }
 
     @Fuzz
@@ -82,6 +83,8 @@ public class NfTest {
         } catch (IOException e) {
             throw new RuntimeException(e);
         } catch (Throwable t) {
+            def message = t.getMessage()
+            println "Aha. throwable $message"
             Assume.assumeNoException(t);
         } finally {
 
@@ -144,10 +147,17 @@ public class NfTest {
         print inputFile
     }
 
+    @After
     public void cleanUp() {
         println("cleaning up $iteration")
+        def sess = (Session) Global.getSession()
+        if (sess != null) {
+            sess.cleanup()
+            sess.destroy()
+        }
+        Global.cleanUp()
         //plugins won't stop after sriptcompilation exception
-//         Plugins.stop()
+         Plugins.stop()
 
         //nextflow clean -f
         // this makes interesting things in syntactic?
