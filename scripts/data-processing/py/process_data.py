@@ -105,11 +105,11 @@ def generate_graph(base_path: str, outdirname: str, errorbarname: str = 'se', re
         count_based_plot_data = pd.concat(count_based_plot_data, ignore_index=True, sort=False)
         generate_total_coverage_bar(os.path.join(out_folder, f"{dataset}-cov.pdf"), cov_data)
 
-        generate_total_inputs_over_time(            os.path.join(out_folder, f"{dataset}-total_inputs.pdf")   , errorbarname, time_based_plot_data)
-        generate_valid_coverage_over_time(          os.path.join(out_folder, f"{dataset}-valid-cov-time.pdf") , errorbarname, time_based_plot_data)
-        generate_all_coverage_over_time(            os.path.join(out_folder, f"{dataset}-all-cov-time.pdf")   , errorbarname, time_based_plot_data)
-        generate_valid_coverage_over_total_inputs(  os.path.join(out_folder, f"{dataset}-valid-cov-input.pdf"), errorbarname, count_based_plot_data)
-        generate_all_coverage_over_total_inputs(    os.path.join(out_folder, f"{dataset}-all-cov-input.pdf")  , errorbarname, count_based_plot_data)
+        generate_total_inputs_over_time(            os.path.join(out_folder, f"{dataset}-total_inputs.pdf")   , time_based_plot_data   , errorbarname)
+        generate_valid_coverage_over_time(          os.path.join(out_folder, f"{dataset}-valid-cov-time.pdf") , time_based_plot_data   , errorbarname)
+        generate_all_coverage_over_time(            os.path.join(out_folder, f"{dataset}-all-cov-time.pdf")   , time_based_plot_data   , errorbarname)
+        generate_valid_coverage_over_total_inputs(  os.path.join(out_folder, f"{dataset}-valid-cov-input.pdf"), count_based_plot_data  , errorbarname)
+        generate_all_coverage_over_total_inputs(    os.path.join(out_folder, f"{dataset}-all-cov-input.pdf")  , count_based_plot_data  , errorbarname)
 
 
 def main():
