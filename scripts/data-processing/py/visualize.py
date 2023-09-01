@@ -13,11 +13,10 @@ def p2f(value: str) -> float:
 
 def process_plot_data(path: str, algorithm: str, reindexsteps: int = 10) -> pd.DataFrame:
     ps=os.path.join(path, 'plot_data')
-    
     print(ps)
     time_axis = "# unix_time"
     threshhold=3600 #seconds	
-    if algorithm == "afl2":
+    if algorithm == "afl":
         data = pd.read_csv(ps, sep=",", skipinitialspace=True,
                        converters={"valid_cov": p2f, "map_size": p2f})
     else:

@@ -10,7 +10,7 @@ from pytablewriter import MarkdownTableWriter
 
 DATASET = ["nextflow"]
 
-ALGORITHM = ["afl", "semantic-zest", "syntactic-zest", "semantic-noguidance", "syntactic-noguidance"]
+ALGORITHM = ["semantic-zest", "syntactic-zest", "semantic-noguidance", "syntactic-noguidance","afl"]
 
 RANGE=7
 
@@ -74,7 +74,7 @@ def generate_graph(base_path: str, outdirname: str, errorbarname: str = 'se', re
                 print(f"processing: {path}")
 
                 # plot_data from jqf afl run differs from other 
-                if not algorithm == "afl":
+                if not algorithm == "afl" and os.path.exists(os.path.join(path,"plot_data")): 
                     time_based_data, count_based_data = process_plot_data(path,algorithm, reindexsteps)
                     time_based_data_per_algo.append(time_based_data)
                     count_based_data_per_algo.append(count_based_data)
@@ -113,16 +113,23 @@ def generate_graph(base_path: str, outdirname: str, errorbarname: str = 'se', re
 
 
 def main():
-    # path = "/home/alena/source/growe/experiments_repro/"
-    path = sys.argv[1]
-    outdirname=f"figs_{path}"
+    path = "c:\\Users\\Alena\\source\\repos\\growe\\exp5\\"
+    folder = "exp5"
+    errorbarname = 'se'
+    reindexsteps = 7 
+
+    if len(sys.argv) >= 3:
+        path = sys.argv[1] 
+        outdirname=f"figs_{path}" 
+    else: outdirname=f"figs_{folder}" 
     if len(sys.argv) >= 3:
         errorbarname = sys.argv[2]
-        outdirname+=f"_{errorbarname}"        
     if len(sys.argv) >= 4:
         reindexsteps = int(sys.argv[3])
-        outdirname+=f"_{reindexsteps}steps"        
 
+    outdirname+=f"_{reindexsteps}steps"        
+    outdirname+=f"_{errorbarname}"        
+    
     # generate_cov_table(path)
     generate_graph(path, outdirname, errorbarname, reindexsteps)
 
