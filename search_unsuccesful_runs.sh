@@ -3,10 +3,11 @@
 base_names=("semantic-zest" "syntactic-zest" "semantic-noguidance" "syntactic-noguidance")
 search_file="===== DONE ====="  # Replace with the specific file you're looking for
 
+path=$1
 
 for base_name in "${base_names[@]}"; do
     for id in {0..14}; do
-        folder="nextflow-${base_name}-${id}"
+        folder="$path/nextflow-${base_name}-${id}"
         if [ -d "$folder" ]; then
             log_file="$folder/executor.log"  # Assuming the log file name is consistent
 
