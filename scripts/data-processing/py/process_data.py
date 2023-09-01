@@ -53,7 +53,7 @@ def generate_cov_table(base_path: str):
     )
     writer.write_table()
 
-def generate_graph(base_path: str, outdirname: str):
+def generate_graph(base_path: str, outdirname: str, errorbarname: str = 'se', reindexsteps: int = 10 ):
     for dataset in DATASET:
         time_based_plot_data = []
         count_based_plot_data = []
@@ -75,7 +75,7 @@ def generate_graph(base_path: str, outdirname: str):
 
                 # plot_data from jqf afl run differs from other 
                 if not algorithm == "afl":
-                    time_based_data, count_based_data = process_plot_data(path,algorithm)
+                    time_based_data, count_based_data = process_plot_data(path,algorithm, reindexsteps)
                     time_based_data_per_algo.append(time_based_data)
                     count_based_data_per_algo.append(count_based_data)
 
@@ -104,21 +104,27 @@ def generate_graph(base_path: str, outdirname: str):
         time_based_plot_data = pd.concat(time_based_plot_data, ignore_index=True, sort=False)
         count_based_plot_data = pd.concat(count_based_plot_data, ignore_index=True, sort=False)
         generate_total_coverage_bar(os.path.join(out_folder, f"{dataset}-cov.pdf"), cov_data)
-        generate_total_inputs_over_time(os.path.join(out_folder, f"{dataset}-total_inputs.pdf"), time_based_plot_data)
-        generate_valid_coverage_over_time(os.path.join(out_folder, f"{dataset}-valid-cov-time.pdf"), time_based_plot_data)
-        generate_all_coverage_over_time(os.path.join(out_folder, f"{dataset}-all-cov-time.pdf"), time_based_plot_data)
-        generate_valid_coverage_over_total_inputs(os.path.join(out_folder, f"{dataset}-valid-cov-input.pdf"), count_based_plot_data)
-        generate_all_coverage_over_total_inputs(os.path.join(out_folder, f"{dataset}-all-cov-input.pdf"), count_based_plot_data)
+
+        generate_total_inputs_over_time(            os.path.join(out_folder, f"{dataset}-total_inputs.pdf")   , errorbarname, time_based_plot_data)
+        generate_valid_coverage_over_time(          os.path.join(out_folder, f"{dataset}-valid-cov-time.pdf") , errorbarname, time_based_plot_data)
+        generate_all_coverage_over_time(            os.path.join(out_folder, f"{dataset}-all-cov-time.pdf")   , errorbarname, time_based_plot_data)
+        generate_valid_coverage_over_total_inputs(  os.path.join(out_folder, f"{dataset}-valid-cov-input.pdf"), errorbarname, count_based_plot_data)
+        generate_all_coverage_over_total_inputs(    os.path.join(out_folder, f"{dataset}-all-cov-input.pdf")  , errorbarname, count_based_plot_data)
 
 
 def main():
     # path = "/home/alena/source/growe/experiments_repro/"
     path = sys.argv[1]
-    outdirname="figs"
+    outdirname=f"figs_{path}"
     if len(sys.argv) >= 3:
-        outdirname = sys.argv[2]
+        errorbarname = sys.argv[2]
+        outdirname+=f"_{errorbarname}"        
+    if len(sys.argv) >= 4:
+        reindexsteps = sys.argv[3]
+        outdirname+=f"_{reindexsteps}steps"        
+
     # generate_cov_table(path)
-    generate_graph(path, outdirname)
+    generate_graph(path, outdirname, errorbarname, reindexsteps)
 
 if __name__ == "__main__":
     main()

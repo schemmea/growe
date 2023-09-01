@@ -11,7 +11,7 @@ def p2f(value: str) -> float:
     return float(value.strip('%'))
 
 
-def process_plot_data(path: str, algorithm: str) -> pd.DataFrame:
+def process_plot_data(path: str, algorithm: str, reindexsteps: int = 10) -> pd.DataFrame:
     ps=os.path.join(path, 'plot_data')
     
     print(ps)
@@ -34,7 +34,7 @@ def process_plot_data(path: str, algorithm: str) -> pd.DataFrame:
     time_based_data = data.copy().drop_duplicates(
         keep='first', subset=[x_axis])
     time_based_data = time_based_data.set_index(x_axis).reindex(
-       range(1, time_based_data[x_axis].max(), 10)).interpolate().reset_index()
+       range(1, time_based_data[x_axis].max(), reindexsteps)).interpolate().reset_index()
     time_based_data['algorithm'] = [algorithm] * time_based_data.shape[0]
 
 
@@ -42,7 +42,7 @@ def process_plot_data(path: str, algorithm: str) -> pd.DataFrame:
     count_based_data = data.copy().drop_duplicates(
         keep='first', subset=[x_axis])
     count_based_data = count_based_data.set_index(x_axis).reindex(
-       range(0, count_based_data[x_axis].max(), 10)).interpolate().reset_index()
+       range(0, count_based_data[x_axis].max(), reindexsteps)).interpolate().reset_index()
     count_based_data['algorithm'] = [algorithm] * count_based_data.shape[0]
 
 
@@ -52,28 +52,30 @@ def process_cov_data(path: str) -> List[str]:
     with open(path) as f:
         return f.readlines()
 
-def generate_plot_data_base(path: str, data: pd.DataFrame, x_axis: str, y_axis: str, step=1):
+def generate_plot_data_base(path: str, data: pd.DataFrame, x_axis: str, y_axis: str, errorbarname: str = 'se'):
     print(x_axis, y_axis)
-    axis = sns.lineplot(x=x_axis, y=y_axis, hue='algorithm', errorbar="se", hue_order=sorted(data['algorithm'].unique()), data=data)
-    # axis = sns.lineplot(x=x_axis, y=y_axis, hue='algorithm', hue_order=sorted(data['algorithm'].unique()), data=data)    
+    if errorbarname == 'se':
+        axis = sns.lineplot(x=x_axis, y=y_axis, hue='algorithm', errorbar="se", hue_order=sorted(data['algorithm'].unique()), data=data)
+    elif errorbarname == 'sd':
+        axis = sns.lineplot(x=x_axis, y=y_axis, hue='algorithm', errorbar=("sd",95), hue_order=sorted(data['algorithm'].unique()), data=data)    
     fig = axis.get_figure()
     fig.savefig(path)
     fig.clf()
 
-def generate_valid_coverage_over_time(path: str, data: pd.DataFrame, step=1):
-    generate_plot_data_base(path, data, "# unix_time", "valid_covered_probes", step)
+def generate_valid_coverage_over_time(path: str, data: pd.DataFrame,  errorbarname: str = 'se'):
+    generate_plot_data_base(path, data, "# unix_time", "valid_covered_probes", errorbarname)
 
-def generate_all_coverage_over_time(path: str, data: pd.DataFrame, step=1):
-    generate_plot_data_base(path, data, "# unix_time", "all_covered_probes", step)
+def generate_all_coverage_over_time(path: str, data: pd.DataFrame,  errorbarname: str = 'se'):
+    generate_plot_data_base(path, data, "# unix_time", "all_covered_probes", errorbarname)
 
-def generate_total_inputs_over_time(path: str, data: pd.DataFrame, step=1):
-    generate_plot_data_base(path, data, "# unix_time", "total_inputs", step)
+def generate_total_inputs_over_time(path: str, data: pd.DataFrame,  errorbarname: str = 'se'):
+    generate_plot_data_base(path, data, "# unix_time", "total_inputs", errorbarname)
 
-def generate_valid_coverage_over_total_inputs(path: str, data: pd.DataFrame, step=1):
-    generate_plot_data_base(path, data, "total_inputs", "valid_covered_probes", step)
+def generate_valid_coverage_over_total_inputs(path: str, data: pd.DataFrame,  errorbarname: str = 'se'):
+    generate_plot_data_base(path, data, "total_inputs", "valid_covered_probes", errorbarname)
 
-def generate_all_coverage_over_total_inputs(path: str, data: pd.DataFrame, step=1):
-    generate_plot_data_base(path, data, "total_inputs", "all_covered_probes", step)
+def generate_all_coverage_over_total_inputs(path: str, data: pd.DataFrame,  errorbarname: str = 'se'):
+    generate_plot_data_base(path, data, "total_inputs", "all_covered_probes", errorbarname)
 
 def show_values_on_bars(axs):
     def _show_on_single_plot(ax):
