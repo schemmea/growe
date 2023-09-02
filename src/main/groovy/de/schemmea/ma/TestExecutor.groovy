@@ -16,7 +16,7 @@ import org.apache.commons.lang.StringUtils
 import java.nio.file.Paths
 import java.time.Duration
 
-class TestExecutor {
+public class TestExecutor {
 
     static Args ARGS = new Args();
     private static Set<String> stackTraces = new HashSet<>();
@@ -24,7 +24,7 @@ class TestExecutor {
 
     static File logfile = new File(Paths.get(Configuration.EXCEPTION_LOG_FILE).toUri());
 
-    static void main(String... args) {
+    public static void main(String... args) {
 
         var commander = new JCommander(ARGS, args)
 

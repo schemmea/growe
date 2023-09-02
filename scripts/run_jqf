@@ -32,7 +32,7 @@ fi
 
 EXEC_DIR="nextflow-$1-$2"
 
-export JVM_OPTS="$JVM_OPTS -Djqf.ei.MAX_INPUT_SIZE=10000000" #byte #1000000 == 1MB
+export JVM_OPTS="$JVM_OPTS -Djqf.ei.MAX_INPUT_SIZE=100000000" #byte #1000000 == 1MB
 export JVM_OPTS="$JVM_OPTS -Djqf.logCoverage=true"
 export JVM_OPTS="$JVM_OPTS -Djqf.ei.QUIET_MODE=false"
 export JVM_OPTS="$JVM_OPTS -DuseFastNonCollidingCoverageInstrumentation=true"
@@ -62,7 +62,7 @@ function executeTest() {
     export JVM_OPTS="$JVM_OPTS -Djqf.ei.TOTALLY_RANDOM=true -Djqf.ei.DISABLE_SAVE_NEW_COUNTS=true"
     /usr/bin/env bash -c "JVM_OPTS=$OPTS $DRIVER_PATH --illegal-access=permit -Xmx6G -jar $JAR_PATH -d $DURATIONSECONDS -i $ITERATIONS ${*: 3} | tee -a $LOGFILE 2>/dev/null"
   else
-    /usr/bin/env bash -c "$DRIVER_PATH --illegal-access=permit -Xmx3G -jar $JAR_PATH -d $DURATIONSECONDS -i $ITERATIONS ${*: 3} | tee -a $LOGFILE 2>/dev/null"
+    /usr/bin/env bash -c "$DRIVER_PATH --illegal-access=permit -Xmx6G -jar $JAR_PATH -d $DURATIONSECONDS -i $ITERATIONS ${*: 3} | tee -a $LOGFILE 2>/dev/null"
   fi
 
 }
