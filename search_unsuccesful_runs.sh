@@ -6,34 +6,43 @@ search_file="===== DONE ====="  # Replace with the specific file you're looking 
 path=$1
 
 for base_name in "${base_names[@]}"; do
-    for id in {0..14}; do
+    for id in {0..6}; do
         folder="$path/nextflow-${base_name}-${id}"
+
+	errorstring="$folder"
         if [ -d "$folder" ]; then
             log_file="$folder/executor.log"  # Assuming the log file name is consistent
 
             if [ -f "$log_file" ]; then
-                if grep -q "$search_file" "$log_file"; then
-  		    echo "$search_file in $folder"
-                else
-                    echo "!!! $search_file not found in $folder !!!!"
+                if ! grep -q "$search_file" "$log_file"; then
+  		    $errorstring="$errostring not $search_file!!!!"
                 fi
             else
-                echo "Log file $log_file not found in $folder"
+                $errorstring="$errostring no $log_file!!!!"
             fi
 
            log_file2="$folder/errorDir/cov-all.log"	   
  	   log_file3="$folder/errorDir/cov-valid.log"
-	if [ -f  "$log_file2" ]; then
-            echo "$log_file2 in $folder"
+  	   if  [ -f  "$log_file2" ]; then
+              myfilesize=$(wc -c "$log_file2" | awk '{print $1}')
+		if [[ $myfilesize -eq 0 ]]; then
+		  $errorstring="$log_file2 is empty"
+		fi
+	    else
+               $errorstring="$errostring no $log_file2 !!!!"
+           fi
+	   if  [ -f  "$log_file3" ]; then
+	              myfilesize=$(wc -c "$log_file3" | awk '{print $1}')
+		if [[ $myfilesize -eq 0 ]]; then
+		  $errorstring="$log_file3 is empty"
+		fi
+		else
+              $errorstring="$errostring no $log_file3 !!!!"
+            fi
+		echo "$errorstring"
         else
-            echo "!!! $log_file2 not found in $folder !!!!"
-        fi
-	if [ -f  "$log_file3" ]; then
-            echo "$log_file3 in $folder"
-        else
-            echo "!!! $log_file3 not found in $folder !!!!"
+		echo "no run for $folder!"
         fi
 
-        fi
     done
 done
