@@ -26,7 +26,7 @@ for base_name in "${base_names[@]}"; do
              if  [ -f  "$log_file2" ]; then
                     myfilesize=$(wc -c "$log_file2" | awk '{print $1}')
                 if [[ $myfilesize -eq 0 ]]; then
-                  errorstring="cov-all is empty"
+                  errorstring="$errorstring cov-all is empty"
                 fi
             else
                  errorstring="$errostring no cov-all !!!!"
