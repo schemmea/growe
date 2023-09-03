@@ -76,8 +76,9 @@ def generate_graph(base_path: str, outdirname: str, errorbarname: str = 'se', re
                 # plot_data from jqf afl run differs from other 
                 if not algorithm == "afl" and os.path.exists(os.path.join(path,"plot_data")): 
                     time_based_data, count_based_data = process_plot_data(path,algorithm, reindexsteps)
-                    time_based_data_per_algo.append(time_based_data)
-                    count_based_data_per_algo.append(count_based_data)
+		    if time_based_data and count_based_data:
+                        time_based_data_per_algo.append(time_based_data)
+                        count_based_data_per_algo.append(count_based_data)
 
                 cov_all_path = os.path.join(path, "cov-all.log")
                 if os.path.exists(cov_all_path):
@@ -118,7 +119,7 @@ def main():
     errorbarname = 'se'
     reindexsteps = 7 
 
-    if len(sys.argv) >= 3:
+    if len(sys.argv) >= 2:
         path = sys.argv[1] 
         outdirname=f"figs_{path}" 
     else: outdirname=f"figs_{folder}" 
