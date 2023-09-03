@@ -34,7 +34,7 @@ for base_name in "${base_names[@]}"; do
             if  [ -f  "$log_file3" ]; then
                 myfilesize=$(wc -c "$log_file3" | awk '{print $1}')
                 if [[ $myfilesize -eq 0 ]]; then
-                  errorstring="cov-valid is empty"
+                  errorstring="$errorstring cov-valid is empty"
                 fi
             else
                 errorstring="$errostring no cov-valid !!!!"
