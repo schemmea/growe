@@ -1,7 +1,7 @@
 #!/bin/bash
 
-remotepath="/home/alena/source/growe/exp5/"
-localpath="$HOME/source/growe/exp5/"
+remotepath="/home/alena/source/growe/exps8/"
+localpath="$HOME/source/growe/exps8/"
 for prefix in "semantic-zest" "syntactic-zest" "semantic-noguidance" "syntactic-noguidance"; do
     for ((i=0; i<=5; i++)); do
         dir="nextflow-${prefix}-${i}/errorDir"
@@ -14,7 +14,7 @@ for prefix in "semantic-zest" "syntactic-zest" "semantic-noguidance" "syntactic-
 
         scp alena@213.202.208.247:${remotepath}${plot_data} "${localpath}${plot_data}"
         scp alena@213.202.208.247:${remotepath}${cov_all} "${localpath}${cov_all}"
-       # scp alena@213.202.208.247:${remotepath}${cov_valid} "${localpath}${cov_valid}"
+        scp alena@213.202.208.247:${remotepath}${cov_valid} "${localpath}${cov_valid}"
 
     done
 done

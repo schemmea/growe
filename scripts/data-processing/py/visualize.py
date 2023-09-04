@@ -22,7 +22,7 @@ def process_plot_data(path: str, algorithm: str, reindexsteps: int = 10) -> pd.D
     else:
         data = pd.read_csv(ps, sep=",", skipinitialspace=True)
 
-    if not data: return None
+    if data.empty: return None, None
 
     data[time_axis] -= data[time_axis][0]
     data['total_inputs'] = data['valid_inputs'] + data['invalid_inputs']

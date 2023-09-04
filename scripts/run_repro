@@ -45,13 +45,8 @@ LOGFILE2="./repro_valid.log"
 
 
 export JVM_OPTS="$JVM_OPTS -Djqf.repro.traceDir=$errordir"
-#export JVM_OPTS="$JVM_OPTS -Djqf.logCoverage=true -Djanala.verbose=true"
-#export JVM_OPTS="$JVM_OPTS -Djqf.ei.QUIET_MODE=false"
-#export JVM_OPTS="$JVM_OPTS -DuseFastNonCollidingCoverageInstrumentation=true"
-#export JVM_OPTS="$JVM_OPTS -Djqf.tracing.TRACE_GENERATORS=true"
 
 # Do not let GC mess with fuzzing
-#export JVM_OPTS="$JVM_OPTS -XX:-UseGCOverheadLimit -Djqf.tracing.MATCH_CALLEE_NAMES=true"
 export JVM_OPTS="$JVM_OPTS -Djqf.repro.logUniqueBranches=true -Xmx7g"
 
 if [[ $* == *"debug"* ]]; then
