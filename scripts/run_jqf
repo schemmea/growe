@@ -35,6 +35,7 @@ EXEC_DIR="nextflow-$1-$2"
 export JVM_OPTS="$JVM_OPTS -Djqf.ei.MAX_INPUT_SIZE=100000000" #byte #1000000 == 1MB
 export JVM_OPTS="$JVM_OPTS -Djqf.logCoverage=true"
 export JVM_OPTS="$JVM_OPTS -Djqf.ei.QUIET_MODE=false"
+export JVM_OPTS="$JVM_OPTS -Djqf.ei.TIMEOUT=30000" # Millis
 export JVM_OPTS="$JVM_OPTS -DuseFastNonCollidingCoverageInstrumentation=true"
 
 # Do not let GC mess with fuzzing
