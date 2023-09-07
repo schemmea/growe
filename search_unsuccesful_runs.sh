@@ -6,7 +6,7 @@ search_file="===== DONE ====="  # Replace with the specific file you're looking 
 path=$1
 
 for base_name in "${base_names[@]}"; do
-    for id in {0..6}; do
+    for id in {0..10}; do
        folder="$path/nextflow-${base_name}-${id}"
 
 	      errorstring="$folder"
@@ -15,7 +15,7 @@ for base_name in "${base_names[@]}"; do
 
             if [ -f "$log_file" ]; then
                 if ! grep -q "$search_file" "$log_file"; then
-  	          	    errorstring="$errostring not $search_file!!!!"
+  	          	    errorstring="$errorstring not $search_file!!!!"
                 fi
             else
                 errorstring="$errostring no $log_file!!!!"
@@ -29,7 +29,7 @@ for base_name in "${base_names[@]}"; do
                   errorstring="$errorstring cov-all is empty"
                 fi
             else
-                 errorstring="$errostring no cov-all !!!!"
+                 errorstring="$errorstring no cov-all !!!!"
             fi
             if  [ -f  "$log_file3" ]; then
                 myfilesize=$(wc -c "$log_file3" | awk '{print $1}')
@@ -37,7 +37,7 @@ for base_name in "${base_names[@]}"; do
                   errorstring="$errorstring cov-valid is empty"
                 fi
             else
-                errorstring="$errostring no cov-valid !!!!"
+                errorstring="$errorstring no cov-valid !!!!"
             fi
             echo "$errorstring"
 
