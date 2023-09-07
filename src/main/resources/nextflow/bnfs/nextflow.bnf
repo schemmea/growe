@@ -4,7 +4,7 @@
 
 <workflow> ::= "workflow " <workflowbody>
 <process> ::= <process1> | <process2>
-<process1> ::= "process " <identifier1> " {" <nl> "debug true" <nl> <processbody> <nl> "}" <nl>
+<process1> ::= "process " <identifier> " {" <nl> "debug true" <nl> <processbody> <nl> "}" <nl>
 
 <processbody> ::= "input: " <nl> "val variable " <nl> <nl> "output:" <nl> "val variable " <nl> <content>
 <content> ::= <templatescript> | <script>
@@ -30,7 +30,6 @@
 
 <identifier> ::= <char> | <char> <identifier>
 <identifier2> ::= <identifier> "_twovars"
-<identifier1> ::= <identifier> "_onevar"
 <char> ::= a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z
 <uint> ::= 0|1|2|3|4|5|6|7|8|9
 <number> ::= <uint> | <uint> <number>
