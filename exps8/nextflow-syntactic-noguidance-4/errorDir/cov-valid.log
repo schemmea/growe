@@ -1,0 +1,562 @@
+# Covered: (-1014906875) nextflow/cli/CmdRun#$getStaticMetaClass():0 [1]
+# Covered: (-1014906878) nextflow/cli/CmdRun#$getStaticMetaClass():0 [1]
+# Covered: (-1015017459) nextflow/cli/CmdRun#<init>():240 --> nextflow/cli/HubOptions$Trait$Helper#$init$(Lnextflow/cli/HubOptions;)V
+# Covered: (-1015017461) nextflow/cli/CmdRun#<init>():240 --> nextflow/cli/CmdRun$_closure1#<init>(Ljava/lang/Object;Ljava/lang/Object;)V
+# Covered: (-1015017462) nextflow/cli/CmdRun#<init>():240 --> nextflow/cli/CmdRun#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1015017471) nextflow/cli/CmdRun#<init>():0 --> nextflow/cli/CmdBase#<init>()V
+# Covered: (-1136525309) nextflow/Global#$getCallSiteArray():0 [1]
+# Covered: (-1136525311) nextflow/Global#$getCallSiteArray():0 [0]
+# Covered: (-1136578554) nextflow/Global#cleanUp():276 [1]
+# Covered: (-1136578556) nextflow/Global#cleanUp():276 [0]
+# Covered: (-1136578559) nextflow/Global#cleanUp():0 --> nextflow/Global#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (-1136648186) nextflow/Global#getSession():60 [1]
+# Covered: (-1136648189) nextflow/Global#getSession():58 [1]
+# Covered: (-1136648191) nextflow/Global#getSession():0 --> nextflow/Global#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (-1207943163) nextflow/cli/CmdClone#$getStaticMetaClass():0 [1]
+# Covered: (-1207943166) nextflow/cli/CmdClone#$getStaticMetaClass():0 [1]
+# Covered: (-1207955453) nextflow/cli/CmdClone#<init>():0 --> nextflow/cli/HubOptions$Trait$Helper#$init$(Lnextflow/cli/HubOptions;)V
+# Covered: (-1207955454) nextflow/cli/CmdClone#<init>():0 --> nextflow/cli/CmdClone#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1207955455) nextflow/cli/CmdClone#<init>():0 --> nextflow/cli/CmdBase#<init>()V
+# Covered: (-1241493499) nextflow/cli/CmdSecret$DeleteCmd#$getStaticMetaClass():0 [1]
+# Covered: (-1241493502) nextflow/cli/CmdSecret$DeleteCmd#$getStaticMetaClass():0 [1]
+# Covered: (-1241509886) nextflow/cli/CmdSecret$DeleteCmd#<init>():0 --> nextflow/cli/CmdSecret$DeleteCmd#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1279242235) nextflow/cli/CmdSecret$SetCmd#$getStaticMetaClass():0 [1]
+# Covered: (-1279242238) nextflow/cli/CmdSecret$SetCmd#$getStaticMetaClass():0 [1]
+# Covered: (-1279258622) nextflow/cli/CmdSecret$SetCmd#<init>():0 --> nextflow/cli/CmdSecret$PutCmd#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1291829243) nextflow/cli/CmdDrop#$getStaticMetaClass():0 [1]
+# Covered: (-1291829246) nextflow/cli/CmdDrop#$getStaticMetaClass():0 [1]
+# Covered: (-1291841534) nextflow/cli/CmdDrop#<init>():0 --> nextflow/cli/CmdDrop#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1291841535) nextflow/cli/CmdDrop#<init>():0 --> nextflow/cli/CmdBase#<init>()V
+# Covered: (-1321197565) nextflow/cli/Launcher$_parseMainArgs_closure2#doCall():140 --> nextflow/cli/Launcher#pfaccess$0(Lnextflow/cli/Launcher;)Lcom/beust/jcommander/JCommander;
+# Covered: (-1321197567) nextflow/cli/Launcher$_parseMainArgs_closure2#doCall():140 --> nextflow/cli/CmdClean#getName()Ljava/lang/String;
+# Covered: (-134201341) nextflow/SysEnv$get#call():0 --> nextflow/SysEnv#get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+# Covered: (-134201342) nextflow/SysEnv$get#call():0 [0]
+# Covered: (-1363128315) nextflow/cli/CmdSecret$ListCmd#$getStaticMetaClass():0 [1]
+# Covered: (-1363128318) nextflow/cli/CmdSecret$ListCmd#$getStaticMetaClass():0 [1]
+# Covered: (-1363144702) nextflow/cli/CmdSecret$ListCmd#<init>():0 --> nextflow/cli/CmdSecret$ListCmd#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1409273855) nextflow/util/Escape$_cli_closure1#call():0 --> nextflow/util/Escape$_cli_closure1#doCall(Ljava/lang/Object;)Ljava/lang/String;
+# Covered: (-1409277950) nextflow/util/Escape$_cli_closure1#doCall():76 --> nextflow/util/Escape#cli(Ljava/lang/String;)Ljava/lang/String;
+# Covered: (-1417629693) nextflow/cli/CmdBase#$getCallSiteArray():0 [1]
+# Covered: (-1417629695) nextflow/cli/CmdBase#$getCallSiteArray():0 [0]
+# Covered: (-1417654271) nextflow/cli/CmdBase#getMetaClass():0 [0]
+# Covered: (-1417662463) nextflow/cli/CmdBase#setLauncher():0 --> nextflow/cli/CmdBase#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (-1417666559) nextflow/cli/CmdBase#getLauncher():0 --> nextflow/cli/CmdBase#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (-1417670653) nextflow/cli/CmdBase#<init>():0 --> nextflow/cli/CmdClean#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1417670655) nextflow/cli/CmdBase#<init>():0 --> nextflow/cli/CmdBase#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (-1463795707) nextflow/cli/CmdPlugins#$getStaticMetaClass():0 [1]
+# Covered: (-1463795710) nextflow/cli/CmdPlugins#$getStaticMetaClass():0 [1]
+# Covered: (-1463807998) nextflow/cli/CmdPlugins#<init>():0 --> nextflow/cli/CmdPlugins#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1463807999) nextflow/cli/CmdPlugins#<init>():0 --> nextflow/cli/CmdPlugin#<init>()V
+# Covered: (-1602207739) nextflow/cli/CmdView#$getStaticMetaClass():0 [1]
+# Covered: (-1602207742) nextflow/cli/CmdView#$getStaticMetaClass():0 [1]
+# Covered: (-1602220029) nextflow/cli/CmdView#<init>():43 --> nextflow/cli/CmdView#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1602220031) nextflow/cli/CmdView#<init>():0 --> nextflow/cli/CmdBase#<init>()V
+# Covered: (-1790922749) nextflow/Const#$getCallSiteArray():0 [1]
+# Covered: (-1790922751) nextflow/Const#$getCallSiteArray():0 [0]
+# Covered: (-1790959611) nextflow/Const#deltaLocal():96 [0]
+# Covered: (-1790959615) nextflow/Const#deltaLocal():0 --> nextflow/Const#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (-1807724541) nextflow/util/ProxyConfig#parse():83 [0]
+# Covered: (-1807724542) nextflow/util/ProxyConfig#parse():83 [0]
+# Covered: (-1954525182) nextflow/SysEnv#get():54 [1]
+# Covered: (-1954525183) nextflow/SysEnv#get():54 --> nextflow/SysEnv$Holder#containsKey(Ljava/lang/Object;)Z
+# Covered: (-2004860923) nextflow/cli/CmdPull#$getStaticMetaClass():0 [1]
+# Covered: (-2004860926) nextflow/cli/CmdPull#$getStaticMetaClass():0 [1]
+# Covered: (-2004873213) nextflow/cli/CmdPull#<init>():0 --> nextflow/cli/HubOptions$Trait$Helper#$init$(Lnextflow/cli/HubOptions;)V
+# Covered: (-2004873214) nextflow/cli/CmdPull#<init>():0 --> nextflow/cli/CmdPull#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-2004873215) nextflow/cli/CmdPull#<init>():0 --> nextflow/cli/CmdBase#<init>()V
+# Covered: (-2092941309) nextflow/Global$getSession#call():0 --> nextflow/Global#getSession()Lnextflow/ISession;
+# Covered: (-2092941310) nextflow/Global$getSession#call():0 [0]
+# Covered: (-2143268863) nextflow/cli/Launcher$_printCommands_closure8#call():0 --> nextflow/cli/Launcher$_printCommands_closure8#doCall(Ljava/lang/Object;)Ljava/lang/Integer;
+# Covered: (-2143281135) nextflow/cli/Launcher$_printCommands_closure8#doCall():409 --> nextflow/cli/CmdClean#getName()Ljava/lang/String;
+# Covered: (-2143281136) nextflow/cli/Launcher$_printCommands_closure8#doCall():409 [0]
+# Covered: (-2143281136) nextflow/cli/Launcher$_printCommands_closure8#doCall():409 [1]
+# Covered: (-2143281141) nextflow/cli/Launcher$_printCommands_closure8#doCall():409 --> nextflow/cli/CmdClean#getName()Ljava/lang/String;
+# Covered: (-2143281143) nextflow/cli/Launcher$_printCommands_closure8#doCall():408 --> nextflow/cli/CmdClean#getName()Ljava/lang/String;
+# Covered: (-2143281145) nextflow/cli/Launcher$_printCommands_closure8#doCall():407 [0]
+# Covered: (-2143281145) nextflow/cli/Launcher$_printCommands_closure8#doCall():407 [1]
+# Covered: (-2143281149) nextflow/cli/Launcher$_printCommands_closure8#doCall():406 [0]
+# Covered: (-2143281149) nextflow/cli/Launcher$_printCommands_closure8#doCall():406 [1]
+# Covered: (-239038459) nextflow/cli/CmdLog#$getStaticMetaClass():0 [1]
+# Covered: (-239038462) nextflow/cli/CmdLog#$getStaticMetaClass():0 [1]
+# Covered: (-239071228) nextflow/cli/CmdLog#<init>():98 --> nextflow/cli/CacheBase$Trait$Helper#$init$(Lnextflow/cli/CacheBase;)V
+# Covered: (-239071229) nextflow/cli/CmdLog#<init>():98 --> nextflow/cli/CmdLog#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-239071231) nextflow/cli/CmdLog#<init>():0 --> nextflow/cli/CmdBase#<init>()V
+# Covered: (-377470971) nextflow/cli/CmdConsole#$getStaticMetaClass():0 [1]
+# Covered: (-377470974) nextflow/cli/CmdConsole#$getStaticMetaClass():0 [1]
+# Covered: (-377483262) nextflow/cli/CmdConsole#<init>():0 --> nextflow/cli/CmdConsole#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-377483263) nextflow/cli/CmdConsole#<init>():0 --> nextflow/cli/CmdBase#<init>()V
+# Covered: (-390053885) nextflow/Global$cleanUp$0#call():0 --> nextflow/Global#cleanUp()Ljava/lang/Object;
+# Covered: (-390053886) nextflow/Global$cleanUp$0#call():0 [0]
+# Covered: (-423616511) nextflow/cli/Launcher$_normalizeArgs_closure3#doCall():210 --> nextflow/cli/CmdClean#getName()Ljava/lang/String;
+# Covered: (-725602303) nextflow/cli/Launcher$_init_closure1#call():0 --> nextflow/cli/Launcher$_init_closure1#doCall(Ljava/lang/Object;)Ljava/lang/Object;
+# Covered: (-725606395) nextflow/cli/Launcher$_init_closure1#doCall():120 --> nextflow/cli/CmdClean#getName()Ljava/lang/String;
+# Covered: (-725606396) nextflow/cli/Launcher$_init_closure1#doCall():120 --> nextflow/cli/Launcher#pfaccess$0(Lnextflow/cli/Launcher;)Lcom/beust/jcommander/JCommander;
+# Covered: (-725606398) nextflow/cli/Launcher$_init_closure1#doCall():119 --> nextflow/cli/CmdBase#setLauncher(Lnextflow/cli/Launcher;)V
+# Covered: (-918503421) nextflow/secret/SecretsLoader#$getCallSiteArray():0 [1]
+# Covered: (-918503423) nextflow/secret/SecretsLoader#$getCallSiteArray():0 [0]
+# Covered: (-918544382) nextflow/secret/SecretsLoader#isEnabled():36 --> nextflow/SysEnv$get#<init>(Lorg/codehaus/groovy/runtime/callsite/CallSite;Lgroovy/lang/MetaClassImpl;Lgroovy/lang/MetaMethod;[Ljava/lang/Class;Ljava/lang/reflect/Constructor;)V
+# Covered: (-918544383) nextflow/secret/SecretsLoader#isEnabled():0 --> nextflow/secret/SecretsLoader#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (-935301115) nextflow/cli/CmdKubeRun#$getStaticMetaClass():0 [1]
+# Covered: (-935301118) nextflow/cli/CmdKubeRun#$getStaticMetaClass():0 [1]
+# Covered: (-935325694) nextflow/cli/CmdKubeRun#<init>():0 --> nextflow/cli/CmdKubeRun#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-935325695) nextflow/cli/CmdKubeRun#<init>():0 --> nextflow/cli/CmdRun#<init>()V
+# Covered: (-939446269) nextflow/util/Escape#$getCallSiteArray():0 [1]
+# Covered: (-939446271) nextflow/util/Escape#$getCallSiteArray():0 [0]
+# Covered: (-939466750) nextflow/util/Escape#replace():0 --> nextflow/util/Escape#replace(Ljava/util/List;Ljava/lang/String;Z)Ljava/lang/String;
+# Covered: (-939466751) nextflow/util/Escape#replace():0 --> nextflow/util/Escape#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (-939487225) nextflow/util/Escape#cli():83 [0]
+# Covered: (-939487227) nextflow/util/Escape#cli():82 --> nextflow/util/Escape#wildcards(Ljava/lang/String;)Ljava/lang/String;
+# Covered: (-939487230) nextflow/util/Escape#cli():80 [1]
+# Covered: (-939491325) nextflow/util/Escape#cli():76 --> nextflow/util/Escape$_cli_closure1#call(Ljava/lang/Object;)Ljava/lang/Object;
+# Covered: (-939491326) nextflow/util/Escape#cli():76 --> nextflow/util/Escape$_cli_closure1#<init>(Ljava/lang/Object;Ljava/lang/Object;)V
+# Covered: (-939511807) nextflow/util/Escape#wildcards():56 --> nextflow/util/Escape#replace(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+# Covered: (-939515895) nextflow/util/Escape#replace():43 [1]
+# Covered: (-939515896) nextflow/util/Escape#replace():43 [1]
+# Covered: (-939515899) nextflow/util/Escape#replace():40 [0]
+# Covered: (-939515899) nextflow/util/Escape#replace():40 [1]
+# Covered: (-939515900) nextflow/util/Escape#replace():40 [0]
+# Covered: (-939515900) nextflow/util/Escape#replace():40 [1]
+# Covered: (-947892219) nextflow/cli/CmdHelp#$getStaticMetaClass():0 [1]
+# Covered: (-947892222) nextflow/cli/CmdHelp#$getStaticMetaClass():0 [1]
+# Covered: (-947896304) nextflow/cli/CmdHelp#run():50 --> nextflow/cli/Launcher#usage(Ljava/lang/String;)V
+# Covered: (-947896307) nextflow/cli/CmdHelp#run():50 [1]
+# Covered: (-947896309) nextflow/cli/CmdHelp#run():50 --> nextflow/cli/CmdBase#getLauncher()Lnextflow/cli/Launcher;
+# Covered: (-947896317) nextflow/cli/CmdHelp#run():46 [1]
+# Covered: (-947896319) nextflow/cli/CmdHelp#run():45 --> nextflow/cli/CmdHelp#getUsage(Ljava/util/List;)Lnextflow/cli/UsageAware;
+# Covered: (-947900408) nextflow/cli/CmdHelp#getUsage():40 [1]
+# Covered: (-947900414) nextflow/cli/CmdHelp#getUsage():39 [1]
+# Covered: (-947908606) nextflow/cli/CmdHelp#<init>():0 --> nextflow/cli/CmdHelp#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-947908607) nextflow/cli/CmdHelp#<init>():0 --> nextflow/cli/CmdBase#<init>()V
+# Covered: (000000000) #<unknown>():0 --> nextflow/cli/Launcher#<clinit>()V
+# Covered: (092278785) nextflow/cli/CmdFs#<init>():0 --> nextflow/cli/CmdFs#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (092278786) nextflow/cli/CmdFs#<init>():0 --> nextflow/cli/CmdBase#<init>()V
+# Covered: (092278787) nextflow/cli/CmdFs#<init>():0 --> nextflow/cli/CmdFs#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (092286977) nextflow/cli/CmdFs#getName():0 --> nextflow/cli/CmdFs#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (092315650) nextflow/cli/CmdFs#$getStaticMetaClass():0 [1]
+# Covered: (092315653) nextflow/cli/CmdFs#$getStaticMetaClass():0 [1]
+# Covered: (092356609) nextflow/cli/CmdFs#$getCallSiteArray():0 [0]
+# Covered: (092356611) nextflow/cli/CmdFs#$getCallSiteArray():0 [1]
+# Covered: (1082134529) nextflow/cli/CmdSecret$PutCmd#<init>():0 --> nextflow/cli/CmdSecret$SetCmd#<init>(Lnextflow/cli/CmdSecret;)V
+# Covered: (1082134530) nextflow/cli/CmdSecret$PutCmd#<init>():0 --> nextflow/cli/CmdSecret$PutCmd#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (1082146818) nextflow/cli/CmdSecret$PutCmd#$getStaticMetaClass():0 [1]
+# Covered: (1082146821) nextflow/cli/CmdSecret$PutCmd#$getStaticMetaClass():0 [1]
+# Covered: (1094717441) nextflow/cli/CliOptions#<init>():0 --> nextflow/cli/CliOptions#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (1094717444) nextflow/cli/CliOptions#<init>():0 --> nextflow/cli/CliOptions#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (1094721537) nextflow/cli/CliOptions#getAnsiLog():0 --> nextflow/cli/CliOptions#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (1094721539) nextflow/cli/CliOptions#getAnsiLog():93 [1]
+# Covered: (1094721541) nextflow/cli/CliOptions#getAnsiLog():93 [1]
+# Covered: (1094721544) nextflow/cli/CliOptions#getAnsiLog():96 [1]
+# Covered: (1094721547) nextflow/cli/CliOptions#getAnsiLog():99 [1]
+# Covered: (1094721550) nextflow/cli/CliOptions#getAnsiLog():102 [1]
+# Covered: (1094721555) nextflow/cli/CliOptions#getAnsiLog():106 [1]
+# Covered: (1094729730) nextflow/cli/CliOptions#$getStaticMetaClass():0 [1]
+# Covered: (1094729733) nextflow/cli/CliOptions#$getStaticMetaClass():0 [1]
+# Covered: (1094901761) nextflow/cli/CliOptions#$getCallSiteArray():0 [0]
+# Covered: (1094901763) nextflow/cli/CliOptions#$getCallSiteArray():0 [1]
+# Covered: (1124151298) nextflow/plugin/PluginsFacade#stop():236 [1]
+# Covered: (138416129) nextflow/cli/CmdConfig#<init>():0 --> nextflow/cli/CmdBase#<init>()V
+# Covered: (138416131) nextflow/cli/CmdConfig#<init>():45 --> nextflow/cli/CmdConfig#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (138448898) nextflow/cli/CmdConfig#$getStaticMetaClass():0 [1]
+# Covered: (138448901) nextflow/cli/CmdConfig#$getStaticMetaClass():0 [1]
+# Covered: (1417678849) nextflow/cli/CmdSelfUpdate#<init>():0 --> nextflow/cli/CmdSelfUpdate#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (1417678850) nextflow/cli/CmdSelfUpdate#<init>():0 --> nextflow/cli/CmdBase#<init>()V
+# Covered: (1417678851) nextflow/cli/CmdSelfUpdate#<init>():0 --> nextflow/cli/CmdSelfUpdate#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (1417682945) nextflow/cli/CmdSelfUpdate#getName():0 --> nextflow/cli/CmdSelfUpdate#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (1417691138) nextflow/cli/CmdSelfUpdate#$getStaticMetaClass():0 [1]
+# Covered: (1417691141) nextflow/cli/CmdSelfUpdate#$getStaticMetaClass():0 [1]
+# Covered: (1417703425) nextflow/cli/CmdSelfUpdate#$getCallSiteArray():0 [0]
+# Covered: (1417703427) nextflow/cli/CmdSelfUpdate#$getCallSiteArray():0 [1]
+# Covered: (1543524353) nextflow/cli/Launcher$run$0#call():0 --> nextflow/cli/Launcher#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (1543524354) nextflow/cli/Launcher$run$0#call():0 [0]
+# Covered: (1543524355) nextflow/cli/Launcher$run$0#call():0 --> nextflow/cli/Launcher#run()I
+# Covered: (1623199747) nextflow/util/LoggerHelper#<init>():0 --> nextflow/util/LoggerHelper#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (1623207938) nextflow/util/LoggerHelper#setSyslog():120 [1]
+# Covered: (1623224321) nextflow/util/LoggerHelper#containsClassName():147 [0]
+# Covered: (1623224323) nextflow/util/LoggerHelper#containsClassName():147 [0]
+# Covered: (1623224325) nextflow/util/LoggerHelper#containsClassName():147 [0]
+# Covered: (1623224325) nextflow/util/LoggerHelper#containsClassName():147 [1]
+# Covered: (1623224329) nextflow/util/LoggerHelper#containsClassName():148 [1]
+# Covered: (1623224331) nextflow/util/LoggerHelper#containsClassName():150 [0]
+# Covered: (1623224333) nextflow/util/LoggerHelper#containsClassName():150 [0]
+# Covered: (1623224335) nextflow/util/LoggerHelper#containsClassName():150 [1]
+# Covered: (1623228417) nextflow/util/LoggerHelper#setup():157 --> nextflow/cli/CliOptions#getLogFile()Ljava/lang/String;
+# Covered: (1623228419) nextflow/util/LoggerHelper#setup():157 [1]
+# Covered: (1623228421) nextflow/util/LoggerHelper#setup():159 --> nextflow/cli/CliOptions#getQuiet()Z
+# Covered: (1623228422) nextflow/util/LoggerHelper#setup():160 --> nextflow/cli/CliOptions#getDebug()Ljava/util/List;
+# Covered: (1623228424) nextflow/util/LoggerHelper#setup():160 [1]
+# Covered: (1623228426) nextflow/util/LoggerHelper#setup():161 --> nextflow/cli/CliOptions#getTrace()Ljava/util/List;
+# Covered: (1623228428) nextflow/util/LoggerHelper#setup():161 [1]
+# Covered: (1623228430) nextflow/util/LoggerHelper#setup():161 [1]
+# Covered: (1623228433) nextflow/util/LoggerHelper#setup():161 [1]
+# Covered: (1623228437) nextflow/util/LoggerHelper#setup():168 [1]
+# Covered: (1623228439) nextflow/util/LoggerHelper#setup():171 --> nextflow/util/LoggerHelper#containsClassName(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)Z
+# Covered: (1623228440) nextflow/util/LoggerHelper#setup():171 [0]
+# Covered: (1623228441) nextflow/util/LoggerHelper#setup():171 [0]
+# Covered: (1623228443) nextflow/util/LoggerHelper#setup():173 --> nextflow/util/LoggerHelper#containsClassName(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)Z
+# Covered: (1623228444) nextflow/util/LoggerHelper#setup():173 [0]
+# Covered: (1623228445) nextflow/util/LoggerHelper#setup():173 [0]
+# Covered: (1623228447) nextflow/util/LoggerHelper#setup():176 [0]
+# Covered: (1623228449) nextflow/util/LoggerHelper#setup():176 [0]
+# Covered: (1623228451) nextflow/util/LoggerHelper#setup():176 [0]
+# Covered: (1623228451) nextflow/util/LoggerHelper#setup():176 [1]
+# Covered: (1623228454) nextflow/util/LoggerHelper#setup():179 [0]
+# Covered: (1623228456) nextflow/util/LoggerHelper#setup():179 [0]
+# Covered: (1623228458) nextflow/util/LoggerHelper#setup():179 [1]
+# Covered: (1623228461) nextflow/util/LoggerHelper#setup():184 --> nextflow/util/LoggerHelper#createConsoleAppender()Lch/qos/logback/core/Appender;
+# Covered: (1623228462) nextflow/util/LoggerHelper#setup():187 --> nextflow/util/LoggerHelper#createSyslogAppender()Lch/qos/logback/classic/net/SyslogAppender;
+# Covered: (1623228463) nextflow/util/LoggerHelper#setup():190 [0]
+# Covered: (1623228464) nextflow/util/LoggerHelper#setup():190 --> nextflow/util/LoggerHelper#createRollingAppender()Lch/qos/logback/core/rolling/RollingFileAppender;
+# Covered: (1623228468) nextflow/util/LoggerHelper#setup():194 [1]
+# Covered: (1623228470) nextflow/util/LoggerHelper#setup():196 --> nextflow/util/LoggerHelper$CaptureAppender#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (1623228471) nextflow/util/LoggerHelper#setup():196 [0]
+# Covered: (1623228474) nextflow/util/LoggerHelper#setup():198 [1]
+# Covered: (1623228478) nextflow/util/LoggerHelper#setup():202 [1]
+# Covered: (1623228479) nextflow/util/LoggerHelper#setup():203 --> nextflow/util/LoggerHelper#createLogger(Ljava/lang/String;Lch/qos/logback/classic/Level;)Lorg/slf4j/Logger;
+# Covered: (1623228481) nextflow/util/LoggerHelper#setup():207 [0]
+# Covered: (1623228482) nextflow/util/LoggerHelper#setup():207 [0]
+# Covered: (1623228484) nextflow/util/LoggerHelper#setup():207 [0]
+# Covered: (1623228485) nextflow/util/LoggerHelper#setup():207 [0]
+# Covered: (1623228486) nextflow/util/LoggerHelper#setup():207 [0]
+# Covered: (1623228487) nextflow/util/LoggerHelper#setup():208 --> nextflow/util/LoggerHelper#createLogger(Ljava/lang/String;Lch/qos/logback/classic/Level;)Lorg/slf4j/Logger;
+# Covered: (1623228489) nextflow/util/LoggerHelper#setup():212 [0]
+# Covered: (1623228490) nextflow/util/LoggerHelper#setup():212 [0]
+# Covered: (1623228492) nextflow/util/LoggerHelper#setup():212 [0]
+# Covered: (1623228493) nextflow/util/LoggerHelper#setup():212 [0]
+# Covered: (1623228494) nextflow/util/LoggerHelper#setup():212 [0]
+# Covered: (1623228495) nextflow/util/LoggerHelper#setup():213 --> nextflow/util/LoggerHelper#createLogger(Ljava/lang/String;Lch/qos/logback/classic/Level;)Lorg/slf4j/Logger;
+# Covered: (1623228496) nextflow/util/LoggerHelper#setup():217 [0]
+# Covered: (1623228498) nextflow/util/LoggerHelper#setup():217 [0]
+# Covered: (1623228500) nextflow/util/LoggerHelper#setup():217 [0]
+# Covered: (1623228500) nextflow/util/LoggerHelper#setup():217 [1]
+# Covered: (1623228503) nextflow/util/LoggerHelper#setup():218 --> nextflow/util/LoggerHelper#createLogger(Ljava/lang/String;Lch/qos/logback/classic/Level;)Lorg/slf4j/Logger;
+# Covered: (1623228504) nextflow/util/LoggerHelper#setup():221 [0]
+# Covered: (1623228506) nextflow/util/LoggerHelper#setup():221 [0]
+# Covered: (1623228508) nextflow/util/LoggerHelper#setup():221 [1]
+# Covered: (1623228512) nextflow/util/LoggerHelper#setup():225 --> nextflow/util/LoggerHelper$CaptureAppender#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (1623228513) nextflow/util/LoggerHelper#setup():225 [1]
+# Covered: (1623228514) nextflow/util/LoggerHelper#setup():225 [1]
+# Covered: (1623232517) nextflow/util/LoggerHelper#createLogger():233 [1]
+# Covered: (1623232519) nextflow/util/LoggerHelper#createLogger():235 --> nextflow/util/LoggerHelper$CaptureAppender#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (1623232520) nextflow/util/LoggerHelper#createLogger():235 [0]
+# Covered: (1623232523) nextflow/util/LoggerHelper#createLogger():237 [1]
+# Covered: (1623236609) nextflow/util/LoggerHelper#createConsoleAppender():245 [1]
+# Covered: (1623236612) nextflow/util/LoggerHelper#createConsoleAppender():245 [1]
+# Covered: (1623236613) nextflow/util/LoggerHelper#createConsoleAppender():247 --> nextflow/cli/CliOptions#getAnsiLog()Z
+# Covered: (1623236614) nextflow/util/LoggerHelper#createConsoleAppender():247 [0]
+# Covered: (1623236615) nextflow/util/LoggerHelper#createConsoleAppender():247 --> nextflow/util/LoggerHelper$CaptureAppender#<init>()V
+# Covered: (1623236617) nextflow/util/LoggerHelper#createConsoleAppender():248 --> nextflow/util/LoggerHelper$CaptureAppender#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (1623236618) nextflow/util/LoggerHelper#createConsoleAppender():248 [0]
+# Covered: (1623236619) nextflow/util/LoggerHelper#createConsoleAppender():249 --> nextflow/util/LoggerHelper$ConsoleLoggerFilter#<init>(Ljava/util/Map;)V
+# Covered: (1623236623) nextflow/util/LoggerHelper#createConsoleAppender():254 [1]
+# Covered: (1623240706) nextflow/util/LoggerHelper#createSyslogAppender():264 [1]
+# Covered: (1623240710) nextflow/util/LoggerHelper#createSyslogAppender():265 [1]
+# Covered: (1623244802) nextflow/util/LoggerHelper#createRollingAppender():286 [1]
+# Covered: (1623244806) nextflow/util/LoggerHelper#createRollingAppender():287 [1]
+# Covered: (1623257089) nextflow/util/LoggerHelper#configureLogger():345 --> nextflow/cli/Launcher#getOptions()Lnextflow/cli/CliOptions;
+# Covered: (1623257090) nextflow/util/LoggerHelper#configureLogger():345 --> nextflow/util/LoggerHelper#<init>(Lnextflow/cli/CliOptions;)V
+# Covered: (1623257091) nextflow/util/LoggerHelper#configureLogger():346 --> nextflow/cli/Launcher#isDaemon()Z
+# Covered: (1623257092) nextflow/util/LoggerHelper#configureLogger():346 --> nextflow/util/LoggerHelper#setDaemon(Z)Lnextflow/util/LoggerHelper;
+# Covered: (1623257093) nextflow/util/LoggerHelper#configureLogger():346 --> nextflow/util/LoggerHelper#setRolling(Z)Lnextflow/util/LoggerHelper;
+# Covered: (1623257094) nextflow/util/LoggerHelper#configureLogger():348 --> nextflow/cli/Launcher#getOptions()Lnextflow/cli/CliOptions;
+# Covered: (1623257095) nextflow/util/LoggerHelper#configureLogger():348 --> nextflow/cli/CliOptions#getSyslog()Ljava/lang/String;
+# Covered: (1623257096) nextflow/util/LoggerHelper#configureLogger():348 --> nextflow/util/LoggerHelper#setSyslog(Ljava/lang/String;)Lnextflow/util/LoggerHelper;
+# Covered: (1623257097) nextflow/util/LoggerHelper#configureLogger():348 --> nextflow/util/LoggerHelper#setup()V
+# Covered: (1623330818) nextflow/util/LoggerHelper#$getStaticMetaClass():0 [1]
+# Covered: (1623330821) nextflow/util/LoggerHelper#$getStaticMetaClass():0 [1]
+# Covered: (1719668738) nextflow/util/LoggerHelper$CaptureAppender#<init>():0 --> nextflow/util/LoggerHelper$CaptureAppender#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (1719676930) nextflow/util/LoggerHelper$CaptureAppender#$getStaticMetaClass():0 [1]
+# Covered: (1719676933) nextflow/util/LoggerHelper$CaptureAppender#$getStaticMetaClass():0 [1]
+# Covered: (1719705601) nextflow/util/LoggerHelper$CaptureAppender#getMetaClass():0 [0]
+# Covered: (1954578433) nextflow/plugin/Plugins#stop():64 --> nextflow/plugin/PluginsFacade#stop()V
+# Covered: (1996509185) nextflow/cli/Launcher$command#call():0 --> nextflow/cli/Launcher#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (1996509186) nextflow/cli/Launcher$command#call():0 [0]
+# Covered: (1996509187) nextflow/cli/Launcher$command#call():0 --> nextflow/cli/Launcher#command([Ljava/lang/String;)Lnextflow/cli/Launcher;
+# Covered: (2009075713) nextflow/cli/CmdNode#<init>():0 --> nextflow/cli/CmdBase#<init>()V
+# Covered: (2009075715) nextflow/cli/CmdNode#<init>():0 --> nextflow/cli/CmdNode#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (2009108482) nextflow/cli/CmdNode#$getStaticMetaClass():0 [1]
+# Covered: (2009108485) nextflow/cli/CmdNode#$getStaticMetaClass():0 [1]
+# Covered: (201330689) nextflow/cli/CmdPlugin#<init>():0 --> nextflow/cli/CmdBase#<init>()V
+# Covered: (201330690) nextflow/cli/CmdPlugin#<init>():0 --> nextflow/cli/CmdPlugins#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (201342978) nextflow/cli/CmdPlugin#$getStaticMetaClass():0 [1]
+# Covered: (201342981) nextflow/cli/CmdPlugin#$getStaticMetaClass():0 [1]
+# Covered: (2097156097) nextflow/cli/CmdClean#<init>():0 --> nextflow/cli/CmdBase#<init>()V
+# Covered: (2097156099) nextflow/cli/CmdClean#<init>():81 --> nextflow/cli/CmdClean#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (2097156100) nextflow/cli/CmdClean#<init>():81 --> nextflow/cli/CacheBase$Trait$Helper#$init$(Lnextflow/cli/CacheBase;)V
+# Covered: (2097201154) nextflow/cli/CmdClean#$getStaticMetaClass():0 [1]
+# Covered: (2097201157) nextflow/cli/CmdClean#$getStaticMetaClass():0 [1]
+# Covered: (327159809) nextflow/cli/Launcher$_printOptions_closure7#<init>():0 --> nextflow/cli/Launcher$_printOptions_closure7#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (327163905) nextflow/cli/Launcher$_printOptions_closure7#doCall():0 --> nextflow/cli/Launcher$_printOptions_closure7#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (327176193) nextflow/cli/Launcher$_printOptions_closure7#$createCallSiteArray():0 --> nextflow/cli/Launcher$_printOptions_closure7#$createCallSiteArray_1([Ljava/lang/String;)V
+# Covered: (327180289) nextflow/cli/Launcher$_printOptions_closure7#$getCallSiteArray():0 [0]
+# Covered: (327180289) nextflow/cli/Launcher$_printOptions_closure7#$getCallSiteArray():0 [1]
+# Covered: (327180291) nextflow/cli/Launcher$_printOptions_closure7#$getCallSiteArray():0 [1]
+# Covered: (327180292) nextflow/cli/Launcher$_printOptions_closure7#$getCallSiteArray():0 --> nextflow/cli/Launcher$_printOptions_closure7#$createCallSiteArray()Lorg/codehaus/groovy/runtime/callsite/CallSiteArray;
+# Covered: (515903489) nextflow/cli/CmdList#<init>():0 --> nextflow/cli/CmdBase#<init>()V
+# Covered: (515903490) nextflow/cli/CmdList#<init>():0 --> nextflow/cli/CmdList#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (515915778) nextflow/cli/CmdList#$getStaticMetaClass():0 [1]
+# Covered: (515915781) nextflow/cli/CmdList#$getStaticMetaClass():0 [1]
+# Covered: (524292098) nextflow/cli/Launcher#<init>():0 --> nextflow/cli/Launcher#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (524292099) nextflow/cli/Launcher#<init>():83 --> nextflow/cli/Launcher#init()V
+# Covered: (524296193) nextflow/cli/Launcher#init():88 --> nextflow/cli/CmdClean#<init>()V
+# Covered: (524296194) nextflow/cli/Launcher#init():89 --> nextflow/cli/CmdClone#<init>()V
+# Covered: (524296195) nextflow/cli/Launcher#init():90 --> nextflow/cli/CmdConsole#<init>()V
+# Covered: (524296196) nextflow/cli/Launcher#init():91 --> nextflow/cli/CmdFs#<init>()V
+# Covered: (524296197) nextflow/cli/Launcher#init():92 --> nextflow/cli/CmdInfo#<init>()V
+# Covered: (524296198) nextflow/cli/Launcher#init():93 --> nextflow/cli/CmdList#<init>()V
+# Covered: (524296199) nextflow/cli/Launcher#init():94 --> nextflow/cli/CmdLog#<init>()V
+# Covered: (524296200) nextflow/cli/Launcher#init():95 --> nextflow/cli/CmdPull#<init>()V
+# Covered: (524296201) nextflow/cli/Launcher#init():96 --> nextflow/cli/CmdRun#<init>()V
+# Covered: (524296202) nextflow/cli/Launcher#init():97 --> nextflow/cli/CmdKubeRun#<init>()V
+# Covered: (524296203) nextflow/cli/Launcher#init():98 --> nextflow/cli/CmdDrop#<init>()V
+# Covered: (524296204) nextflow/cli/Launcher#init():99 --> nextflow/cli/CmdConfig#<init>()V
+# Covered: (524296205) nextflow/cli/Launcher#init():100 --> nextflow/cli/CmdNode#<init>()V
+# Covered: (524296206) nextflow/cli/Launcher#init():101 --> nextflow/cli/CmdView#<init>()V
+# Covered: (524296207) nextflow/cli/Launcher#init():102 --> nextflow/cli/CmdHelp#<init>()V
+# Covered: (524296208) nextflow/cli/Launcher#init():103 --> nextflow/cli/CmdSelfUpdate#<init>()V
+# Covered: (524296209) nextflow/cli/Launcher#init():104 --> nextflow/cli/CmdPlugins#<init>()V
+# Covered: (524296210) nextflow/cli/Launcher#init():105 --> nextflow/cli/CmdPlugin#<init>()V
+# Covered: (524296212) nextflow/cli/Launcher#init():108 --> nextflow/secret/SecretsLoader#isEnabled()Z
+# Covered: (524296213) nextflow/cli/Launcher#init():108 [0]
+# Covered: (524296214) nextflow/cli/Launcher#init():109 --> nextflow/cli/CmdSecret#<init>()V
+# Covered: (524296216) nextflow/cli/Launcher#init():112 --> nextflow/util/SpuriousDeps#cmdCloud()Lnextflow/cli/CmdBase;
+# Covered: (524296218) nextflow/cli/Launcher#init():113 [1]
+# Covered: (524296220) nextflow/cli/Launcher#init():116 --> nextflow/cli/CliOptions#<init>()V
+# Covered: (524296222) nextflow/cli/Launcher#init():118 --> nextflow/cli/Launcher$_init_closure1#<init>(Ljava/lang/Object;Ljava/lang/Object;)V
+# Covered: (524296223) nextflow/cli/Launcher#init():118 --> nextflow/cli/Launcher$_init_closure1#call(Ljava/lang/Object;)Ljava/lang/Object;
+# Covered: (524300290) nextflow/cli/Launcher#parseMainArgs():130 --> nextflow/cli/Launcher#makeCli(Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
+# Covered: (524300292) nextflow/cli/Launcher#parseMainArgs():133 --> nextflow/cli/Launcher#getColumns()S
+# Covered: (524300293) nextflow/cli/Launcher#parseMainArgs():134 [1]
+# Covered: (524300294) nextflow/cli/Launcher#parseMainArgs():134 [1]
+# Covered: (524300296) nextflow/cli/Launcher#parseMainArgs():137 --> nextflow/cli/Launcher#normalizeArgs([Ljava/lang/String;)Ljava/util/List;
+# Covered: (524300299) nextflow/cli/Launcher#parseMainArgs():139 [1]
+# Covered: (524300300) nextflow/cli/Launcher#parseMainArgs():139 [1]
+# Covered: (524300303) nextflow/cli/Launcher#parseMainArgs():140 --> nextflow/cli/Launcher$_parseMainArgs_closure2#<init>(Ljava/lang/Object;Ljava/lang/Object;)V
+# Covered: (524300304) nextflow/cli/Launcher#parseMainArgs():140 --> nextflow/cli/Launcher$_parseMainArgs_closure2#doCall(Ljava/lang/Object;)Ljava/lang/Boolean;
+# Covered: (524300306) nextflow/cli/Launcher#parseMainArgs():144 --> nextflow/cli/Launcher#checkLogFileName()V
+# Covered: (524304386) nextflow/cli/Launcher#makeCli():150 [0]
+# Covered: (524304387) nextflow/cli/Launcher#makeCli():150 [0]
+# Covered: (524304389) nextflow/cli/Launcher#makeCli():152 [1]
+# Covered: (524304390) nextflow/cli/Launcher#makeCli():152 [1]
+# Covered: (524304396) nextflow/cli/Launcher#makeCli():156 [1]
+# Covered: (524304397) nextflow/cli/Launcher#makeCli():156 [1]
+# Covered: (524304400) nextflow/cli/Launcher#makeCli():158 [0]
+# Covered: (524304401) nextflow/cli/Launcher#makeCli():160 --> nextflow/util/Escape#cli([Ljava/lang/String;)Ljava/lang/String;
+# Covered: (524308481) nextflow/cli/Launcher#checkLogFileName():165 --> nextflow/cli/CliOptions#getLogFile()Ljava/lang/String;
+# Covered: (524308483) nextflow/cli/Launcher#checkLogFileName():165 [0]
+# Covered: (524308484) nextflow/cli/Launcher#checkLogFileName():165 [0]
+# Covered: (524308485) nextflow/cli/Launcher#checkLogFileName():166 --> nextflow/cli/Launcher#isDaemon()Z
+# Covered: (524308486) nextflow/cli/Launcher#checkLogFileName():166 [1]
+# Covered: (524308491) nextflow/cli/Launcher#checkLogFileName():168 [0]
+# Covered: (524308492) nextflow/cli/Launcher#checkLogFileName():168 --> nextflow/cli/CliOptions#getDebug()Ljava/util/List;
+# Covered: (524308494) nextflow/cli/Launcher#checkLogFileName():168 [1]
+# Covered: (524308495) nextflow/cli/Launcher#checkLogFileName():168 [0]
+# Covered: (524308496) nextflow/cli/Launcher#checkLogFileName():168 --> nextflow/cli/CliOptions#getTrace()Ljava/util/List;
+# Covered: (524308498) nextflow/cli/Launcher#checkLogFileName():168 [1]
+# Covered: (524308499) nextflow/cli/Launcher#checkLogFileName():168 [1]
+# Covered: (524312578) nextflow/cli/Launcher#getColumns():174 [0]
+# Covered: (524312579) nextflow/cli/Launcher#getColumns():174 [0]
+# Covered: (524333068) nextflow/cli/Launcher#normalizeArgs():204 [0]
+# Covered: (524333068) nextflow/cli/Launcher#normalizeArgs():204 [1]
+# Covered: (524333084) nextflow/cli/Launcher#normalizeArgs():210 [0]
+# Covered: (524333085) nextflow/cli/Launcher#normalizeArgs():210 --> nextflow/cli/Launcher$_normalizeArgs_closure3#<init>(Ljava/lang/Object;Ljava/lang/Object;Lgroovy/lang/Reference;)V
+# Covered: (524333086) nextflow/cli/Launcher#normalizeArgs():210 --> nextflow/cli/Launcher$_normalizeArgs_closure3#doCall(Ljava/lang/Object;)Ljava/lang/Boolean;
+# Covered: (524333087) nextflow/cli/Launcher#normalizeArgs():210 --> nextflow/cli/CmdBase#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (524333088) nextflow/cli/Launcher#normalizeArgs():210 [1]
+# Covered: (524333089) nextflow/cli/Launcher#normalizeArgs():210 [1]
+# Covered: (524333090) nextflow/cli/Launcher#normalizeArgs():210 [1]
+# Covered: (524333095) nextflow/cli/Launcher#normalizeArgs():210 [1]
+# Covered: (524333099) nextflow/cli/Launcher#normalizeArgs():214 [1]
+# Covered: (524333143) nextflow/cli/Launcher#normalizeArgs():222 [1]
+# Covered: (524333158) nextflow/cli/Launcher#normalizeArgs():222 [1]
+# Covered: (524333162) nextflow/cli/Launcher#normalizeArgs():226 [1]
+# Covered: (524333177) nextflow/cli/Launcher#normalizeArgs():226 [1]
+# Covered: (524333181) nextflow/cli/Launcher#normalizeArgs():230 [1]
+# Covered: (524333196) nextflow/cli/Launcher#normalizeArgs():230 [1]
+# Covered: (524333200) nextflow/cli/Launcher#normalizeArgs():234 [1]
+# Covered: (524333215) nextflow/cli/Launcher#normalizeArgs():234 [1]
+# Covered: (524333219) nextflow/cli/Launcher#normalizeArgs():238 [1]
+# Covered: (524333234) nextflow/cli/Launcher#normalizeArgs():238 [1]
+# Covered: (524333238) nextflow/cli/Launcher#normalizeArgs():242 [1]
+# Covered: (524333253) nextflow/cli/Launcher#normalizeArgs():242 [1]
+# Covered: (524333257) nextflow/cli/Launcher#normalizeArgs():246 [1]
+# Covered: (524333272) nextflow/cli/Launcher#normalizeArgs():246 [1]
+# Covered: (524333276) nextflow/cli/Launcher#normalizeArgs():250 [1]
+# Covered: (524333291) nextflow/cli/Launcher#normalizeArgs():250 [1]
+# Covered: (524333295) nextflow/cli/Launcher#normalizeArgs():254 [1]
+# Covered: (524333310) nextflow/cli/Launcher#normalizeArgs():254 [1]
+# Covered: (524333314) nextflow/cli/Launcher#normalizeArgs():258 [1]
+# Covered: (524333329) nextflow/cli/Launcher#normalizeArgs():258 [1]
+# Covered: (524333333) nextflow/cli/Launcher#normalizeArgs():262 [1]
+# Covered: (524333348) nextflow/cli/Launcher#normalizeArgs():262 [1]
+# Covered: (524333352) nextflow/cli/Launcher#normalizeArgs():266 [1]
+# Covered: (524333367) nextflow/cli/Launcher#normalizeArgs():266 [1]
+# Covered: (524333371) nextflow/cli/Launcher#normalizeArgs():270 [1]
+# Covered: (524333386) nextflow/cli/Launcher#normalizeArgs():270 [1]
+# Covered: (524333390) nextflow/cli/Launcher#normalizeArgs():274 [1]
+# Covered: (524333405) nextflow/cli/Launcher#normalizeArgs():274 [1]
+# Covered: (524333409) nextflow/cli/Launcher#normalizeArgs():278 [1]
+# Covered: (524333424) nextflow/cli/Launcher#normalizeArgs():278 [1]
+# Covered: (524333428) nextflow/cli/Launcher#normalizeArgs():282 [1]
+# Covered: (524333443) nextflow/cli/Launcher#normalizeArgs():282 [1]
+# Covered: (524333447) nextflow/cli/Launcher#normalizeArgs():286 [0]
+# Covered: (524333450) nextflow/cli/Launcher#normalizeArgs():286 [1]
+# Covered: (524333451) nextflow/cli/Launcher#normalizeArgs():286 [1]
+# Covered: (524333466) nextflow/cli/Launcher#normalizeArgs():286 [1]
+# Covered: (524333470) nextflow/cli/Launcher#normalizeArgs():290 [0]
+# Covered: (524333473) nextflow/cli/Launcher#normalizeArgs():290 [1]
+# Covered: (524333474) nextflow/cli/Launcher#normalizeArgs():290 [1]
+# Covered: (524333489) nextflow/cli/Launcher#normalizeArgs():290 [1]
+# Covered: (524333493) nextflow/cli/Launcher#normalizeArgs():294 [1]
+# Covered: (524333508) nextflow/cli/Launcher#normalizeArgs():294 [1]
+# Covered: (524333512) nextflow/cli/Launcher#normalizeArgs():298 [1]
+# Covered: (524333527) nextflow/cli/Launcher#normalizeArgs():298 [1]
+# Covered: (524333531) nextflow/cli/Launcher#normalizeArgs():302 [1]
+# Covered: (524333551) nextflow/cli/Launcher#normalizeArgs():302 [1]
+# Covered: (524333555) nextflow/cli/Launcher#normalizeArgs():306 [1]
+# Covered: (524333570) nextflow/cli/Launcher#normalizeArgs():306 [1]
+# Covered: (524333574) nextflow/cli/Launcher#normalizeArgs():310 [1]
+# Covered: (524333579) nextflow/cli/Launcher#normalizeArgs():310 [1]
+# Covered: (524333615) nextflow/cli/Launcher#normalizeArgs():316 [1]
+# Covered: (524333620) nextflow/cli/Launcher#normalizeArgs():316 [1]
+# Covered: (524333656) nextflow/cli/Launcher#normalizeArgs():322 [1]
+# Covered: (524333661) nextflow/cli/Launcher#normalizeArgs():322 [1]
+# Covered: (524333697) nextflow/cli/Launcher#normalizeArgs():328 [1]
+# Covered: (524333702) nextflow/cli/Launcher#normalizeArgs():328 [1]
+# Covered: (524333738) nextflow/cli/Launcher#normalizeArgs():334 [1]
+# Covered: (524333746) nextflow/cli/Launcher#normalizeArgs():334 [1]
+# Covered: (524333754) nextflow/cli/Launcher#normalizeArgs():334 [1]
+# Covered: (524345348) nextflow/cli/Launcher#usage():362 [1]
+# Covered: (524345362) nextflow/cli/Launcher#usage():374 --> nextflow/cli/Launcher#printOptions(Ljava/lang/Class;)V
+# Covered: (524345363) nextflow/cli/Launcher#usage():375 --> nextflow/cli/Launcher#printCommands(Ljava/util/List;)V
+# Covered: (524349441) nextflow/cli/Launcher#printOptions():0 --> nextflow/cli/Launcher#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (524349446) nextflow/cli/Launcher#printOptions():381 [0]
+# Covered: (524349448) nextflow/cli/Launcher#printOptions():381 [0]
+# Covered: (524349448) nextflow/cli/Launcher#printOptions():381 [1]
+# Covered: (524349453) nextflow/cli/Launcher#printOptions():383 [0]
+# Covered: (524349453) nextflow/cli/Launcher#printOptions():383 [1]
+# Covered: (524349454) nextflow/cli/Launcher#printOptions():383 [0]
+# Covered: (524349454) nextflow/cli/Launcher#printOptions():383 [1]
+# Covered: (524349457) nextflow/cli/Launcher#printOptions():386 [0]
+# Covered: (524349457) nextflow/cli/Launcher#printOptions():386 [1]
+# Covered: (524349460) nextflow/cli/Launcher#printOptions():386 [0]
+# Covered: (524349460) nextflow/cli/Launcher#printOptions():386 [1]
+# Covered: (524349461) nextflow/cli/Launcher#printOptions():386 [0]
+# Covered: (524349461) nextflow/cli/Launcher#printOptions():386 [1]
+# Covered: (524349462) nextflow/cli/Launcher#printOptions():386 [0]
+# Covered: (524349462) nextflow/cli/Launcher#printOptions():386 [1]
+# Covered: (524349465) nextflow/cli/Launcher#printOptions():386 [0]
+# Covered: (524349466) nextflow/cli/Launcher#printOptions():386 [0]
+# Covered: (524349466) nextflow/cli/Launcher#printOptions():386 [1]
+# Covered: (524349469) nextflow/cli/Launcher#printOptions():386 [0]
+# Covered: (524349470) nextflow/cli/Launcher#printOptions():386 [0]
+# Covered: (524349470) nextflow/cli/Launcher#printOptions():386 [1]
+# Covered: (524349473) nextflow/cli/Launcher#printOptions():391 --> nextflow/cli/Launcher$_printOptions_closure7#<init>(Ljava/lang/Object;Ljava/lang/Object;)V
+# Covered: (524349474) nextflow/cli/Launcher#printOptions():391 --> nextflow/cli/Launcher$_printOptions_closure7#doCall(Ljava/lang/Object;)Ljava/lang/Object;
+# Covered: (524349475) nextflow/cli/Launcher#printOptions():393 --> nextflow/cli/Launcher#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (524349478) nextflow/cli/Launcher#printOptions():394 [0]
+# Covered: (524349480) nextflow/cli/Launcher#printOptions():394 [0]
+# Covered: (524349480) nextflow/cli/Launcher#printOptions():394 [1]
+# Covered: (524349485) nextflow/cli/Launcher#printOptions():395 --> nextflow/cli/Launcher#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (524349488) nextflow/cli/Launcher#printOptions():396 --> nextflow/cli/Launcher#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (524353543) nextflow/cli/Launcher#printCommands():405 --> nextflow/cli/Launcher$_printCommands_closure8#<init>(Ljava/lang/Object;Ljava/lang/Object;Lgroovy/lang/Reference;Lgroovy/lang/Reference;)V
+# Covered: (524353544) nextflow/cli/Launcher#printCommands():405 --> nextflow/cli/Launcher$_printCommands_closure8#call(Ljava/lang/Object;)Ljava/lang/Object;
+# Covered: (524353546) nextflow/cli/Launcher#printCommands():413 --> nextflow/cli/Launcher$_printCommands_closure9#<init>(Ljava/lang/Object;Ljava/lang/Object;Lgroovy/lang/Reference;)V
+# Covered: (524353547) nextflow/cli/Launcher#printCommands():413 --> nextflow/cli/Launcher$_printCommands_closure9#doCall(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+# Covered: (524357633) nextflow/cli/Launcher#command():427 --> nextflow/cli/Launcher#parseMainArgs([Ljava/lang/String;)Lnextflow/cli/Launcher;
+# Covered: (524357634) nextflow/cli/Launcher#command():428 --> nextflow/util/LoggerHelper#configureLogger(Lnextflow/cli/Launcher;)V
+# Covered: (524361729) nextflow/cli/Launcher#checkForHelp():450 --> nextflow/cli/CliOptions#getHelp()Z
+# Covered: (524361730) nextflow/cli/Launcher#checkForHelp():450 [0]
+# Covered: (524361731) nextflow/cli/Launcher#checkForHelp():450 --> nextflow/cli/CmdBase#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (524361732) nextflow/cli/Launcher#checkForHelp():450 [1]
+# Covered: (524361733) nextflow/cli/Launcher#checkForHelp():450 [1]
+# Covered: (524361734) nextflow/cli/Launcher#checkForHelp():450 [0]
+# Covered: (524361735) nextflow/cli/Launcher#checkForHelp():450 --> nextflow/cli/CmdBase#getHelp()Z
+# Covered: (524361736) nextflow/cli/Launcher#checkForHelp():450 [1]
+# Covered: (524361737) nextflow/cli/Launcher#checkForHelp():450 [1]
+# Covered: (524365825) nextflow/cli/Launcher#run():476 --> nextflow/cli/Launcher#setupEnvironment()V
+# Covered: (524365827) nextflow/cli/Launcher#run():482 [0]
+# Covered: (524365829) nextflow/cli/Launcher#run():482 --> nextflow/util/LoggerHelper$ConsoleLoggerFilter#decide(Ljava/lang/Object;)Lch/qos/logback/core/spi/FilterReply;
+# Covered: (524365830) nextflow/cli/Launcher#run():485 --> nextflow/cli/CliOptions#getVersion()Z
+# Covered: (524365831) nextflow/cli/Launcher#run():485 [1]
+# Covered: (524365835) nextflow/cli/Launcher#run():491 --> nextflow/cli/Launcher#checkForHelp()V
+# Covered: (524365836) nextflow/cli/Launcher#run():494 [0]
+# Covered: (524365837) nextflow/cli/Launcher#run():494 --> nextflow/cli/CmdSecret#run()V
+# Covered: (524365839) nextflow/cli/Launcher#run():496 [1]
+# Covered: (524374018) nextflow/cli/Launcher#setupEnvironment():580 --> nextflow/cli/Launcher#setProxy(Ljava/lang/String;Ljava/util/Map;)V
+# Covered: (524374020) nextflow/cli/Launcher#setupEnvironment():581 --> nextflow/cli/Launcher#setProxy(Ljava/lang/String;Ljava/util/Map;)V
+# Covered: (524374022) nextflow/cli/Launcher#setupEnvironment():582 --> nextflow/cli/Launcher#setProxy(Ljava/lang/String;Ljava/util/Map;)V
+# Covered: (524374024) nextflow/cli/Launcher#setupEnvironment():584 --> nextflow/cli/Launcher#setProxy(Ljava/lang/String;Ljava/util/Map;)V
+# Covered: (524374026) nextflow/cli/Launcher#setupEnvironment():585 --> nextflow/cli/Launcher#setProxy(Ljava/lang/String;Ljava/util/Map;)V
+# Covered: (524374028) nextflow/cli/Launcher#setupEnvironment():586 --> nextflow/cli/Launcher#setProxy(Ljava/lang/String;Ljava/util/Map;)V
+# Covered: (524374030) nextflow/cli/Launcher#setupEnvironment():588 --> nextflow/cli/Launcher#setNoProxy(Ljava/util/Map;)V
+# Covered: (524378116) nextflow/cli/Launcher#setNoProxy():601 [1]
+# Covered: (524378120) nextflow/cli/Launcher#setNoProxy():602 [1]
+# Covered: (524382211) nextflow/cli/Launcher#setProxy():620 [1]
+# Covered: (524382212) nextflow/cli/Launcher#setProxy():620 [1]
+# Covered: (524382220) nextflow/cli/Launcher#setProxy():620 [0]
+# Covered: (524382226) nextflow/cli/Launcher#setProxy():622 --> nextflow/extension/Bolts#isLowerCase(Ljava/lang/String;)Z
+# Covered: (524382227) nextflow/cli/Launcher#setProxy():622 [0]
+# Covered: (524382227) nextflow/cli/Launcher#setProxy():622 [1]
+# Covered: (524382233) nextflow/cli/Launcher#setProxy():626 --> nextflow/util/ProxyConfig#parse(Ljava/lang/String;)Lnextflow/util/ProxyConfig;
+# Covered: (524382235) nextflow/cli/Launcher#setProxy():627 [1]
+# Covered: (524394498) nextflow/cli/Launcher#$getStaticMetaClass():0 [1]
+# Covered: (524394501) nextflow/cli/Launcher#$getStaticMetaClass():0 [1]
+# Covered: (524410881) nextflow/cli/Launcher#getMetaClass():0 [0]
+# Covered: (524427265) nextflow/cli/Launcher#$createCallSiteArray():0 --> nextflow/cli/Launcher#$createCallSiteArray_1([Ljava/lang/String;)V
+# Covered: (524431361) nextflow/cli/Launcher#$getCallSiteArray():0 [1]
+# Covered: (524431364) nextflow/cli/Launcher#$getCallSiteArray():0 --> nextflow/cli/Launcher#$createCallSiteArray()Lorg/codehaus/groovy/runtime/callsite/CallSiteArray;
+# Covered: (583012353) nextflow/cli/CmdInfo#<init>():0 --> nextflow/cli/CmdBase#<init>()V
+# Covered: (583012354) nextflow/cli/CmdInfo#<init>():0 --> nextflow/cli/CmdInfo#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (583020545) nextflow/cli/CmdInfo#run():70 [1]
+# Covered: (583020546) nextflow/cli/CmdInfo#run():70 [1]
+# Covered: (583020548) nextflow/cli/CmdInfo#run():71 [0]
+# Covered: (583020549) nextflow/cli/CmdInfo#run():71 [0]
+# Covered: (583020550) nextflow/cli/CmdInfo#run():72 --> nextflow/cli/CmdInfo#getInfo(I)Ljava/lang/String;
+# Covered: (583061513) nextflow/cli/CmdInfo#getInfo():211 --> nextflow/Const#deltaLocal()Ljava/lang/String;
+# Covered: (583061536) nextflow/cli/CmdInfo#getInfo():216 [1]
+# Covered: (583061556) nextflow/cli/CmdInfo#getInfo():222 [0]
+# Covered: (583061557) nextflow/cli/CmdInfo#getInfo():222 [0]
+# Covered: (583077890) nextflow/cli/CmdInfo#$getStaticMetaClass():0 [1]
+# Covered: (583077893) nextflow/cli/CmdInfo#$getStaticMetaClass():0 [1]
+# Covered: (583090177) nextflow/cli/CmdInfo#getInfo():0 --> nextflow/cli/CmdInfo#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (583090178) nextflow/cli/CmdInfo#getInfo():0 [0]
+# Covered: (583090180) nextflow/cli/CmdInfo#getInfo():0 [0]
+# Covered: (583090183) nextflow/cli/CmdInfo#getInfo():0 --> nextflow/cli/CmdInfo#getInfo(IZ)Ljava/lang/String;
+# Covered: (583155713) nextflow/cli/CmdInfo#$getCallSiteArray():0 [1]
+# Covered: (583155716) nextflow/cli/CmdInfo#$getCallSiteArray():0 --> nextflow/cli/CmdInfo#$createCallSiteArray()Lorg/codehaus/groovy/runtime/callsite/CallSiteArray;
+# Covered: (692064258) nextflow/cli/CmdSecret$GetCmd#<init>():0 --> nextflow/cli/CmdSecret$GetCmd#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (692080642) nextflow/cli/CmdSecret$GetCmd#$getStaticMetaClass():0 [1]
+# Covered: (692080645) nextflow/cli/CmdSecret$GetCmd#$getStaticMetaClass():0 [1]
+# Covered: (704647170) nextflow/util/LoggerHelper$ConsoleLoggerFilter#<init>():0 --> nextflow/util/LoggerHelper$ConsoleLoggerFilter#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (704651266) nextflow/util/LoggerHelper$ConsoleLoggerFilter#decide():378 [1]
+# Covered: (704651267) nextflow/util/LoggerHelper$ConsoleLoggerFilter#decide():378 [1]
+# Covered: (704651271) nextflow/util/LoggerHelper$ConsoleLoggerFilter#decide():384 [0]
+# Covered: (704651271) nextflow/util/LoggerHelper$ConsoleLoggerFilter#decide():384 [1]
+# Covered: (704651272) nextflow/util/LoggerHelper$ConsoleLoggerFilter#decide():384 [0]
+# Covered: (704651272) nextflow/util/LoggerHelper$ConsoleLoggerFilter#decide():384 [1]
+# Covered: (704651276) nextflow/util/LoggerHelper$ConsoleLoggerFilter#decide():386 [0]
+# Covered: (704651276) nextflow/util/LoggerHelper$ConsoleLoggerFilter#decide():386 [1]
+# Covered: (704651278) nextflow/util/LoggerHelper$ConsoleLoggerFilter#decide():386 [1]
+# Covered: (704651279) nextflow/util/LoggerHelper$ConsoleLoggerFilter#decide():386 [1]
+# Covered: (704651284) nextflow/util/LoggerHelper$ConsoleLoggerFilter#decide():386 [1]
+# Covered: (704655362) nextflow/util/LoggerHelper$ConsoleLoggerFilter#$getStaticMetaClass():0 [1]
+# Covered: (704655365) nextflow/util/LoggerHelper$ConsoleLoggerFilter#$getStaticMetaClass():0 [1]
+# Covered: (704692225) nextflow/util/LoggerHelper$ConsoleLoggerFilter#decide():0 --> nextflow/util/LoggerHelper$ConsoleLoggerFilter#decide(Lch/qos/logback/classic/spi/ILoggingEvent;)Lch/qos/logback/core/spi/FilterReply;
+# Covered: (750784513) nextflow/cli/CmdSecret#<init>():0 --> nextflow/cli/CmdBase#<init>()V
+# Covered: (750784515) nextflow/cli/CmdSecret#<init>():46 --> nextflow/cli/CmdSecret#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (750784516) nextflow/cli/CmdSecret#<init>():58 --> nextflow/cli/CmdSecret$GetCmd#<init>(Lnextflow/cli/CmdSecret;)V
+# Covered: (750784518) nextflow/cli/CmdSecret#<init>():59 --> nextflow/cli/CmdSecret$PutCmd#<init>(Lnextflow/cli/CmdSecret;)V
+# Covered: (750784520) nextflow/cli/CmdSecret#<init>():60 --> nextflow/cli/CmdSecret$SetCmd#<init>(Lnextflow/cli/CmdSecret;)V
+# Covered: (750784522) nextflow/cli/CmdSecret#<init>():61 --> nextflow/cli/CmdSecret$ListCmd#<init>(Lnextflow/cli/CmdSecret;)V
+# Covered: (750784524) nextflow/cli/CmdSecret#<init>():62 --> nextflow/cli/CmdSecret$DeleteCmd#<init>(Lnextflow/cli/CmdSecret;)V
+# Covered: (750813186) nextflow/cli/CmdSecret#$getStaticMetaClass():0 [1]
+# Covered: (750813189) nextflow/cli/CmdSecret#$getStaticMetaClass():0 [1]
+# Covered: (939540482) nextflow/plugin/Plugins$stop$0#call():0 [0]
+# Covered: (939540483) nextflow/plugin/Plugins$stop$0#call():0 --> nextflow/plugin/Plugins#stop()V
+# Covered: (939585538) nextflow/extension/Bolts#isLowerCase():283 [0]
+# Covered: (939585540) nextflow/extension/Bolts#isLowerCase():283 [0]
+# Covered: (939585540) nextflow/extension/Bolts#isLowerCase():283 [1]
+# Covered: (939585541) nextflow/extension/Bolts#isLowerCase():283 [0]
+# Covered: (939585541) nextflow/extension/Bolts#isLowerCase():283 [1]
+# Covered: (939585544) nextflow/extension/Bolts#isLowerCase():284 [0]
+# Covered: (939585544) nextflow/extension/Bolts#isLowerCase():284 [1]
