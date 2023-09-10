@@ -10,10 +10,10 @@ from pytablewriter import MarkdownTableWriter
 
 DATASET = ["nextflow"]
 
-ALGORITHM = ["semantic-zest", "syntactic-zest", "semantic-noguidance", "syntactic-noguidance"]
-#ALGORITHM = ["semantic-zest", "syntactic-zest", "semantic-noguidance", "syntactic-noguidance","afl"]
+#ALGORITHM = ["semantic-zest", "syntactic-zest", "semantic-noguidance", "syntactic-noguidance"]
+ALGORITHM = ["semantic-zest", "syntactic-zest", "semantic-noguidance", "syntactic-noguidance","afl"]
 
-RANGE=4
+RANGE=9
 
 ROLLING_MEAN=8
 
@@ -161,8 +161,8 @@ def main():
     outdirname+=f"_{reindexsteps}steps"        
     outdirname+=f"_{errorbarname}"        
     
-    generate_cov_table(path)
-    #generate_graph(path, outdirname, errorbarname, reindexsteps)
+    #generate_cov_table(path)
+    generate_graph(path, outdirname, errorbarname, reindexsteps)
 
 if __name__ == "__main__":
     main()
