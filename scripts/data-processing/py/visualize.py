@@ -89,24 +89,25 @@ def generate_plot_data_base(path: str, data: pd.DataFrame, rolling_data:pd.DataF
     ax1.set_ylabel(y_axis)
     ax2.set_ylabel(f"rolling_{rolling_mean}_{y_axis}")
 
-    fig = ax2.get_figure()
-    fig.savefig(path)
-    fig.clf()
+    #fig = ax2.get_figure()
+    #  fig.savefig(path)
+    #fig.clf()
+    return ax2
 
 def generate_valid_coverage_over_time(          path: str, data: pd.DataFrame, rolling_data: pd.DataFrame, rolling_mean, errorbarname: str = 'se'):
-    generate_plot_data_base(path, data, rolling_data, "# unix_time", "valid_covered_probes", rolling_mean, errorbarname)
+    return generate_plot_data_base(path, data, rolling_data, "# unix_time", "valid_covered_probes", rolling_mean, errorbarname)
 
 def generate_all_coverage_over_time(            path: str, data: pd.DataFrame, rolling_data: pd.DataFrame, rolling_mean, errorbarname: str = 'se'):
-    generate_plot_data_base(path, data, rolling_data,  "# unix_time", "all_covered_probes", rolling_mean, errorbarname)
+    return generate_plot_data_base(path, data, rolling_data,  "# unix_time", "all_covered_probes", rolling_mean, errorbarname)
 
 def generate_total_inputs_over_time(            path: str, data: pd.DataFrame, rolling_data: pd.DataFrame, rolling_mean, errorbarname: str = 'se'):
-    generate_plot_data_base(path, data, rolling_data,  "# unix_time", "total_inputs", rolling_mean, errorbarname)
+    return generate_plot_data_base(path, data, rolling_data,  "# unix_time", "total_inputs", rolling_mean, errorbarname)
 
 def generate_valid_coverage_over_total_inputs(  path: str, data: pd.DataFrame, rolling_data: pd.DataFrame, rolling_mean, errorbarname: str = 'se'):
-    generate_plot_data_base(path, data, rolling_data, "total_inputs", "valid_covered_probes", rolling_mean, errorbarname)
+    return generate_plot_data_base(path, data, rolling_data, "total_inputs", "valid_covered_probes", rolling_mean, errorbarname)
 
 def generate_all_coverage_over_total_inputs(    path: str, data: pd.DataFrame, rolling_data: pd.DataFrame, rolling_mean, errorbarname: str = 'se'):
-    generate_plot_data_base(path, data, rolling_data, "total_inputs", "all_covered_probes", rolling_mean, errorbarname)
+    return generate_plot_data_base(path, data, rolling_data, "total_inputs", "all_covered_probes", rolling_mean, errorbarname)
 
 def show_values_on_bars(axs):
     def _show_on_single_plot(ax):
@@ -125,9 +126,10 @@ def show_values_on_bars(axs):
 def generate_total_coverage_bar(path: str, data: Dict[str, List[Any]]):
     axis = sns.barplot(x="type", y="value", hue="algo", data=data)
     show_values_on_bars(axis)
-    fig = axis.get_figure()
-    fig.savefig(path)
-    fig.clf()
+    #fig = axis.get_figure()
+    #fig.savefig(path)
+    #fig.clf()
+    return axis
 
 
 

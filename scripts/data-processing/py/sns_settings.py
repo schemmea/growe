@@ -12,4 +12,4 @@ colors = ['#2A587A', '#FABC75', '#83B828', '#F83A25', '#FDD8EB']
 sns.palplot(colors)
 sns.set_palette(sns.color_palette(colors), 8, .75)
 sub_figure_title = {"fontweight": 700, 'fontname':'Times New Roman', 'fontsize': 18}
-plt.tight_layout()
+#plt.tight_layout()
