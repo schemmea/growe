@@ -1,20 +1,20 @@
-<nextflow> ::= "#!/usr/bin/env nextflow" <newline> <processes> <workflow>
-<newline> ::= "\n"
+<nextflow> ::= "#!/usr/bin/env nextflow" <nl> <processes> <workflow>
+<nl> ::= "\n"
 
-<processes> ::= <process>  |  <process>  <newline> <processes>
+<processes> ::= <process>  |  <process>  <nl> <processes>
 <magicstring> ::= "script1" | "script2.sh" | "script3" | "script4.txt" | "script5"
 
-<process> ::= "process " <identifier> "{" <newline> "debug true" <newline> <input> <output> <script> <newline> "}" <newline>
+<process> ::= "process " <identifier> "{" <nl> "debug true" <nl> <input> <output> <script> <nl> "}" <nl>
 
 <iotype> ::=  "val" |  "tuple"
-<input> ::= "input:" <newline> <iotype>  " variable" <newline>
-<output> ::= "output:" <newline> <iotype> " variable" <newline>
+<input> ::= "input:" <nl> <iotype>  " variable" <nl>
+<output> ::= "output:" <nl> <iotype> " variable" <nl>
 
-<script> ::= "script:" <newline> "template " <tick>  <magicstring> <tick>
+<script> ::= "script:" <nl> "template " <tick>  <magicstring> <tick>
 
 <processcalls> ::= <identifier> <pipe> <identifier> | <identifier> <pipe> <processcalls>
 <workflow> ::= " workflow " <workflowbody>
-<workflowbody> ::= "{" <newline> <channel> <pipe> <processcalls> <newline> "}"
+<workflowbody> ::= "{" <nl> <channel> <pipe> <processcalls> <nl> "}"
 
 <channel> ::= "Channel.of" <open> <channellist> <close>
 <channellist> ::= <channelitem> "," <channelitem> | <channelitem> "," <channellist>

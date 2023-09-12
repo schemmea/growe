@@ -13,12 +13,9 @@ public class NextflowCommandGenerator extends Generator<String[]> {
 
     public NextflowCommandGenerator() throws IOException {
         super(String[].class);
-        boolean useBaseline = TestExecutor.getARGS().getUseBaseline();
-        if (useBaseline) {
-            baseGenerator = new BaselineGenerator();
-        } else {
-            baseGenerator = new WorkflowFileGenerator();
-        }
+
+        baseGenerator = new WorkflowFileGenerator();
+
     }
 
 
@@ -43,7 +40,7 @@ public class NextflowCommandGenerator extends Generator<String[]> {
                 if (sourceOfRandomness.nextBoolean()) {
                     return new String[]{command, file, sourceOfRandomness.choose(runOptions), "-cache", "false"};
                 } else {
-                    return new String[]{command, file, "-cache" , "false"};
+                    return new String[]{command, file, "-cache", "false"};
                 }
             case "secrets":
                 String option = sourceOfRandomness.choose(secretsOptions);
@@ -58,8 +55,8 @@ public class NextflowCommandGenerator extends Generator<String[]> {
             case "console":
             case "view":
             case "clean":
-                 return new String[]{command, "" + sourceOfRandomness.nextChar('a', 'z')};
-               //return new String[]{command, "-"+sourceOfRandomness.nextChar('a', 'z') };
+                return new String[]{command, "" + sourceOfRandomness.nextChar('a', 'z')};
+            //return new String[]{command, "-"+sourceOfRandomness.nextChar('a', 'z') };
             case "log":
             case "list":
             case "info":

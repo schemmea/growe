@@ -6,6 +6,8 @@ import com.sourceclear.gramtest.bnfLexer;
 import com.sourceclear.gramtest.bnfParser;
 import com.pholser.junit.quickcheck.generator.GenerationStatus;
 import com.pholser.junit.quickcheck.random.SourceOfRandomness;
+import de.schemmea.ma.TestExecutor;
+import de.schemmea.ma.utils.Args;
 import de.schemmea.ma.utils.FileResourcesUtils;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -40,12 +42,20 @@ public class ContentGenerator extends Generator<String> {
 
     private final ParserRuleContext tree;
 
+    int bytestaken = 0;
+
     public ContentGenerator() throws IOException {
         super(String.class);
 
         scripts = loadScriptFiles();
-        InputStream bnfFile = new FileResourcesUtils().getResourceFileAsStream("/nextflow/bnfs/nextflow.bnf");
 
+        InputStream bnfFile = null;
+        if (TestExecutor.getARGS().getUseBaseline()) {
+            bnfFile = new FileResourcesUtils().getResourceFileAsStream("/nextflow/bnfs/nextflow_baseline.bnf");
+        } else {
+            bnfFile = new FileResourcesUtils().getResourceFileAsStream("/nextflow/bnfs/nextflow.bnf");
+
+        }
         Lexer lexer = new bnfLexer(new ANTLRInputStream(bnfFile));
 
         CommonTokenStream tokens = new CommonTokenStream(lexer);
@@ -61,10 +71,13 @@ public class ContentGenerator extends Generator<String> {
 
             String genTest = generatedTests.get(0);
 
-            genTest = replaceProcesscallsPlaceholder(genTest, sourceOfRandomness);
-            genTest = replaceMagicStringWithRandomScript(genTest, sourceOfRandomness);
-
+            if (!TestExecutor.getARGS().getUseBaseline()) {
+                genTest = replaceProcesscallsPlaceholder(genTest);
+                genTest = replaceMagicStringWithRandomScript(genTest, sourceOfRandomness);
+            }
             genTest = genTest.replace("\\n", Configuration.newline);
+
+            GeneratorVisitor.addToBytesLastRun(bytestaken);
 
             return genTest;
         } catch (Exception e) {
@@ -73,7 +86,7 @@ public class ContentGenerator extends Generator<String> {
         }
     }
 
-    private String replaceProcesscallsPlaceholder(String testCase, SourceOfRandomness sourceOfRandomness) {
+    private String replaceProcesscallsPlaceholder(String testCase) {
         String replaced = testCase;
         var processnames = collectProcessNames(replaced);
         var processnames2var = processnames.stream().filter(n -> n.contains(processwithtwovars)).collect(Collectors.toList());
@@ -133,6 +146,7 @@ public class ContentGenerator extends Generator<String> {
         var filteredScripts = scripts.stream().filter(scriptFilter).collect(Collectors.toList());
         if (filteredScripts.size() > 0) {
             int count = replaced.split(scriptMagicString).length - 1;
+            bytestaken += count;
             for (int i = 0; i < count; i++) {
                 //call script inline and not with template
 

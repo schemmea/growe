@@ -160,7 +160,7 @@ public class GeneratorVisitor extends bnfBaseVisitor {
             try {
                 shuffle(acList, sourceOfRandomness);
                 int c = shuffled.getOrDefault(ctx.getText(), 0);
-                shuffled.put(ctx.getText(), ++c);
+                shuffled.put(ctx.getText(), c + acList.size());
             } catch (Exception e) {
                 // e.printStackTrace();
                 System.out.println("~~~~~ End of Random in shuffle~~~~");
@@ -304,11 +304,27 @@ public class GeneratorVisitor extends bnfBaseVisitor {
     //---------------------------- Property Methods -----------------------------
 
     public List<String> getTests() {
-        // int sum = choicesMade.values().stream().mapToInt(Integer::intValue).sum() +
-        //         shuffled.values().stream().mapToInt(Integer::intValue).sum();
-        // System.out.println("~~~~~ Choices Made: " + choicesMade +
-        //         ", \nShuffled: " + shuffled + "\nSum: " + sum +" ~~~~");
+        int sum = choicesMade.values().stream().mapToInt(Integer::intValue).sum() +
+                shuffled.values().stream().mapToInt(Integer::intValue).sum();
+        System.out.println("~~~~~ Choices Made: " + choicesMade +
+                ", \nShuffled: " + shuffled + "\nSum: " + sum + " ~~~~");
+
+        allBytesTaken.add(sum);
         return tests;
     }
 
+    public static ArrayList<Integer> allBytesTaken;
+
+    static {
+        allBytesTaken = new ArrayList<>();
+    }
+
+    public static void addToBytesLastRun(int add) {
+        int size = allBytesTaken.size();
+        allBytesTaken.set(size - 1, allBytesTaken.get(size - 1) + add);
+        int totalsum = allBytesTaken.stream().mapToInt(Integer::intValue).sum();
+        float avg = ((float) totalsum) / ((float) size);
+
+        System.out.println("Bytes so far: in" + size + " runs, total" + totalsum + ", average: " + avg);
+    }
 }
