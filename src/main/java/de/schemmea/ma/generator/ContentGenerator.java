@@ -47,15 +47,15 @@ public class ContentGenerator extends Generator<String> {
     public ContentGenerator() throws IOException {
         super(String.class);
 
-        scripts = loadScriptFiles();
-
         InputStream bnfFile = null;
+
         if (TestExecutor.getARGS().getUseBaseline()) {
             bnfFile = new FileResourcesUtils().getResourceFileAsStream("/nextflow/bnfs/nextflow_baseline.bnf");
         } else {
+            scripts = loadScriptFiles();
             bnfFile = new FileResourcesUtils().getResourceFileAsStream("/nextflow/bnfs/nextflow.bnf");
-
         }
+
         Lexer lexer = new bnfLexer(new ANTLRInputStream(bnfFile));
 
         CommonTokenStream tokens = new CommonTokenStream(lexer);
@@ -77,6 +77,7 @@ public class ContentGenerator extends Generator<String> {
             }
             genTest = genTest.replace("\\n", Configuration.newline);
 
+            //do this in both setups to print in generator visitor
             GeneratorVisitor.addToBytesLastRun(bytestaken);
 
             return genTest;

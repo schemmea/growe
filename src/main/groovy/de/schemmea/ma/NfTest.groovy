@@ -35,9 +35,6 @@ public class NfTest {
 
     static void setIteration(int value) { iteration = value; }
 
-    public void setup() {
-        //    Plugins.stop()
-    }
 
     @Fuzz
     public void debugTest() {
@@ -65,7 +62,7 @@ public class NfTest {
 
 
     @Fuzz
-    public void testNFCommandTryCatch(@From(GroovyWrapperGenerator.class) String[] command) {
+    public void testNFCommandTryCatch(@From(NextflowCommandGenerator.class) String[] command) {
         NfTest.setIteration(NfTest.getIteration() + 1); //for java debugging
         println Configuration.newline + "ITERATION " + NfTest.iteration + Configuration.newline
         println command
@@ -99,7 +96,7 @@ public class NfTest {
     }
 
     @Fuzz
-    public void testNFCommand(@From(GroovyWrapperGenerator.class) String[] command) {
+    public void testNFCommand(@From(NextflowCommandGenerator.class) String[] command) {
         NfTest.setIteration(NfTest.getIteration() + 1); //for java debugging
         println Configuration.newline + "ITERATION " + NfTest.iteration + Configuration.newline
         println command
@@ -120,6 +117,23 @@ public class NfTest {
         }
     }
 
+    @Fuzz
+    public void testRun(@From(GroovyWrapperGenerator.class) File file) {
+
+        println Configuration.newline + "ITERATION " + ++iteration + Configuration.newline
+
+        String filename = file.absolutePath;
+        String[] args = new String[]{"run", filename, "-cache", "false", "-ps", "1"};
+
+        Launcher launcher = new Launcher().command(args)
+
+        //avoid try catch (Throwable) in Launcher
+        CmdRun myRunner = new CmdRun();
+        myRunner.setArgs(args.tail().toList());
+        myRunner.setLauncher(launcher);
+
+        myRunner.run();
+    }
 
     @Fuzz
     public void testFile(@From(BaselineGenerator.class) File inputFile) {
@@ -164,7 +178,7 @@ public class NfTest {
 
         //nextflow clean -f
         // this makes interesting things in syntactic?
-        // int status = new Launcher().command(new String[]{"clean","-f"}).run();
+        int status = new Launcher().command(new String[]{"clean","-f"}).run();
     }
 
 }
