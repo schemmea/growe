@@ -18,9 +18,9 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
   sleep 1
   screen -S "$name-$id" -p "name-$id" -X stuff "timeout ${timeouts}s $SCRIPT_DIR/run_jqf \"$name\" $id ^M"
 
-sleep $timeouts    
+ sleep $timeouts    
 
-timeouts=((1 * 20 * 60 + 30))
+timeouts=$((1 * 20 * 60 + 30))
 
   echo "repro $name-$id timeout ${timeouts}s "
   screen -S "repro-$name-$id" -dm -t "repro-$name-$id"

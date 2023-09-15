@@ -6,7 +6,7 @@ search_file="===== DONE ====="  # Replace with the specific file you're looking 
 path=$1
 
 for base_name in "${base_names[@]}"; do
-    for id in {0..10}; do
+    for id in {0..5}; do
        folder="$path/nextflow-${base_name}-${id}"
 
 	      errorstring="$folder"
