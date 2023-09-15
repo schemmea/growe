@@ -24,3 +24,4 @@ exp*
 scripts/data-processing/py/__pycache__/
 figs*
 
+.ipynb_checkpoints/
