@@ -16,30 +16,23 @@ for id in $(seq $id1 $id2); do
 
   echo "semantic-zest-$id timeout ${timeouts}s "
   screen -S "semantic-zest-$id" -dm -t "semantic-zest-$id"
+  sleep 1
   screen -S "semantic-zest-$id" -p "semantic-zest-$id" -X stuff "timeout ${timeouts}s $SCRIPT_DIR/run_jqf \"semantic-zest\" $id ^M"
-#    sleep $time
- #   sleep 10
-  #$SCRIPT_DIR/run_jqf "semantic-zest" $id
 
   echo "syntactic-zest-$id timeout ${timeouts}s"
   screen -S "syntactic-zest-$id" -dm -t "syntactic-zest-$id"
+  sleep 1
   screen -S "syntactic-zest-$id" -p "syntactic-zest-$id" -X stuff "timeout ${timeouts}s $SCRIPT_DIR/run_jqf \"syntactic-zest\" $id -b ^M"
-  # sleep $time
-  # sleep 10
-  #$SCRIPT_DIR/run_jqf "syntactic-zest" $id -b
 
   echo "semantic-noguidance-$id timeout ${timeouts}s"
   screen -S "semantic-noguidance-$id" -dm -t "semantic-noguidance-$id"
+  sleep 1
   screen -S "semantic-noguidance-$id" -p "semantic-noguidance-$id" -X stuff "timeout ${timeouts}s $SCRIPT_DIR/run_jqf \"semantic-noguidance\" $id ^M"
-   #sleep $time
-   #sleep 10
-    #$SCRIPT_DIR/run_jqf "semantic-noguidance" $id
 
   echo "syntactic-noguidance-$id timeout ${timeouts}s"
   screen -S "syntactic-noguidance-$id" -dm -t "syntactic-noguidance-$id"
+  sleep 1
   screen -S "syntactic-noguidance-$id" -p "syntactic-noguidance-$id" -X stuff "timeout ${timeouts}s $SCRIPT_DIR/run_jqf \"syntactic-noguidance\" $id -b ^M"
-
-  #SCRIPT_DIR/run_jqf "syntactic-noguidance" $id -b
 
   sleep $time
   sleep 10

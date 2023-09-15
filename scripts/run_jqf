@@ -69,7 +69,7 @@ function executeTest() {
 }
 
 # execution preparation
-mkdir -p "$EXEC_DIR" || return 1
+mkdir -p "$EXEC_DIR" || rm -r  "$EXEC_DIR/errorDir"
 cd "$EXEC_DIR" || return 1
 
 executeTest "$@"

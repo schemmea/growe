@@ -1,0 +1,29 @@
+#!/bin/bash
+
+if [ $# -lt 2 ]; then
+  echo "Usage: $0 ID-FROM ID-TO" 2>/dev/null
+  exit 1
+fi
+
+name=$1
+id=$2
+time=$((1*60*60))
+timeouts=$((time + 30))
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+
+  echo "$name-$id timeout ${timeouts}s "
+  screen -S "$name-$id" -dm -t "name-$id"
+  sleep 1
+  screen -S "$name-$id" -p "name-$id" -X stuff "timeout ${timeouts}s $SCRIPT_DIR/run_jqf \"$name\" $id ^M"
+
+sleep $timeouts    
+
+timeouts=((1 * 20 * 60 + 30))
+
+  echo "repro $name-$id timeout ${timeouts}s "
+  screen -S "repro-$name-$id" -dm -t "repro-$name-$id"
+  sleep 1
+  screen -S "repro-$name-$id" -p "repro-$name-$id" -X stuff "timeout ${timeouts}s $SCRIPT_DIR/run_repro \"nextflow-$name-$id\"  ^M"
+
