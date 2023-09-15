@@ -178,7 +178,7 @@ public class NfTest {
 
         //nextflow clean -f
         // this makes interesting things in syntactic?
-        int status = new Launcher().command(new String[]{"clean","-f"}).run();
+        //int status = new Launcher().command(new String[]{"clean","-f"}).run();
     }
 
 }

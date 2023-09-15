@@ -28,7 +28,7 @@ public class TestExecutor {
 
         var commander = new JCommander(ARGS, args)
 
-        String testname = "testRun"//"testNFCommand" //"testMini" //"testNFCommand"
+        String testname = "testNFCommand"//"testNFCommand" //"testMini" //"testNFCommand"
         Class testclass = NfTest.class
 
         String errorDir = Configuration.ERROR_DIR;
@@ -39,7 +39,6 @@ public class TestExecutor {
 
         new FileResourcesUtils().copyFilesToFolder(Configuration.SOURCE_PATH, Configuration.OUTPUT_PATH);
         new FileResourcesUtils().copyFilesToFolder(Configuration.TEMPLATE_SOURCE_PATH, Configuration.OUTPUT_TEMPLATE_PATH);
-        new FileResourcesUtils().copyFilesToFolder(Configuration.DATA_SOURCE_PATH, Configuration.OUTPUT_DATA_PATH);
 
         if (ARGS.guidance == "repro") {
             def testInputFiles = []

@@ -6,9 +6,8 @@
 
 <process> ::= "process " <identifier> "{" <nl> "debug true" <nl> <input> <output> <script> <nl> "}" <nl>
 
-<iotype> ::=  "val" |  "tuple"
-<input> ::= "input:" <nl> <iotype>  " variable" <nl>
-<output> ::= "output:" <nl> <iotype> " variable" <nl>
+<input> ::= "input:" <nl> "val variable" <nl>
+<output> ::= "output:" <nl> "val variable" <nl>
 
 <script> ::= "script:" <nl> "template " <tick>  <magicstring> <tick>
 
