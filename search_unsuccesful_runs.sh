@@ -1,12 +1,12 @@
 #!/bin/bash
 
 base_names=("semantic-zest" "syntactic-zest" "semantic-noguidance" "syntactic-noguidance")
-search_file="===== DONE ====="  # Replace with the specific file you're looking for
-
+#search_file="===== DONE ====="  # Replace with the specific file you're looking for
+search_file="Tested de.schemmea.ma.NfTest#testNFCommand null times"
 path=$1
 
 for base_name in "${base_names[@]}"; do
-    for id in {0..5}; do
+    for id in {0..20}; do
        folder="$path/nextflow-${base_name}-${id}"
 
 	      errorstring="$folder"
@@ -20,8 +20,9 @@ for base_name in "${base_names[@]}"; do
             else
                 errorstring="$errostring no $log_file!!!!"
             fi
-
-             log_file2="$folder/errorDir/cov-all.log"
+	
+	    
+            log_file2="$folder/errorDir/cov-all.log"
              log_file3="$folder/errorDir/cov-valid.log"
              if  [ -f  "$log_file2" ]; then
                     myfilesize=$(wc -c "$log_file2" | awk '{print $1}')
