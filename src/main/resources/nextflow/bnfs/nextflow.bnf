@@ -11,7 +11,7 @@
 <templatescript> ::= "script: " <nl> " template 'scriptnamemagicstring'"
 <quotes> ::= '"""'
 <script> ::= "script: " <nl> <quotes> <nl> "scriptplaceholder1magicstring" <nl> <quotes>
-<process2> ::= "process " <identifier2> "{" <nl> "debug true" <nl> <processbody2> <nl> "}" <nl>
+<process2> ::= "process " <identifier2> "{" <nl> <processbody2> <nl> "}" <nl>
 
 <processbody2> ::= "input:" <nl> "val variable" <nl> "val variable2 " <nl> <nl> "output:" <nl> "val variable" <nl> "val variable2" <nl> <content2>
 <content2> ::= <templatescript2> | <script2>
