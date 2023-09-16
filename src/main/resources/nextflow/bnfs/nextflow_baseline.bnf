@@ -4,7 +4,7 @@
 <processes> ::= <process>  |  <process>  <nl> <processes>
 <magicstring> ::= "script1" | "script2.sh" | "script3" | "script4.txt" | "script5"
 
-<process> ::= "process " <identifier> "{" <nl> "debug true" <nl> <input> <output> <script> <nl> "}" <nl>
+<process> ::= "process " <identifier> "{" <nl> <input> <output> <script> <nl> "}" <nl>
 
 <input> ::= "input:" <nl> "val variable" <nl>
 <output> ::= "output:" <nl> "val variable" <nl>

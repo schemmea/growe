@@ -4,7 +4,7 @@
 
 <workflow> ::= "workflow " <workflowbody>
 <process> ::= <process1> | <process2>
-<process1> ::= "process " <identifier> " {" <nl> "debug true" <nl> <processbody> <nl> "}" <nl>
+<process1> ::= "process " <identifier> " {" <nl> <processbody> <nl> "}" <nl>
 
 <processbody> ::= "input: " <nl> "val variable " <nl> <nl> "output:" <nl> "val variable " <nl> <content>
 <content> ::= <templatescript> | <script>
