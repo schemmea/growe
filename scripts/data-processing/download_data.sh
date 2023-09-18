@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #remotepath="/home/alena/source/ma_test2/exp1/"
-remotepath="/home/alena/source/growe/runexps/"
-localpath="$HOME/source/repos/growe/runexps/"
+remotepath="/home/alena/source/growe/expfinalfinal/"
+localpath="$HOME/source/repos/growe/expfinalfinal/"
 for prefix in "semantic-zest" "syntactic-zest" "semantic-noguidance" "syntactic-noguidance"; do
 #for prefix in "afl"; do
-    for ((i=6; i<=8; i++)); do
+    for ((i=6; i<=19; i++)); do
 #        dir="nextflow-${prefix}-${i}/fuzz-results"
     	dir="nextflow-${prefix}-${i}/errorDir"
         mkdir -p "$localpath$dir"
