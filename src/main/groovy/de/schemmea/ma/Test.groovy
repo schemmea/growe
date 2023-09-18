@@ -31,13 +31,26 @@ public class Test {
 
     @Fuzz
     public void testMini(@From(TestMiniGenerator.class) String mini) {
-        Test.setIteration(Test.getIteration()+1); //for java debugging
+        Test.setIteration(Test.getIteration() + 1); //for java debugging
         println Configuration.newline + "ITERATION " + Test.iteration + Configuration.newline
         println mini
 
     }
 
+    @Fuzz
+    public void testlauncher() {
+        String falseyFile = "C:\\Users\\Alena\\source\\repos\\growe\\src\\main\\resources\\seeds\\yesOrNo2.nf";
 
+        String filename = "C:\\Users\\Alena\\source\\repos\\growe\\src\\main\\resources\\seeds\\yesOrNo.nf";
+
+        Launcher launcher1 = new Launcher().command('run', falseyFile)
+
+        int status = launcher1.run()
+
+        Launcher launcher2 = new Launcher().command('run', filename)
+
+        int status2 = launcher2.run()
+    }
 
 }
 
