@@ -124,44 +124,8 @@
 # Covered: (-1014984701) nextflow/cli/CmdRun#hasParams():280 --> nextflow/cli/CmdRun#getParamsFile()Ljava/lang/String;
 # Covered: (-1014984702) nextflow/cli/CmdRun#hasParams():280 [0]
 # Covered: (-1014988798) nextflow/cli/CmdRun#getParamsFile():276 [1]
-# Covered: (-1014996961) nextflow/cli/CacheBase$Trait$Helper#listIds():91 --> nextflow/extension/FilesEx#empty(Ljava/io/File;)Z
-# Covered: (-1014996962) nextflow/cli/CacheBase$Trait$Helper#listIds():91 --> nextflow/cli/CmdClean#nextflow_cli_CacheBase__history$get()Lnextflow/util/HistoryFile;
-# Covered: (-1014996964) nextflow/cli/CacheBase$Trait$Helper#listIds():90 [0]
-# Covered: (-1014996965) nextflow/cli/CacheBase$Trait$Helper#listIds():90 [0]
-# Covered: (-1014996967) nextflow/cli/CacheBase$Trait$Helper#listIds():90 --> nextflow/cli/CmdClean#getArgs()Ljava/util/List;
-# Covered: (-1014996973) nextflow/cli/CacheBase$Trait$Helper#listIds():85 [1]
-# Covered: (-1014996975) nextflow/cli/CacheBase$Trait$Helper#listIds():85 --> nextflow/cli/CmdClean#getAfter()Ljava/lang/String;
-# Covered: (-1014996981) nextflow/cli/CacheBase$Trait$Helper#listIds():81 [1]
-# Covered: (-1014996983) nextflow/cli/CacheBase$Trait$Helper#listIds():81 --> nextflow/cli/CmdClean#getBefore()Ljava/lang/String;
-# Covered: (-1014996989) nextflow/cli/CacheBase$Trait$Helper#listIds():77 [1]
 # Covered: (-1014996990) nextflow/cli/CmdRun#getDisableJobsCancellation():267 [1]
-# Covered: (-1014996991) nextflow/cli/CacheBase$Trait$Helper#listIds():77 --> nextflow/cli/CmdClean#getBut()Ljava/lang/String;
 # Covered: (-1014996991) nextflow/cli/CmdRun#getDisableJobsCancellation():267 [1]
-# Covered: (-1015001083) nextflow/cli/CacheBase$Trait$Helper#cacheFor():72 --> nextflow/cache/CacheFactory#create(Ljava/util/UUID;Ljava/lang/String;Ljava/nio/file/Path;)Lnextflow/cache/CacheDB;
-# Covered: (-1015001084) nextflow/cli/CacheBase$Trait$Helper#cacheFor():72 --> nextflow/cli/CmdClean#nextflow_cli_CacheBase__basePath$get()Ljava/nio/file/Path;
-# Covered: (-1015005133) nextflow/cli/CacheBase$Trait$Helper#init():66 [1]
-# Covered: (-1015005137) nextflow/cli/CacheBase$Trait$Helper#init():66 [1]
-# Covered: (-1015005139) nextflow/cli/CacheBase$Trait$Helper#init():66 --> nextflow/cli/CmdClean#getBefore()Ljava/lang/String;
-# Covered: (-1015005141) nextflow/cli/CacheBase$Trait$Helper#init():63 [1]
-# Covered: (-1015005145) nextflow/cli/CacheBase$Trait$Helper#init():63 [1]
-# Covered: (-1015005147) nextflow/cli/CacheBase$Trait$Helper#init():63 --> nextflow/cli/CmdClean#getAfter()Ljava/lang/String;
-# Covered: (-1015005149) nextflow/cli/CacheBase$Trait$Helper#init():60 [1]
-# Covered: (-1015005153) nextflow/cli/CacheBase$Trait$Helper#init():60 [1]
-# Covered: (-1015005155) nextflow/cli/CacheBase$Trait$Helper#init():60 --> nextflow/cli/CmdClean#getAfter()Ljava/lang/String;
-# Covered: (-1015005157) nextflow/cli/CacheBase$Trait$Helper#init():57 [1]
-# Covered: (-1015005158) nextflow/cli/CacheBase$Trait$Helper#init():57 [1]
-# Covered: (-1015005159) nextflow/cli/CacheBase$Trait$Helper#init():57 --> nextflow/extension/FilesEx#empty(Ljava/io/File;)Z
-# Covered: (-1015005160) nextflow/cli/CacheBase$Trait$Helper#init():57 --> nextflow/cli/CmdClean#nextflow_cli_CacheBase__history$get()Lnextflow/util/HistoryFile;
-# Covered: (-1015005162) nextflow/cli/CacheBase$Trait$Helper#init():57 [0]
-# Covered: (-1015005163) nextflow/cli/CacheBase$Trait$Helper#init():57 [1]
-# Covered: (-1015005165) nextflow/cli/CacheBase$Trait$Helper#init():57 --> nextflow/cli/CmdClean#nextflow_cli_CacheBase__history$get()Lnextflow/util/HistoryFile;
-# Covered: (-1015005167) nextflow/cli/CacheBase$Trait$Helper#init():54 --> nextflow/cli/CmdClean#nextflow_cli_CacheBase__history$set(Lnextflow/util/HistoryFile;)Lnextflow/util/HistoryFile;
-# Covered: (-1015005173) nextflow/cli/CacheBase$Trait$Helper#init():54 [0]
-# Covered: (-1015005174) nextflow/cli/CacheBase$Trait$Helper#init():54 [0]
-# Covered: (-1015005176) nextflow/cli/CacheBase$Trait$Helper#init():54 --> nextflow/cli/CmdClean#nextflow_cli_CacheBase__basePath$get()Ljava/nio/file/Path;
-# Covered: (-1015005179) nextflow/cli/CacheBase$Trait$Helper#init():53 [0]
-# Covered: (-1015005180) nextflow/cli/CacheBase$Trait$Helper#init():53 [0]
-# Covered: (-1015005182) nextflow/cli/CacheBase$Trait$Helper#init():53 --> nextflow/cli/CmdClean#nextflow_cli_CacheBase__history$get()Lnextflow/util/HistoryFile;
 # Covered: (-1015017459) nextflow/cli/CmdRun#<init>():240 --> nextflow/cli/HubOptions$Trait$Helper#$init$(Lnextflow/cli/HubOptions;)V
 # Covered: (-1015017461) nextflow/cli/CmdRun#<init>():240 --> nextflow/cli/CmdRun$_closure1#<init>(Ljava/lang/Object;Ljava/lang/Object;)V
 # Covered: (-1015017462) nextflow/cli/CmdRun#<init>():240 --> nextflow/cli/CmdRun#$getStaticMetaClass()Lgroovy/lang/MetaClass;
@@ -183,6 +147,9 @@
 # Covered: (-1035935739) nextflow/executor/ExecutorFactory#$getStaticMetaClass():0 [0]
 # Covered: (-1035935739) nextflow/executor/ExecutorFactory#$getStaticMetaClass():0 [1]
 # Covered: (-1035935742) nextflow/executor/ExecutorFactory#$getStaticMetaClass():0 [1]
+# Covered: (-1035939834) nextflow/executor/ExecutorFactory#shutdown():243 [1]
+# Covered: (-1035939836) nextflow/executor/ExecutorFactory#shutdown():243 [0]
+# Covered: (-1035939838) nextflow/executor/ExecutorFactory#shutdown():243 [0]
 # Covered: (-1035943930) nextflow/executor/ExecutorFactory#signalExecutors():238 [1]
 # Covered: (-1035943932) nextflow/executor/ExecutorFactory#signalExecutors():238 [0]
 # Covered: (-1035943934) nextflow/executor/ExecutorFactory#signalExecutors():238 [0]
@@ -197,7 +164,10 @@
 # Covered: (-1035984893) nextflow/executor/ExecutorFactory#<init>():69 --> nextflow/executor/ExecutorFactory#$getStaticMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (-1056866299) nextflow/util/MemoryUnit#$getStaticMetaClass():0 [1]
 # Covered: (-1056866302) nextflow/util/MemoryUnit#$getStaticMetaClass():0 [1]
+# Covered: (-1056878591) nextflow/util/MemoryUnit#of():172 --> nextflow/util/MemoryUnit#<init>(J)V
+# Covered: (-1056894974) nextflow/util/MemoryUnit#toString():133 [0]
 # Covered: (-1056894974) nextflow/util/MemoryUnit#toString():133 [1]
+# Covered: (-1056894975) nextflow/util/MemoryUnit#toString():133 [0]
 # Covered: (-1056894975) nextflow/util/MemoryUnit#toString():133 [1]
 # Covered: (-1056956412) nextflow/util/MemoryUnit#<init>():61 [0]
 # Covered: (-1056956413) nextflow/util/MemoryUnit#<init>():61 [0]
@@ -258,6 +228,13 @@
 # Covered: (-1106939903) nextflow/Session#getContainerConfig0():1204 [0]
 # Covered: (-1106943999) nextflow/Session#getContainerConfig():1200 --> nextflow/Session#getContainerConfig(Ljava/lang/String;)Lnextflow/container/ContainerConfig;
 # Covered: (-1106948093) nextflow/Session#getContainerConfig():0 --> nextflow/Session$_closure5#doCall(Ljava/lang/String;)Lnextflow/container/ContainerConfig;
+# Covered: (-1106960376) nextflow/Session#cleanup():1123 [0]
+# Covered: (-1106960377) nextflow/Session#cleanup():1123 [0]
+# Covered: (-1106960378) nextflow/Session#cleanup():1123 [0]
+# Covered: (-1106960380) nextflow/Session#cleanup():1123 --> nextflow/config/ConfigMap#get(Ljava/lang/Object;)Ljava/lang/Object;
+# Covered: (-1106960381) nextflow/Session#cleanup():1123 [0]
+# Covered: (-1106960382) nextflow/Session#cleanup():1123 [1]
+# Covered: (-1106960383) nextflow/Session#cleanup():1123 --> nextflow/plugin/extension/PluginExtensionProvider#isExtensionMethod(Ljava/lang/Object;Ljava/lang/String;)Z
 # Covered: (-1106968556) nextflow/Session#notifyError():1104 --> nextflow/script/WorkflowMetadata#invokeOnError(Ljava/lang/Object;)V
 # Covered: (-1106968558) nextflow/Session#notifyError():1100 [1]
 # Covered: (-1106968559) nextflow/Session#notifyError():1100 [1]
@@ -266,11 +243,46 @@
 # Covered: (-1106968568) nextflow/Session#notifyError():1091 [1]
 # Covered: (-1106968572) nextflow/Session#notifyError():1091 [0]
 # Covered: (-1106968575) nextflow/Session#notifyError():1090 [1]
+# Covered: (-1106972661) nextflow/Session#notifyFlowComplete():1074 --> nextflow/trace/WorkflowStatsObserver#onFlowComplete()V
+# Covered: (-1106972662) nextflow/Session#notifyFlowComplete():1073 [0]
+# Covered: (-1106972663) nextflow/Session#notifyFlowComplete():1073 --> nextflow/trace/WorkflowStatsObserver#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1106972666) nextflow/Session#notifyFlowComplete():1071 [0]
+# Covered: (-1106972666) nextflow/Session#notifyFlowComplete():1071 [1]
+# Covered: (-1106972668) nextflow/Session#notifyFlowComplete():1071 [0]
+# Covered: (-1106972670) nextflow/Session#notifyFlowComplete():1071 [0]
 # Covered: (-1106980862) nextflow/Session#notifyFlowCreate():1054 --> nextflow/Session$_notifyFlowCreate_closure23#call(Ljava/lang/Object;)Ljava/lang/Object;
 # Covered: (-1106980863) nextflow/Session#notifyFlowCreate():1054 --> nextflow/Session$_notifyFlowCreate_closure23#<init>(Ljava/lang/Object;Ljava/lang/Object;)V
+# Covered: (-1106984958) nextflow/Session#notifyFlowBegin():1050 --> nextflow/Session$_notifyFlowBegin_closure22#call(Ljava/lang/Object;)Ljava/lang/Object;
+# Covered: (-1106984959) nextflow/Session#notifyFlowBegin():1050 --> nextflow/Session$_notifyFlowBegin_closure22#<init>(Ljava/lang/Object;Ljava/lang/Object;)V
 # Covered: (-1107025908) nextflow/Session#onShutdown():921 [1]
 # Covered: (-1107025917) nextflow/Session#onShutdown():917 [1]
 # Covered: (-1107025918) nextflow/Session#onShutdown():917 [1]
+# Covered: (-1107034098) nextflow/Session#validateConfig0():877 [1]
+# Covered: (-1107034100) nextflow/Session#validateConfig0():877 [0]
+# Covered: (-1107034102) nextflow/Session#validateConfig0():877 [0]
+# Covered: (-1107034104) nextflow/Session#validateConfig0():876 --> nextflow/config/ConfigMap#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1107034105) nextflow/Session#validateConfig0():876 --> nextflow/config/ConfigMap#get(Ljava/lang/Object;)Ljava/lang/Object;
+# Covered: (-1107034107) nextflow/Session#validateConfig0():872 [1]
+# Covered: (-1107034108) nextflow/Session#validateConfig0():872 [1]
+# Covered: (-1107034109) nextflow/Session#validateConfig0():872 --> nextflow/config/ConfigMap#get(Ljava/lang/Object;)Ljava/lang/Object;
+# Covered: (-1107038202) nextflow/Session#validateConfig():865 [1]
+# Covered: (-1107038204) nextflow/Session#validateConfig():865 [0]
+# Covered: (-1107038206) nextflow/Session#validateConfig():865 [0]
+# Covered: (-1107038207) nextflow/Session#validateConfig():864 --> nextflow/Session#validateConfig0(Ljava/util/Collection;)Ljava/util/List;
+# Covered: (-1107062768) nextflow/Session#checkConfig():817 --> nextflow/Session#validateConfig(Ljava/util/Collection;)V
+# Covered: (-1107062769) nextflow/Session#checkConfig():816 --> nextflow/util/LoggerHelper$RollOnStartupPolicy#isTriggeringEvent(Ljava/io/File;Ljava/lang/Object;)Z
+# Covered: (-1107062773) nextflow/Session#checkConfig():816 [0]
+# Covered: (-1107062776) nextflow/Session#checkConfig():815 [1]
+# Covered: (-1107062777) nextflow/Session#checkConfig():815 --> nextflow/NF#isDsl1()Z
+# Covered: (-1107062778) nextflow/Session#checkConfig():814 --> nextflow/script/ScriptMeta#allProcessNames()Ljava/util/Set;
+# Covered: (-1107062779) nextflow/Session#checkConfig():813 [0]
+# Covered: (-1107062782) nextflow/Session#checkConfig():812 --> nextflow/extension/Bolts#navigate(Ljava/util/Map;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+# Covered: (-1107087356) nextflow/Session#isSuccess():788 [0]
+# Covered: (-1107087357) nextflow/Session#isSuccess():788 [0]
+# Covered: (-1107087358) nextflow/Session#isSuccess():788 [0]
+# Covered: (-1107087358) nextflow/Session#isSuccess():788 [1]
+# Covered: (-1107087359) nextflow/Session#isSuccess():788 [0]
+# Covered: (-1107087359) nextflow/Session#isSuccess():788 [1]
 # Covered: (-1107107834) nextflow/Session#operatorsForceTermination():767 [1]
 # Covered: (-1107107835) nextflow/Session#operatorsForceTermination():767 [1]
 # Covered: (-1107111909) nextflow/Session#abort():758 --> nextflow/Session#operatorsForceTermination()V
@@ -292,6 +304,40 @@
 # Covered: (-1107111933) nextflow/Session#abort():743 [0]
 # Covered: (-1107111933) nextflow/Session#abort():743 [1]
 # Covered: (-1107111935) nextflow/Session#abort():742 [1]
+# Covered: (-1107124208) nextflow/Session#shutdown0():702 --> nextflow/Session#notifyFlowComplete()V
+# Covered: (-1107124214) nextflow/Session#shutdown0():694 --> nextflow/script/WorkflowMetadata$_closure3#call()Ljava/lang/Object;
+# Covered: (-1107124217) nextflow/Session#shutdown0():691 [0]
+# Covered: (-1107124217) nextflow/Session#shutdown0():691 [1]
+# Covered: (-1107124218) nextflow/Session#shutdown0():691 [0]
+# Covered: (-1107124218) nextflow/Session#shutdown0():691 [1]
+# Covered: (-1107124222) nextflow/Session#shutdown0():689 [1]
+# Covered: (-1107128317) nextflow/Session#joinAllOperators():675 [1]
+# Covered: (-1107128318) nextflow/Session#joinAllOperators():675 [1]
+# Covered: (-1107132388) nextflow/Session#destroy():666 --> nextflow/util/Duration#<init>(J)V
+# Covered: (-1107132389) nextflow/Session#destroy():666 --> nextflow/Session#isSuccess()Z
+# Covered: (-1107132391) nextflow/Session#destroy():665 [0]
+# Covered: (-1107132392) nextflow/Session#destroy():665 [0]
+# Covered: (-1107132395) nextflow/Session#destroy():665 [0]
+# Covered: (-1107132396) nextflow/Session#destroy():665 [0]
+# Covered: (-1107132401) nextflow/Session#destroy():661 [0]
+# Covered: (-1107132402) nextflow/Session#destroy():658 --> nextflow/plugin/Plugins#stop()V
+# Covered: (-1107132403) nextflow/Session#destroy():655 --> nextflow/cache/CacheDB#close()V
+# Covered: (-1107132404) nextflow/Session#destroy():655 [0]
+# Covered: (-1107132408) nextflow/Session#destroy():650 [0]
+# Covered: (-1107132408) nextflow/Session#destroy():650 [1]
+# Covered: (-1107132410) nextflow/Session#destroy():647 --> nextflow/executor/ExecutorFactory#shutdown()V
+# Covered: (-1107132411) nextflow/Session#destroy():647 [0]
+# Covered: (-1107132411) nextflow/Session#destroy():647 [1]
+# Covered: (-1107132413) nextflow/Session#destroy():644 --> nextflow/Session#shutdown0()V
+# Covered: (-1107132414) nextflow/Session#destroy():642 --> nextflow/util/ThreadPoolManager#shutdown(Z)V
+# Covered: (-1107136504) nextflow/Session#await():633 --> nextflow/Session#joinAllOperators()V
+# Covered: (-1107136505) nextflow/Session#await():632 [0]
+# Covered: (-1107136506) nextflow/Session#await():632 [0]
+# Covered: (-1107136507) nextflow/Session#await():631 --> nextflow/util/LoggerHelper$RollOnStartupPolicy#isTriggeringEvent(Ljava/io/File;Ljava/lang/Object;)Z
+# Covered: (-1107136508) nextflow/Session#await():630 --> nextflow/util/Barrier#awaitCompletion()V
+# Covered: (-1107136509) nextflow/Session#await():628 --> nextflow/util/LoggerHelper$RollOnStartupPolicy#isTriggeringEvent(Ljava/io/File;Ljava/lang/Object;)Z
+# Covered: (-1107136510) nextflow/Session#await():627 --> nextflow/util/Barrier#awaitCompletion()V
+# Covered: (-1107136511) nextflow/Session#await():626 --> nextflow/util/LoggerHelper$RollOnStartupPolicy#isTriggeringEvent(Ljava/io/File;Ljava/lang/Object;)Z
 # Covered: (-1107140607) nextflow/Session#getManifest():0 --> nextflow/Session$_closure2#doCall()Lnextflow/config/Manifest;
 # Covered: (-1107144700) nextflow/Session#getConfigEnv():603 [0]
 # Covered: (-1107144701) nextflow/Session#getConfigEnv():603 [0]
@@ -320,6 +366,20 @@
 # Covered: (-1107189759) nextflow/Session#start():508 --> nextflow/util/LoggerHelper$RollOnStartupPolicy#isTriggeringEvent(Ljava/io/File;Ljava/lang/Object;)Z
 # Covered: (-1107193853) nextflow/Session#dumpNetworkStatus():499 [1]
 # Covered: (-1107193855) nextflow/Session#dumpNetworkStatus():498 --> nextflow/dag/DAG#dumpActiveNodes()Ljava/lang/String;
+# Covered: (-1107197940) nextflow/Session#callIgniters():479 [1]
+# Covered: (-1107197942) nextflow/Session#callIgniters():479 [0]
+# Covered: (-1107197944) nextflow/Session#callIgniters():479 [0]
+# Covered: (-1107197945) nextflow/Session#callIgniters():478 --> nextflow/util/LoggerHelper$RollOnStartupPolicy#isTriggeringEvent(Ljava/io/File;Ljava/lang/Object;)Z
+# Covered: (-1107197950) nextflow/Session#callIgniters():478 [0]
+# Covered: (-1107202038) nextflow/Session#fireDataflowNetwork():473 --> nextflow/Session#callIgniters()V
+# Covered: (-1107202039) nextflow/Session#fireDataflowNetwork():469 [1]
+# Covered: (-1107202040) nextflow/Session#fireDataflowNetwork():467 --> nextflow/extension/CH#broadcast()V
+# Covered: (-1107202042) nextflow/Session#fireDataflowNetwork():462 [1]
+# Covered: (-1107202043) nextflow/Session#fireDataflowNetwork():462 [1]
+# Covered: (-1107202044) nextflow/Session#fireDataflowNetwork():462 --> nextflow/NextflowMeta#isDsl2()Z
+# Covered: (-1107202045) nextflow/Session#fireDataflowNetwork():462 --> nextflow/NextflowMeta#getInstance()Lnextflow/NextflowMeta;
+# Covered: (-1107202046) nextflow/Session#fireDataflowNetwork():460 --> nextflow/Session#notifyFlowBegin()V
+# Covered: (-1107202047) nextflow/Session#fireDataflowNetwork():459 --> nextflow/Session#checkConfig()V
 # Covered: (-1107210235) nextflow/Session#registerSignalHandlers():446 --> nextflow/Session$_registerSignalHandlers_closure17#<init>(Ljava/lang/Object;Ljava/lang/Object;)V
 # Covered: (-1107210237) nextflow/Session#registerSignalHandlers():436 --> nextflow/Session$_registerSignalHandlers_closure16#<init>(Ljava/lang/Object;Ljava/lang/Object;Lgroovy/lang/Reference;)V
 # Covered: (-1107214317) nextflow/Session#createObservers():421 --> nextflow/trace/DefaultObserverFactory#create(Lnextflow/Session;)Ljava/util/Collection;
@@ -373,11 +433,8 @@
 # Covered: (-1107230640) nextflow/Session#create():344 [0]
 # Covered: (-1107230643) nextflow/Session#create():343 --> nextflow/extension/Bolts#asType(Ljava/lang/Number;Ljava/lang/Class;)Ljava/lang/Object;
 # Covered: (-1107230644) nextflow/Session#create():343 --> nextflow/config/ConfigMap#get(Ljava/lang/Object;)Ljava/lang/Object;
-# Covered: (-1107230645) nextflow/Session#create():339 --> nextflow/config/ConfigMap#getMetaClass()Lgroovy/lang/MetaClass;
-# Covered: (-1107230647) nextflow/Session#create():339 [1]
-# Covered: (-1107230648) nextflow/Session#create():339 [1]
-# Covered: (-1107230651) nextflow/Session#create():337 [0]
-# Covered: (-1107230652) nextflow/Session#create():337 [0]
+# Covered: (-1107230651) nextflow/Session#create():337 [1]
+# Covered: (-1107230652) nextflow/Session#create():337 [1]
 # Covered: (-1107230654) nextflow/Session#create():337 --> nextflow/config/ConfigMap#get(Ljava/lang/Object;)Ljava/lang/Object;
 # Covered: (-1107230657) nextflow/Session#create():335 [1]
 # Covered: (-1107230658) nextflow/Session#create():335 [1]
@@ -443,15 +500,28 @@
 # Covered: (-1132322813) nextflow/script/BaseScript#$getCallSiteArray():0 [1]
 # Covered: (-1132322815) nextflow/script/BaseScript#$getCallSiteArray():0 [0]
 # Covered: (-1132367871) nextflow/script/BaseScript#getBinding():0 --> nextflow/script/BaseScript#getBinding()Lnextflow/script/ScriptBinding;
-# Covered: (-1132408812) nextflow/script/BaseScript#run():199 --> nextflow/script/ExecutionStack$pop$0#<init>(Lorg/codehaus/groovy/runtime/callsite/CallSite;Lgroovy/lang/MetaClassImpl;Lgroovy/lang/MetaMethod;[Ljava/lang/Class;Ljava/lang/reflect/Constructor;)V
+# Covered: (-1132408812) nextflow/script/BaseScript#run():199 --> nextflow/script/ExecutionStack$pop$1#<init>(Lorg/codehaus/groovy/runtime/callsite/CallSite;Lgroovy/lang/MetaClassImpl;Lgroovy/lang/MetaMethod;[Ljava/lang/Class;Ljava/lang/reflect/Constructor;)V
+# Covered: (-1132408817) nextflow/script/BaseScript#run():199 --> nextflow/script/ExecutionStack$pop$1#<init>(Lorg/codehaus/groovy/runtime/callsite/CallSite;Lgroovy/lang/MetaClassImpl;Lgroovy/lang/MetaMethod;[Ljava/lang/Class;Ljava/lang/reflect/Constructor;)V
 # Covered: (-1132408818) nextflow/script/BaseScript#run():192 --> nextflow/script/BaseScript#run0()Ljava/lang/Object;
 # Covered: (-1132408822) nextflow/script/BaseScript#run():191 [0]
 # Covered: (-1132408824) nextflow/script/BaseScript#run():191 [0]
-# Covered: (-1132408825) nextflow/script/BaseScript#run():190 --> nextflow/script/ExecutionStack$push#<init>(Lorg/codehaus/groovy/runtime/callsite/CallSite;Lgroovy/lang/MetaClassImpl;Lgroovy/lang/MetaMethod;[Ljava/lang/Class;Ljava/lang/reflect/Constructor;)V
+# Covered: (-1132408825) nextflow/script/BaseScript#run():190 --> nextflow/script/ExecutionStack$push$0#<init>(Lorg/codehaus/groovy/runtime/callsite/CallSite;Lgroovy/lang/MetaClassImpl;Lgroovy/lang/MetaMethod;[Ljava/lang/Class;Ljava/lang/reflect/Constructor;)V
 # Covered: (-1132408826) nextflow/script/BaseScript#run():189 --> nextflow/script/BaseScript#setup()V
 # Covered: (-1132408828) nextflow/script/BaseScript#run():189 [0]
 # Covered: (-1132408830) nextflow/script/BaseScript#run():189 [0]
 # Covered: (-1132408831) nextflow/script/BaseScript#run():0 --> nextflow/script/BaseScript#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (-1132412885) nextflow/script/BaseScript#run0():162 [1]
+# Covered: (-1132412887) nextflow/script/BaseScript#run0():162 --> nextflow/script/ScriptMeta#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1132412889) nextflow/script/BaseScript#run0():160 [1]
+# Covered: (-1132412891) nextflow/script/BaseScript#run0():160 --> nextflow/script/ScriptMeta#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1132412892) nextflow/script/BaseScript#run0():159 [0]
+# Covered: (-1132412893) nextflow/script/BaseScript#run0():159 [0]
+# Covered: (-1132412910) nextflow/script/BaseScript#run0():150 [1]
+# Covered: (-1132412914) nextflow/script/BaseScript#run0():150 [1]
+# Covered: (-1132412916) nextflow/script/BaseScript#run0():150 --> nextflow/script/WorkflowBinding#getProperty(Ljava/lang/String;)Ljava/lang/Object;
+# Covered: (-1132412917) nextflow/script/BaseScript#run0():150 --> nextflow/script/ScriptBinding#getVariable(Ljava/lang/String;)Ljava/lang/Object;
+# Covered: (-1132412919) nextflow/script/BaseScript#run0():146 [1]
+# Covered: (-1132412921) nextflow/script/BaseScript#run0():146 --> nextflow/script/ScriptMeta#getMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (-1132412922) nextflow/script/BaseScript#run0():145 --> nextflow/script/ScriptBinding#getVariable(Ljava/lang/String;)Ljava/lang/Object;
 # Covered: (-1132412924) nextflow/script/BaseScript#run0():145 [0]
 # Covered: (-1132412926) nextflow/script/BaseScript#run0():145 [0]
@@ -489,9 +559,13 @@
 # Covered: (-1132457983) nextflow/script/BaseScript#<init>():0 --> nextflow/script/BaseScript#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
 # Covered: (-1136525309) nextflow/Global#$getCallSiteArray():0 [1]
 # Covered: (-1136525311) nextflow/Global#$getCallSiteArray():0 [0]
+# Covered: (-1136578551) nextflow/Global#cleanUp():278 --> nextflow/util/ThreadPoolManager$_createAndRegisterShutdownCallback_lambda1#doCall(Ljava/lang/Object;)V
+# Covered: (-1136578554) nextflow/Global#cleanUp():276 [0]
+# Covered: (-1136578554) nextflow/Global#cleanUp():276 [1]
+# Covered: (-1136578556) nextflow/Global#cleanUp():276 [0]
+# Covered: (-1136578559) nextflow/Global#cleanUp():0 --> nextflow/Global#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
 # Covered: (-1136582653) nextflow/Global#onCleanup():266 [1]
 # Covered: (-1136582655) nextflow/Global#onCleanup():0 --> nextflow/Global#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
-# Covered: (-1136639999) nextflow/Global#setLazySession():0 --> nextflow/Global#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
 # Covered: (-1136644095) nextflow/Global#setSession():0 --> nextflow/Global#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
 # Covered: (-1136648186) nextflow/Global#getSession():60 [1]
 # Covered: (-1136648189) nextflow/Global#getSession():58 [0]
@@ -579,6 +653,12 @@
 # Covered: (-134201342) nextflow/SysEnv$get#call():0 [0]
 # Covered: (-134209533) nextflow/SysEnv$get#call():0 --> nextflow/SysEnv#get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 # Covered: (-134209534) nextflow/SysEnv$get#call():0 [0]
+# Covered: (-1342156797) nextflow/script/ScriptMeta$isModule$0#call():0 --> nextflow/script/ScriptMeta#isModule()Z
+# Covered: (-1342156798) nextflow/script/ScriptMeta$isModule$0#call():0 [0]
+# Covered: (-1342156799) nextflow/script/ScriptMeta$isModule$0#call():0 --> nextflow/script/ScriptMeta#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1342164989) nextflow/script/ScriptMeta$isModule$0#call():0 --> nextflow/script/ScriptMeta#isModule()Z
+# Covered: (-1342164990) nextflow/script/ScriptMeta$isModule$0#call():0 [0]
+# Covered: (-1342164991) nextflow/script/ScriptMeta$isModule$0#call():0 --> nextflow/script/ScriptMeta#getMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (-1363128315) nextflow/cli/CmdSecret$ListCmd#$getStaticMetaClass():0 [0]
 # Covered: (-1363128315) nextflow/cli/CmdSecret$ListCmd#$getStaticMetaClass():0 [1]
 # Covered: (-1363128318) nextflow/cli/CmdSecret$ListCmd#$getStaticMetaClass():0 [1]
@@ -655,6 +735,12 @@
 # Covered: (-1505742844) nextflow/ast/NextflowDSLImpl$DslCodeVisitor#visitMethod():147 [1]
 # Covered: (-1505742846) nextflow/ast/NextflowDSLImpl$DslCodeVisitor#visitMethod():147 [0]
 # Covered: (-1505751032) nextflow/ast/NextflowDSLImpl$DslCodeVisitor#<init>():134 --> nextflow/ast/NextflowDSLImpl$DslCodeVisitor#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1518317565) nextflow/Session$destroy$0#call():0 --> nextflow/Session#destroy()V
+# Covered: (-1518317566) nextflow/Session$destroy$0#call():0 [0]
+# Covered: (-1518317567) nextflow/Session$destroy$0#call():0 --> nextflow/Session#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1518325757) nextflow/Session$destroy$0#call():0 --> nextflow/Session#destroy()V
+# Covered: (-1518325758) nextflow/Session$destroy$0#call():0 [0]
+# Covered: (-1518325759) nextflow/Session$destroy$0#call():0 --> nextflow/Session#getMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (-1593827325) nextflow/plugin/Plugins$getPriorityExtensions#call():0 --> nextflow/plugin/Plugins#getPriorityExtensions(Ljava/lang/Class;)Ljava/util/List;
 # Covered: (-1593827326) nextflow/plugin/Plugins$getPriorityExtensions#call():0 [0]
 # Covered: (-1602207739) nextflow/cli/CmdView#$getStaticMetaClass():0 [0]
@@ -670,6 +756,18 @@
 # Covered: (-1614794748) nextflow/ast/NextflowDSLImpl#visit():108 --> nextflow/ast/NextflowDSLImpl$DslCodeVisitor#visitExpressionStatement(Lorg/codehaus/groovy/ast/stmt/ExpressionStatement;)V
 # Covered: (-1614794751) nextflow/ast/NextflowDSLImpl#visit():108 --> nextflow/ast/NextflowDSLImpl#createVisitor(Lorg/codehaus/groovy/control/SourceUnit;)Lorg/codehaus/groovy/ast/ClassCodeVisitorSupport;
 # Covered: (-1614802942) nextflow/ast/NextflowDSLImpl#<init>():0 --> nextflow/ast/NextflowDSLImpl#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1635758077) nextflow/script/ScriptMeta$getLocalProcessNames$2#call():0 --> nextflow/script/ScriptMeta#getLocalProcessNames()Ljava/util/Set;
+# Covered: (-1635758078) nextflow/script/ScriptMeta$getLocalProcessNames$2#call():0 [0]
+# Covered: (-1635758079) nextflow/script/ScriptMeta$getLocalProcessNames$2#call():0 --> nextflow/script/ScriptMeta#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1635766269) nextflow/script/ScriptMeta$getLocalProcessNames$2#call():0 --> nextflow/script/ScriptMeta#getLocalProcessNames()Ljava/util/Set;
+# Covered: (-1635766270) nextflow/script/ScriptMeta$getLocalProcessNames$2#call():0 [0]
+# Covered: (-1635766271) nextflow/script/ScriptMeta$getLocalProcessNames$2#call():0 --> nextflow/script/ScriptMeta#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1660923898) nextflow/Session$newProcessFactory$1#call():0 --> nextflow/Session#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1660923902) nextflow/Session$newProcessFactory$1#call():0 [1]
+# Covered: (-1660923903) nextflow/Session$newProcessFactory$1#call():0 --> nextflow/Session#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1660932093) nextflow/Session$newProcessFactory$1#call():0 --> nextflow/Session#newProcessFactory(Lnextflow/script/BaseScript;)Lnextflow/script/ProcessFactory;
+# Covered: (-1660932094) nextflow/Session$newProcessFactory$1#call():0 [0]
+# Covered: (-1660932095) nextflow/Session$newProcessFactory$1#call():0 --> nextflow/Session#getMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (-1665097723) nextflow/ast/OpXformImpl$1#$getStaticMetaClass():0 [0]
 # Covered: (-1665097723) nextflow/ast/OpXformImpl$1#$getStaticMetaClass():0 [1]
 # Covered: (-1665097726) nextflow/ast/OpXformImpl$1#$getStaticMetaClass():0 [1]
@@ -710,10 +808,6 @@
 # Covered: (-1811935224) nextflow/util/CustomThreadFactory#<init>():47 [1]
 # Covered: (-1811935227) nextflow/util/CustomThreadFactory#<init>():46 [0]
 # Covered: (-1811935229) nextflow/util/CustomThreadFactory#<init>():39 --> nextflow/util/CustomThreadFactory#$getStaticMetaClass()Lgroovy/lang/MetaClass;
-# Covered: (-1845477370) nextflow/script/ExecutionStack$push#call():0 --> nextflow/script/ExecutionStack$push#<init>(Lorg/codehaus/groovy/runtime/callsite/CallSite;Lgroovy/lang/MetaClassImpl;Lgroovy/lang/MetaMethod;[Ljava/lang/Class;Ljava/lang/reflect/Constructor;)V
-# Covered: (-1845477374) nextflow/script/ExecutionStack$push#call():0 [1]
-# Covered: (-1845485565) nextflow/script/ExecutionStack$push#call():0 --> nextflow/script/ExecutionStack#push(Lnextflow/script/ExecutionContext;)V
-# Covered: (-1845485566) nextflow/script/ExecutionStack$push#call():0 [0]
 # Covered: (-1858043903) nextflow/config/ConfigMap#getMetaClass():0 [0]
 # Covered: (-1858047995) nextflow/config/ConfigMap#$getStaticMetaClass():0 [0]
 # Covered: (-1858047995) nextflow/config/ConfigMap#$getStaticMetaClass():0 [1]
@@ -732,9 +826,50 @@
 # Covered: (-1858060283) nextflow/config/ConfigMap#get():46 [1]
 # Covered: (-1858060286) nextflow/config/ConfigMap#get():46 [1]
 # Covered: (-1858068478) nextflow/config/ConfigMap#<init>():35 --> nextflow/config/ConfigMap#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1866444797) nextflow/util/Duration$toString#call():0 --> nextflow/util/Duration#toString()Ljava/lang/String;
+# Covered: (-1866444798) nextflow/util/Duration$toString#call():0 [0]
+# Covered: (-1866444799) nextflow/util/Duration$toString#call():0 --> nextflow/util/Duration#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1866452989) nextflow/util/Duration$toString#call():0 --> nextflow/util/Duration#toString()Ljava/lang/String;
+# Covered: (-1866452990) nextflow/util/Duration$toString#call():0 [0]
+# Covered: (-1866452991) nextflow/util/Duration$toString#call():0 --> nextflow/util/Duration#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1883234299) nextflow/util/ThreadPoolManager$_createAndRegisterShutdownCallback_lambda1#doCall():92 --> nextflow/util/ThreadPoolManager#shutdown(Lnextflow/ISession;)V
 # Covered: (-1933426687) nextflow/util/Duration#getMetaClass():0 [0]
+# Covered: (-1933443067) nextflow/util/Duration#$getStaticMetaClass():0 [1]
+# Covered: (-1933443070) nextflow/util/Duration#$getStaticMetaClass():0 [1]
+# Covered: (-1933455359) nextflow/util/Duration#asBoolean():336 [0]
+# Covered: (-1933475827) nextflow/util/Duration#toString():286 --> nextflow/extension/Bolts#asType(Ljava/lang/Number;Ljava/lang/Class;)Ljava/lang/Object;
+# Covered: (-1933475833) nextflow/util/Duration#toString():285 [0]
+# Covered: (-1933475834) nextflow/util/Duration#toString():285 [0]
+# Covered: (-1933475838) nextflow/util/Duration#toString():280 [0]
+# Covered: (-1933475838) nextflow/util/Duration#toString():280 [1]
+# Covered: (-1933475839) nextflow/util/Duration#toString():280 [0]
+# Covered: (-1933475839) nextflow/util/Duration#toString():280 [1]
+# Covered: (-1933524989) nextflow/util/Duration#between():215 --> nextflow/util/Duration#<init>(J)V
+# Covered: (-1933533183) nextflow/util/Duration#of():201 --> nextflow/util/Duration#<init>(Ljava/lang/String;)V
+# Covered: (-1933541364) nextflow/util/Duration#convert():174 [0]
+# Covered: (-1933541367) nextflow/util/Duration#convert():174 [1]
+# Covered: (-1933541368) nextflow/util/Duration#convert():174 [1]
+# Covered: (-1933541371) nextflow/util/Duration#convert():171 [0]
+# Covered: (-1933541371) nextflow/util/Duration#convert():171 [1]
+# Covered: (-1933541374) nextflow/util/Duration#convert():171 [1]
+# Covered: (-1933541375) nextflow/util/Duration#convert():171 [1]
+# Covered: (-1933545448) nextflow/util/Duration#parseSimple():154 [1]
+# Covered: (-1933545449) nextflow/util/Duration#parseSimple():154 [1]
+# Covered: (-1933545451) nextflow/util/Duration#parseSimple():154 [0]
+# Covered: (-1933545452) nextflow/util/Duration#parseSimple():154 [1]
+# Covered: (-1933545456) nextflow/util/Duration#parseSimple():149 --> nextflow/util/Duration#convert(FLjava/lang/String;)J
+# Covered: (-1933545467) nextflow/util/Duration#parseSimple():143 [0]
+# Covered: (-1933545467) nextflow/util/Duration#parseSimple():143 [1]
+# Covered: (-1933545471) nextflow/util/Duration#parseSimple():141 [0]
+# Covered: (-1933561853) nextflow/util/Duration#<init>():99 --> nextflow/util/Duration#parseSimple(Ljava/lang/String;)J
+# Covered: (-1933561854) nextflow/util/Duration#<init>():0 --> nextflow/util/Duration#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-1933570044) nextflow/util/Duration#<init>():72 [0]
+# Covered: (-1933570045) nextflow/util/Duration#<init>():72 [0]
+# Covered: (-1933570046) nextflow/util/Duration#<init>():0 --> nextflow/util/Duration#$getStaticMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (-1954525182) nextflow/SysEnv#get():54 [1]
 # Covered: (-1954525183) nextflow/SysEnv#get():54 --> nextflow/SysEnv$Holder#containsKey(Ljava/lang/Object;)Z
+# Covered: (-1967116287) nextflow/Session$_notifyFlowBegin_closure22#call():0 --> nextflow/Session$_notifyFlowBegin_closure22#doCall(Ljava/lang/Object;)Ljava/lang/Object;
+# Covered: (-1967120383) nextflow/Session$_notifyFlowBegin_closure22#doCall():1050 --> nextflow/trace/WorkflowStatsObserver#onFlowBegin()V
 # Covered: (-2004860923) nextflow/cli/CmdPull#$getStaticMetaClass():0 [0]
 # Covered: (-2004860923) nextflow/cli/CmdPull#$getStaticMetaClass():0 [1]
 # Covered: (-2004860926) nextflow/cli/CmdPull#$getStaticMetaClass():0 [1]
@@ -749,8 +884,12 @@
 # Covered: (-2038423550) nextflow/Session$_closure2#doCall():0 --> nextflow/Session#getMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (-2042605567) nextflow/Session$_closure1#doCall():0 --> nextflow/Session$_closure1#doCall(Ljava/lang/Object;)Ljava/lang/ClassLoader;
 # Covered: (-2042617854) nextflow/Session$_closure1#doCall():0 --> nextflow/Session#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-2092941309) nextflow/Global$getSession#call():0 --> nextflow/Global#getSession()Lnextflow/ISession;
+# Covered: (-2092941310) nextflow/Global$getSession#call():0 [0]
 # Covered: (-2092949499) nextflow/plugin/DevPluginLoader#$getStaticMetaClass():0 [0]
 # Covered: (-2092949499) nextflow/plugin/DevPluginLoader#$getStaticMetaClass():0 [1]
+# Covered: (-2092949501) nextflow/Global$getSession#call():0 --> nextflow/Global#getSession()Lnextflow/ISession;
+# Covered: (-2092949502) nextflow/Global$getSession#call():0 [0]
 # Covered: (-2092949502) nextflow/plugin/DevPluginLoader#$getStaticMetaClass():0 [1]
 # Covered: (-2092953597) nextflow/plugin/DevPluginLoader#<init>():36 --> nextflow/plugin/DevPluginLoader#$getStaticMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (-2092953599) nextflow/plugin/DevPluginLoader#<init>():36 --> nextflow/plugin/DevPluginClasspath#<init>()V
@@ -763,6 +902,12 @@
 # Covered: (-239071228) nextflow/cli/CmdLog#<init>():98 --> nextflow/cli/CacheBase$Trait$Helper#$init$(Lnextflow/cli/CacheBase;)V
 # Covered: (-239071229) nextflow/cli/CmdLog#<init>():98 --> nextflow/cli/CmdLog#$getStaticMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (-239071231) nextflow/cli/CmdLog#<init>():0 --> nextflow/cli/CmdBase#<init>()V
+# Covered: (-281010172) nextflow/util/CustomThreadPool$1#newThread():123 --> nextflow/util/CustomThreadPool$1$1#<init>(Lnextflow/util/CustomThreadPool$1;)V
+# Covered: (-281010175) nextflow/util/CustomThreadPool$1#newThread():121 --> nextflow/util/CustomThreadPool#access$000()Ljava/lang/String;
+# Covered: (-285196282) nextflow/script/ExecutionStack$push$0#call():0 --> nextflow/script/ExecutionStack$push$0#<init>(Lorg/codehaus/groovy/runtime/callsite/CallSite;Lgroovy/lang/MetaClassImpl;Lgroovy/lang/MetaMethod;[Ljava/lang/Class;Ljava/lang/reflect/Constructor;)V
+# Covered: (-285196286) nextflow/script/ExecutionStack$push$0#call():0 [1]
+# Covered: (-285204477) nextflow/script/ExecutionStack$push$0#call():0 --> nextflow/script/ExecutionStack#push(Lnextflow/script/ExecutionContext;)V
+# Covered: (-285204478) nextflow/script/ExecutionStack$push$0#call():0 [0]
 # Covered: (-348069884) nextflow/plugin/DefaultPlugins#$getCallSiteArray():0 --> nextflow/plugin/DefaultPlugins#$createCallSiteArray()Lorg/codehaus/groovy/runtime/callsite/CallSiteArray;
 # Covered: (-348069885) nextflow/plugin/DefaultPlugins#$getCallSiteArray():0 [1]
 # Covered: (-348069887) nextflow/plugin/DefaultPlugins#$getCallSiteArray():0 [0]
@@ -803,6 +948,10 @@
 # Covered: (-377470974) nextflow/cli/CmdConsole#$getStaticMetaClass():0 [1]
 # Covered: (-377483262) nextflow/cli/CmdConsole#<init>():0 --> nextflow/cli/CmdConsole#$getStaticMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (-377483263) nextflow/cli/CmdConsole#<init>():0 --> nextflow/cli/CmdBase#<init>()V
+# Covered: (-390053885) nextflow/Global$cleanUp$0#call():0 --> nextflow/Global#cleanUp()Ljava/lang/Object;
+# Covered: (-390053886) nextflow/Global$cleanUp$0#call():0 [0]
+# Covered: (-390062077) nextflow/Global$cleanUp$0#call():0 --> nextflow/Global#cleanUp()Ljava/lang/Object;
+# Covered: (-390062078) nextflow/Global$cleanUp$0#call():0 [0]
 # Covered: (-423616511) nextflow/cli/Launcher$_normalizeArgs_closure3#doCall():210 --> nextflow/cli/CmdClean#getName()Ljava/lang/String;
 # Covered: (-469696501) nextflow/script/WorkflowBinding#getVariable():151 [1]
 # Covered: (-469696502) nextflow/script/WorkflowBinding#getVariable():151 --> nextflow/NF#hasOperator(Ljava/lang/String;)Z
@@ -814,6 +963,10 @@
 # Covered: (-469696508) nextflow/script/WorkflowBinding#getVariable():143 [1]
 # Covered: (-469696509) nextflow/script/WorkflowBinding#getVariable():143 --> nextflow/script/ScriptMeta#getMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (-469700607) nextflow/script/WorkflowBinding#setVariable():134 --> nextflow/NextflowMeta#hashCode()I
+# Covered: (-469704696) nextflow/script/WorkflowBinding#getProperty():129 --> nextflow/script/ScriptBinding#getEntryName()Ljava/lang/String;
+# Covered: (-469704699) nextflow/script/WorkflowBinding#getProperty():126 [1]
+# Covered: (-469704702) nextflow/script/WorkflowBinding#getProperty():126 [1]
+# Covered: (-469704703) nextflow/script/WorkflowBinding#getProperty():126 [1]
 # Covered: (-469708793) nextflow/script/WorkflowBinding#setProperty():121 --> nextflow/script/WorkflowBinding#setOwner(Lnextflow/script/BaseScript;)Lnextflow/script/WorkflowBinding;
 # Covered: (-469708795) nextflow/script/WorkflowBinding#setProperty():118 [1]
 # Covered: (-469708798) nextflow/script/WorkflowBinding#setProperty():118 [1]
@@ -906,12 +1059,10 @@
 # Covered: (-763351036) nextflow/config/ConfigParser$setRenderClosureAsString#call():0 --> nextflow/config/ConfigParser#setRenderClosureAsString(Z)Lnextflow/config/ConfigParser;
 # Covered: (-763351038) nextflow/config/ConfigParser$setRenderClosureAsString#call():0 [0]
 # Covered: (-763351039) nextflow/config/ConfigParser$setRenderClosureAsString#call():0 --> nextflow/config/ConfigParser#getMetaClass()Lgroovy/lang/MetaClass;
-# Covered: (-801091578) nextflow/Session$newProcessFactory#call():0 --> nextflow/Session#getMetaClass()Lgroovy/lang/MetaClass;
-# Covered: (-801091582) nextflow/Session$newProcessFactory#call():0 [1]
-# Covered: (-801091583) nextflow/Session$newProcessFactory#call():0 --> nextflow/Session#getMetaClass()Lgroovy/lang/MetaClass;
-# Covered: (-801099773) nextflow/Session$newProcessFactory#call():0 --> nextflow/Session#newProcessFactory(Lnextflow/script/BaseScript;)Lnextflow/script/ProcessFactory;
-# Covered: (-801099774) nextflow/Session$newProcessFactory#call():0 [0]
-# Covered: (-801099775) nextflow/Session$newProcessFactory#call():0 --> nextflow/Session#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-780124153) nextflow/script/ExecutionStack#binding():48 --> nextflow/Session#getBinding()Lnextflow/script/ScriptBinding;
+# Covered: (-780124154) nextflow/script/ExecutionStack#binding():48 --> nextflow/Session#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (-780124155) nextflow/script/ExecutionStack#binding():48 --> nextflow/Global#getSession()Lnextflow/ISession;
+# Covered: (-780124158) nextflow/script/ExecutionStack#binding():48 [1]
 # Covered: (-805212159) nextflow/script/ScriptParser#getMetaClass():0 [0]
 # Covered: (-805216251) nextflow/script/ScriptParser#$getStaticMetaClass():0 [0]
 # Covered: (-805216251) nextflow/script/ScriptParser#$getStaticMetaClass():0 [1]
@@ -968,6 +1119,10 @@
 # Covered: (-838823934) nextflow/util/Barrier#$getStaticMetaClass():0 [1]
 # Covered: (-838832126) nextflow/util/Barrier#forceTermination():117 --> nextflow/extension/Bolts#withLock(Ljava/util/concurrent/locks/Lock;Lgroovy/lang/Closure;)Ljava/lang/Object;
 # Covered: (-838832127) nextflow/util/Barrier#forceTermination():117 --> nextflow/util/Barrier$_forceTermination_closure5#<init>(Ljava/lang/Object;Ljava/lang/Object;)V
+# Covered: (-838844410) nextflow/util/Barrier#awaitCompletion():86 [0]
+# Covered: (-838844412) nextflow/util/Barrier#awaitCompletion():86 [1]
+# Covered: (-838844413) nextflow/util/Barrier#awaitCompletion():86 [0]
+# Covered: (-838844414) nextflow/util/Barrier#awaitCompletion():86 [1]
 # Covered: (-838856701) nextflow/util/Barrier#<init>():35 --> nextflow/util/Barrier#$getStaticMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (-876584921) nextflow/util/CacheHelper#hasher():159 [0]
 # Covered: (-876584925) nextflow/util/CacheHelper#hasher():156 [1]
@@ -1054,6 +1209,12 @@
 # Covered: (092315653) nextflow/cli/CmdFs#$getStaticMetaClass():0 [1]
 # Covered: (092356609) nextflow/cli/CmdFs#$getCallSiteArray():0 [0]
 # Covered: (092356611) nextflow/cli/CmdFs#$getCallSiteArray():0 [1]
+# Covered: (1040199681) nextflow/Session$cleanup#call():0 --> nextflow/Session#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (1040199682) nextflow/Session$cleanup#call():0 [0]
+# Covered: (1040199683) nextflow/Session$cleanup#call():0 --> nextflow/Session#cleanup()V
+# Covered: (1040207873) nextflow/Session$cleanup#call():0 --> nextflow/Session#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (1040207874) nextflow/Session$cleanup#call():0 [0]
+# Covered: (1040207875) nextflow/Session$cleanup#call():0 --> nextflow/Session#cleanup()V
 # Covered: (1073745922) nextflow/ast/OpXformImpl#<init>():0 --> nextflow/ast/OpXformImpl#$getStaticMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (1073750017) nextflow/ast/OpXformImpl#visit():361 --> nextflow/ast/OpXformImpl#createVisitor()Lorg/codehaus/groovy/ast/ClassCodeExpressionTransformer;
 # Covered: (1073750020) nextflow/ast/OpXformImpl#visit():361 --> nextflow/ast/OpXformImpl$1#transform(Lorg/codehaus/groovy/ast/expr/Expression;)Lorg/codehaus/groovy/ast/expr/Expression;
@@ -1107,9 +1268,19 @@
 # Covered: (109064197) nextflow/NF#init():38 --> nextflow/script/WorkflowBinding$init#<init>(Lorg/codehaus/groovy/runtime/callsite/CallSite;Lgroovy/lang/MetaClassImpl;Lgroovy/lang/MetaMethod;[Ljava/lang/Class;Ljava/lang/reflect/Constructor;)V
 # Covered: (109068289) nextflow/NF#hasOperator():0 --> nextflow/NF#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
 # Covered: (109068291) nextflow/NF#hasOperator():42 --> nextflow/plugin/extension/PluginExtensionProvider#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (109072385) nextflow/NF#isDsl1():0 --> nextflow/NF#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (109072386) nextflow/NF#isDsl1():46 --> nextflow/NextflowMeta#getInstance()Lnextflow/NextflowMeta;
+# Covered: (109072387) nextflow/NF#isDsl1():46 --> nextflow/NextflowMeta#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (109072389) nextflow/NF#isDsl1():46 [1]
 # Covered: (109076481) nextflow/NF#isDsl2():0 --> nextflow/NF#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
 # Covered: (109076482) nextflow/NF#isDsl2():50 --> nextflow/NextflowMeta#getInstance()Lnextflow/NextflowMeta;
 # Covered: (109076483) nextflow/NF#isDsl2():50 --> nextflow/NextflowMeta#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (109084673) nextflow/NF#getBinding():0 --> nextflow/NF#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+# Covered: (109084674) nextflow/NF#getBinding():0 [0]
+# Covered: (109084676) nextflow/NF#getBinding():0 [0]
+# Covered: (109084685) nextflow/NF#getBinding():59 --> nextflow/NF#isDsl2()Z
+# Covered: (109084686) nextflow/NF#getBinding():59 [0]
+# Covered: (109084687) nextflow/NF#getBinding():59 --> nextflow/script/ExecutionStack$binding#<init>(Lorg/codehaus/groovy/runtime/callsite/CallSite;Lgroovy/lang/MetaClassImpl;Lgroovy/lang/MetaMethod;[Ljava/lang/Class;Ljava/lang/reflect/Constructor;)V
 # Covered: (109117441) nextflow/NF#$createCallSiteArray():0 --> nextflow/NF#$createCallSiteArray_1([Ljava/lang/String;)V
 # Covered: (109121537) nextflow/NF#$getCallSiteArray():0 [0]
 # Covered: (109121537) nextflow/NF#$getCallSiteArray():0 [1]
@@ -1148,8 +1319,6 @@
 # Covered: (1124134933) nextflow/plugin/PluginsFacade#init():198 --> nextflow/plugin/PluginsFacade#createUpdater(Ljava/nio/file/Path;Lnextflow/plugin/CustomPluginManager;)Lnextflow/plugin/PluginUpdater;
 # Covered: (1124134934) nextflow/plugin/PluginsFacade#init():199 --> nextflow/util/LoggerHelper$RollOnStartupPolicy#isTriggeringEvent(Ljava/io/File;Ljava/lang/Object;)Z
 # Covered: (1124134935) nextflow/plugin/PluginsFacade#init():200 [1]
-# Covered: (1124143105) nextflow/plugin/PluginsFacade#setup():225 --> nextflow/plugin/PluginsFacade#init()V
-# Covered: (1124143106) nextflow/plugin/PluginsFacade#setup():226 --> nextflow/plugin/PluginsFacade#load(Ljava/util/Map;)V
 # Covered: (1124147201) nextflow/plugin/PluginsFacade#load():230 --> nextflow/plugin/CustomPluginManager#getMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (1124147202) nextflow/plugin/PluginsFacade#load():230 [1]
 # Covered: (1124147203) nextflow/plugin/PluginsFacade#load():230 [1]
@@ -1157,6 +1326,7 @@
 # Covered: (1124147206) nextflow/plugin/PluginsFacade#load():232 --> nextflow/plugin/PluginsFacade#start(Ljava/util/List;)V
 # Covered: (1124151297) nextflow/plugin/PluginsFacade#stop():236 --> nextflow/plugin/CustomPluginManager#getMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (1124151298) nextflow/plugin/PluginsFacade#stop():236 [0]
+# Covered: (1124151298) nextflow/plugin/PluginsFacade#stop():236 [1]
 # Covered: (1124155393) nextflow/plugin/PluginsFacade#getExtensions():251 --> nextflow/plugin/CustomPluginManager#getMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (1124155394) nextflow/plugin/PluginsFacade#getExtensions():251 [0]
 # Covered: (1124155395) nextflow/plugin/PluginsFacade#getExtensions():252 --> nextflow/secret/LocalSecretsProvider#<init>()V
@@ -1194,19 +1364,12 @@
 # Covered: (1124208643) nextflow/plugin/PluginsFacade#parseConf():415 [1]
 # Covered: (1124208647) nextflow/plugin/PluginsFacade#parseConf():415 [1]
 # Covered: (1124208652) nextflow/plugin/PluginsFacade#parseConf():416 [1]
-# Covered: (1124237313) nextflow/plugin/PluginsFacade#init():0 --> nextflow/plugin/PluginsFacade#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
-# Covered: (1124237314) nextflow/plugin/PluginsFacade#init():0 [0]
-# Covered: (1124237316) nextflow/plugin/PluginsFacade#init():0 [0]
-# Covered: (1124237318) nextflow/plugin/PluginsFacade#init():0 --> nextflow/plugin/PluginsFacade#init(Z)V
-# Covered: (1124265985) nextflow/plugin/PluginsFacade#$createCallSiteArray():0 --> nextflow/plugin/PluginsFacade#$createCallSiteArray_1([Ljava/lang/String;)V
-# Covered: (1124270081) nextflow/plugin/PluginsFacade#$getCallSiteArray():0 [0]
-# Covered: (1124270081) nextflow/plugin/PluginsFacade#$getCallSiteArray():0 [1]
-# Covered: (1124270083) nextflow/plugin/PluginsFacade#$getCallSiteArray():0 [1]
-# Covered: (1124270084) nextflow/plugin/PluginsFacade#$getCallSiteArray():0 --> nextflow/plugin/PluginsFacade#$createCallSiteArray()Lorg/codehaus/groovy/runtime/callsite/CallSiteArray;
 # Covered: (1186992130) nextflow/cache/CacheDB#<init>():0 --> nextflow/cache/CacheDB#$getStaticMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (1186992131) nextflow/cache/CacheDB#<init>():50 --> nextflow/util/CustomPoolFactory#createPool()Lgroovyx/gpars/scheduler/Pool;
 # Covered: (1186996225) nextflow/cache/CacheDB#open():59 --> nextflow/cache/DefaultCacheStore#open()Lnextflow/cache/CacheStore;
-# Covered: (1187000321) nextflow/cache/CacheDB#openForRead():69 --> nextflow/cache/DefaultCacheStore#openForRead()Lnextflow/cache/CacheStore;
+# Covered: (1187057666) nextflow/cache/CacheDB#close():264 --> nextflow/util/CustomThreadPool$1#newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+# Covered: (1187057668) nextflow/cache/CacheDB#close():266 --> nextflow/cache/DefaultCacheStore#close()V
+# Covered: (1187057669) nextflow/cache/CacheDB#close():267 --> nextflow/util/LoggerHelper$RollOnStartupPolicy#isTriggeringEvent(Ljava/io/File;Ljava/lang/Object;)Z
 # Covered: (1187061762) nextflow/cache/CacheDB#$getStaticMetaClass():0 [1]
 # Covered: (1187061765) nextflow/cache/CacheDB#$getStaticMetaClass():0 [0]
 # Covered: (1187061765) nextflow/cache/CacheDB#$getStaticMetaClass():0 [1]
@@ -1216,6 +1379,7 @@
 # Covered: (1203884034) nextflow/trace/AnsiLogObserver#$getStaticMetaClass():0 [1]
 # Covered: (1203884037) nextflow/trace/AnsiLogObserver#$getStaticMetaClass():0 [0]
 # Covered: (1203884037) nextflow/trace/AnsiLogObserver#$getStaticMetaClass():0 [1]
+# Covered: (1203892225) nextflow/trace/AnsiLogObserver#onFlowBegin():0 --> nextflow/trace/TraceObserver$Trait$Helper#onFlowBegin(Lnextflow/trace/TraceObserver;)V
 # Covered: (1203957761) nextflow/trace/AnsiLogObserver#enableMetrics():0 --> nextflow/trace/TraceObserver$Trait$Helper#enableMetrics(Lnextflow/trace/TraceObserver;)Z
 # Covered: (1203965953) nextflow/trace/AnsiLogObserver#onFlowError():0 --> nextflow/trace/TraceObserver$Trait$Helper#onFlowError(Lnextflow/trace/TraceObserver;Lnextflow/processor/TaskHandler;Lnextflow/trace/TraceRecord;)V
 # Covered: (1204019201) nextflow/trace/AnsiLogObserver#getMetaClass():0 [0]
@@ -1283,6 +1447,12 @@
 # Covered: (1434472449) nextflow/cli/CmdRun$hasParams#call():0 --> nextflow/cli/CmdBase#getMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (1434472450) nextflow/cli/CmdRun$hasParams#call():0 [0]
 # Covered: (1434472451) nextflow/cli/CmdRun$hasParams#call():0 --> nextflow/cli/CmdRun#hasParams()Z
+# Covered: (1488990209) nextflow/script/ScriptMeta$getLocalWorkflowNames$1#call():0 --> nextflow/script/ScriptMeta#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (1488990210) nextflow/script/ScriptMeta$getLocalWorkflowNames$1#call():0 [0]
+# Covered: (1488990211) nextflow/script/ScriptMeta$getLocalWorkflowNames$1#call():0 --> nextflow/script/ScriptMeta#getLocalWorkflowNames()Ljava/util/Set;
+# Covered: (1488998401) nextflow/script/ScriptMeta$getLocalWorkflowNames$1#call():0 --> nextflow/script/ScriptMeta#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (1488998402) nextflow/script/ScriptMeta$getLocalWorkflowNames$1#call():0 [0]
+# Covered: (1488998403) nextflow/script/ScriptMeta$getLocalWorkflowNames$1#call():0 --> nextflow/script/ScriptMeta#getLocalWorkflowNames()Ljava/util/Set;
 # Covered: (1501564933) nextflow/script/ScriptMeta#<init>():105 --> nextflow/script/ScriptMeta#$getStaticMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (1501564934) nextflow/script/ScriptMeta#<init>():105 --> nextflow/script/ScriptMeta$_closure1#<init>(Ljava/lang/Object;Ljava/lang/Object;)V
 # Covered: (1501564937) nextflow/script/ScriptMeta#<init>():117 --> nextflow/script/ScriptMeta#definedFunctions0(Lnextflow/script/BaseScript;)Ljava/util/List;
@@ -1291,6 +1461,11 @@
 # Covered: (1501564942) nextflow/script/ScriptMeta#<init>():117 [1]
 # Covered: (1501577218) nextflow/script/ScriptMeta#get():60 [1]
 # Covered: (1501577219) nextflow/script/ScriptMeta#get():60 [1]
+# Covered: (1501581315) nextflow/script/ScriptMeta#allProcessNames():66 [0]
+# Covered: (1501581317) nextflow/script/ScriptMeta#allProcessNames():66 [0]
+# Covered: (1501581319) nextflow/script/ScriptMeta#allProcessNames():66 [0]
+# Covered: (1501581319) nextflow/script/ScriptMeta#allProcessNames():66 [1]
+# Covered: (1501581322) nextflow/script/ScriptMeta#allProcessNames():67 --> nextflow/script/ScriptMeta#getProcessNames()Ljava/util/Set;
 # Covered: (1501589508) nextflow/script/ScriptMeta#allScriptNames():79 [0]
 # Covered: (1501589510) nextflow/script/ScriptMeta#allScriptNames():79 [0]
 # Covered: (1501589512) nextflow/script/ScriptMeta#allScriptNames():79 [0]
@@ -1313,6 +1488,22 @@
 # Covered: (1501646864) nextflow/script/ScriptMeta#definedFunctions0():201 [1]
 # Covered: (1501646868) nextflow/script/ScriptMeta#definedFunctions0():202 [0]
 # Covered: (1501663236) nextflow/script/ScriptMeta#getComponent():236 [1]
+# Covered: (1501683713) nextflow/script/ScriptMeta#getProcessNames():267 --> nextflow/NF#isDsl1()Z
+# Covered: (1501683714) nextflow/script/ScriptMeta#getProcessNames():267 [1]
+# Covered: (1501683722) nextflow/script/ScriptMeta#getProcessNames():272 [0]
+# Covered: (1501683724) nextflow/script/ScriptMeta#getProcessNames():272 [0]
+# Covered: (1501683726) nextflow/script/ScriptMeta#getProcessNames():272 [1]
+# Covered: (1501683733) nextflow/script/ScriptMeta#getProcessNames():277 [0]
+# Covered: (1501683735) nextflow/script/ScriptMeta#getProcessNames():277 [0]
+# Covered: (1501683737) nextflow/script/ScriptMeta#getProcessNames():277 [1]
+# Covered: (1501687809) nextflow/script/ScriptMeta#getLocalProcessNames():285 --> nextflow/NF#isDsl1()Z
+# Covered: (1501687810) nextflow/script/ScriptMeta#getLocalProcessNames():285 [1]
+# Covered: (1501687818) nextflow/script/ScriptMeta#getLocalProcessNames():290 [0]
+# Covered: (1501687820) nextflow/script/ScriptMeta#getLocalProcessNames():290 [0]
+# Covered: (1501687822) nextflow/script/ScriptMeta#getLocalProcessNames():290 [1]
+# Covered: (1501691908) nextflow/script/ScriptMeta#getLocalWorkflowNames():299 [0]
+# Covered: (1501691910) nextflow/script/ScriptMeta#getLocalWorkflowNames():299 [0]
+# Covered: (1501691912) nextflow/script/ScriptMeta#getLocalWorkflowNames():299 [1]
 # Covered: (1501712386) nextflow/script/ScriptMeta#$getStaticMetaClass():0 [1]
 # Covered: (1501712389) nextflow/script/ScriptMeta#$getStaticMetaClass():0 [0]
 # Covered: (1501712389) nextflow/script/ScriptMeta#$getStaticMetaClass():0 [1]
@@ -1490,6 +1681,8 @@
 # Covered: (1698701314) nextflow/script/WorkflowMetadata$_closure1#doCall():242 --> nextflow/container/ContainerConfig#isEnabled()Z
 # Covered: (1698701315) nextflow/script/WorkflowMetadata$_closure1#doCall():242 [1]
 # Covered: (1698705409) nextflow/script/WorkflowMetadata$_closure1#call():0 --> nextflow/script/WorkflowMetadata$_closure1#doCall(Ljava/lang/Object;)Ljava/lang/String;
+# Covered: (1707089922) nextflow/script/WorkflowMetadata$_closure3#doCall():251 --> nextflow/script/WorkflowMetadata#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (1707098113) nextflow/script/WorkflowMetadata$_closure3#call():0 --> nextflow/script/WorkflowMetadata$_closure3#doCall(Ljava/lang/Object;)Ljava/lang/Void;
 # Covered: (1719668738) nextflow/util/LoggerHelper$CaptureAppender#<init>():0 --> nextflow/util/LoggerHelper$CaptureAppender#$getStaticMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (1719672833) nextflow/util/LoggerHelper$CaptureAppender#append():650 --> nextflow/Global#getSession()Lnextflow/ISession;
 # Covered: (1719672835) nextflow/util/LoggerHelper$CaptureAppender#append():653 --> nextflow/util/LoggerHelper#fmtEvent(Lch/qos/logback/classic/spi/ILoggingEvent;Lnextflow/Session;Z)Ljava/lang/String;
@@ -1665,14 +1858,28 @@
 # Covered: (1912623106) nextflow/util/ThreadPoolManager#createAndRegisterShutdownCallback():90 --> nextflow/util/ThreadPoolManager#create()Ljava/util/concurrent/ThreadPoolExecutor;
 # Covered: (1912623107) nextflow/util/ThreadPoolManager#createAndRegisterShutdownCallback():92 --> nextflow/util/ThreadPoolManager$_createAndRegisterShutdownCallback_lambda1#<init>(Ljava/lang/Object;Ljava/lang/Object;Lgroovy/lang/Reference;)V
 # Covered: (1912623108) nextflow/util/ThreadPoolManager#createAndRegisterShutdownCallback():92 --> nextflow/Global#onCleanup(Ljava/util/function/Consumer;)V
+# Covered: (1912627202) nextflow/util/ThreadPoolManager#shutdown():98 [0]
+# Covered: (1912627203) nextflow/util/ThreadPoolManager#shutdown():98 [0]
+# Covered: (1912627204) nextflow/util/ThreadPoolManager#shutdown():98 --> nextflow/Session#isAborted()Z
+# Covered: (1912627205) nextflow/util/ThreadPoolManager#shutdown():98 [0]
+# Covered: (1912627205) nextflow/util/ThreadPoolManager#shutdown():98 [1]
+# Covered: (1912627206) nextflow/util/ThreadPoolManager#shutdown():98 --> nextflow/util/ThreadPoolManager#shutdown(Z)V
+# Covered: (1912631298) nextflow/util/ThreadPoolManager#shutdown():102 [0]
+# Covered: (1912631298) nextflow/util/ThreadPoolManager#shutdown():102 [1]
+# Covered: (1912631299) nextflow/util/ThreadPoolManager#shutdown():102 [0]
+# Covered: (1912631299) nextflow/util/ThreadPoolManager#shutdown():102 [1]
+# Covered: (1912631301) nextflow/util/ThreadPoolManager#shutdown():105 [0]
+# Covered: (1912631301) nextflow/util/ThreadPoolManager#shutdown():105 [1]
+# Covered: (1912631305) nextflow/util/ThreadPoolManager#shutdown():114 --> nextflow/util/ThreadPoolHelper#await(Ljava/util/concurrent/ExecutorService;Lnextflow/util/Duration;Ljava/lang/String;Ljava/lang/String;)V
+# Covered: (1912631307) nextflow/util/ThreadPoolManager#shutdown():115 [0]
+# Covered: (1912631311) nextflow/util/ThreadPoolManager#shutdown():115 --> nextflow/util/LoggerHelper$RollOnStartupPolicy#isTriggeringEvent(Ljava/io/File;Ljava/lang/Object;)Z
 # Covered: (1912639490) nextflow/util/ThreadPoolManager#$getStaticMetaClass():0 [1]
 # Covered: (1912639493) nextflow/util/ThreadPoolManager#$getStaticMetaClass():0 [0]
 # Covered: (1912639493) nextflow/util/ThreadPoolManager#$getStaticMetaClass():0 [1]
-# Covered: (1950359556) nextflow/cli/CmdClean$_run_closure1#doCall():100 --> nextflow/cli/CmdClean#access$0(Lnextflow/cli/CmdClean;Lnextflow/util/HistoryFile$Record;)V
-# Covered: (1950363649) nextflow/cli/CmdClean$_run_closure1#call():0 --> nextflow/cli/CmdClean$_run_closure1#doCall(Ljava/lang/Object;)Ljava/lang/Object;
+# Covered: (1933582337) nextflow/util/ThreadPoolHelper#await():36 --> nextflow/util/Duration#getMillis()J
+# Covered: (1933582340) nextflow/util/ThreadPoolHelper#await():42 [0]
 # Covered: (1954553857) nextflow/plugin/Plugins#getManager():38 --> nextflow/plugin/PluginsFacade#getManager()Lorg/pf4j/PluginManager;
 # Covered: (1954557953) nextflow/plugin/Plugins#init():41 --> nextflow/plugin/PluginsFacade#init(Z)V
-# Covered: (1954566145) nextflow/plugin/Plugins#setup():49 --> nextflow/plugin/PluginsFacade#setup(Ljava/util/Map;)V
 # Covered: (1954570241) nextflow/plugin/Plugins#load():56 --> nextflow/plugin/PluginsFacade#load(Ljava/util/Map;)V
 # Covered: (1954578433) nextflow/plugin/Plugins#stop():64 --> nextflow/plugin/PluginsFacade#stop()V
 # Covered: (1954582529) nextflow/plugin/Plugins#getExtensions():68 --> nextflow/plugin/PluginsFacade#getExtensions(Ljava/lang/Class;)Ljava/util/List;
@@ -1681,8 +1888,6 @@
 # Covered: (1954615298) nextflow/plugin/Plugins#init():0 [0]
 # Covered: (1954615300) nextflow/plugin/Plugins#init():0 [0]
 # Covered: (1954615302) nextflow/plugin/Plugins#init():0 --> nextflow/plugin/Plugins#init(Z)V
-# Covered: (1954619393) nextflow/plugin/Plugins#setup():0 --> nextflow/plugin/Plugins#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
-# Covered: (1954619396) nextflow/plugin/Plugins#setup():48 --> nextflow/plugin/Plugins#setup(Ljava/util/Map;)V
 # Covered: (1954623489) nextflow/plugin/Plugins#getPriorityExtensions():0 --> nextflow/plugin/Plugins#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
 # Covered: (1954623490) nextflow/plugin/Plugins#getPriorityExtensions():0 [0]
 # Covered: (1954623492) nextflow/plugin/Plugins#getPriorityExtensions():0 [0]
@@ -1731,29 +1936,9 @@
 # Covered: (2097156097) nextflow/cli/CmdClean#<init>():0 --> nextflow/cli/CmdBase#<init>()V
 # Covered: (2097156099) nextflow/cli/CmdClean#<init>():81 --> nextflow/cli/CmdClean#$getStaticMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (2097156100) nextflow/cli/CmdClean#<init>():81 --> nextflow/cli/CacheBase$Trait$Helper#$init$(Lnextflow/cli/CacheBase;)V
-# Covered: (2097164289) nextflow/cli/CmdClean#run():96 --> nextflow/cli/CmdClean#init()V
-# Covered: (2097164290) nextflow/cli/CmdClean#run():97 --> nextflow/cli/CmdClean#validateOptions()V
-# Covered: (2097164291) nextflow/cli/CmdClean#run():98 --> nextflow/cli/CmdClean#createSession()V
-# Covered: (2097164292) nextflow/cli/CmdClean#run():99 --> nextflow/plugin/Plugins#setup()V
-# Covered: (2097164293) nextflow/cli/CmdClean#run():100 --> nextflow/cli/CmdClean#listIds()Ljava/util/List;
-# Covered: (2097164294) nextflow/cli/CmdClean#run():100 --> nextflow/cli/CmdClean$_run_closure1#<init>(Ljava/lang/Object;Ljava/lang/Object;)V
-# Covered: (2097164295) nextflow/cli/CmdClean#run():100 --> nextflow/cli/CmdClean$_run_closure1#call(Ljava/lang/Object;)Ljava/lang/Object;
-# Covered: (2097168385) nextflow/cli/CmdClean#createSession():107 --> nextflow/cli/CmdClean$_createSession_closure2#<init>(Ljava/lang/Object;Ljava/lang/Object;)V
-# Covered: (2097168386) nextflow/cli/CmdClean#createSession():107 --> nextflow/Global#setLazySession(Lgroovy/lang/Closure;)V
-# Covered: (2097172481) nextflow/cli/CmdClean#validateOptions():124 [0]
-# Covered: (2097172482) nextflow/cli/CmdClean#validateOptions():124 [0]
-# Covered: (2097172483) nextflow/cli/CmdClean#validateOptions():124 [1]
-# Covered: (2097172484) nextflow/cli/CmdClean#validateOptions():124 [1]
-# Covered: (2097172485) nextflow/cli/CmdClean#validateOptions():124 [1]
-# Covered: (2097176577) nextflow/cli/CmdClean#cleanup():136 --> nextflow/cli/CmdClean#cacheFor(Lnextflow/util/HistoryFile$Record;)Lnextflow/cache/CacheDB;
-# Covered: (2097176578) nextflow/cli/CmdClean#cleanup():136 --> nextflow/cache/CacheDB#openForRead()Lnextflow/cache/CacheDB;
 # Covered: (2097201154) nextflow/cli/CmdClean#$getStaticMetaClass():0 [1]
 # Covered: (2097201157) nextflow/cli/CmdClean#$getStaticMetaClass():0 [0]
 # Covered: (2097201157) nextflow/cli/CmdClean#$getStaticMetaClass():0 [1]
-# Covered: (2097205249) nextflow/cli/CmdClean#init():0 --> nextflow/cli/CacheBase$Trait$Helper#init(Lnextflow/cli/CacheBase;)V
-# Covered: (2097213441) nextflow/cli/CmdClean#cacheFor():0 --> nextflow/cli/CacheBase$Trait$Helper#cacheFor(Lnextflow/cli/CacheBase;Lnextflow/util/HistoryFile$Record;)Lnextflow/cache/CacheDB;
-# Covered: (2097221633) nextflow/cli/CmdClean#listIds():0 --> nextflow/cli/CacheBase$Trait$Helper#listIds(Lnextflow/cli/CacheBase;)Ljava/util/List;
-# Covered: (2097295361) nextflow/cli/CmdClean#access$0():0 --> nextflow/cli/CmdClean#cleanup(Lnextflow/util/HistoryFile$Record;)V
 # Covered: (2109739009) nextflow/dag/DAG#<init>():0 --> nextflow/dag/DAG#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
 # Covered: (2109739019) nextflow/dag/DAG#<init>():77 --> nextflow/dag/DAG#$getStaticMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (2109816833) nextflow/dag/DAG#normalizeMissingVertices():0 --> nextflow/dag/DAG#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
@@ -1782,14 +1967,23 @@
 # Covered: (2109845509) nextflow/dag/DAG#$getStaticMetaClass():0 [1]
 # Covered: (2109898753) nextflow/dag/DAG#$getCallSiteArray():0 [0]
 # Covered: (2109898755) nextflow/dag/DAG#$getCallSiteArray():0 [1]
+# Covered: (2126516226) nextflow/script/WorkflowNotifier#<init>():0 --> nextflow/script/WorkflowNotifier#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (2126520321) nextflow/script/WorkflowNotifier#sendNotification():59 --> nextflow/config/ConfigMap#get(Ljava/lang/Object;)Ljava/lang/Object;
+# Covered: (2126520324) nextflow/script/WorkflowNotifier#sendNotification():60 [0]
+# Covered: (2126520325) nextflow/script/WorkflowNotifier#sendNotification():60 [1]
+# Covered: (2126520330) nextflow/script/WorkflowNotifier#sendNotification():60 [0]
+# Covered: (2126565378) nextflow/script/WorkflowNotifier#$getStaticMetaClass():0 [1]
+# Covered: (2126565381) nextflow/script/WorkflowNotifier#$getStaticMetaClass():0 [0]
+# Covered: (2126565381) nextflow/script/WorkflowNotifier#$getStaticMetaClass():0 [1]
+# Covered: (2126569473) nextflow/script/WorkflowNotifier#getMetaClass():0 [0]
 # Covered: (247472129) nextflow/plugin/CustomPluginManager#<init>():42 --> nextflow/plugin/DevPluginManager#createPluginRepository()Lorg/pf4j/PluginRepository;
 # Covered: (247472130) nextflow/plugin/CustomPluginManager#<init>():42 --> nextflow/plugin/DevPluginManager#$getStaticMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (247484417) nextflow/plugin/CustomPluginManager#createVersionManager():57 --> nextflow/plugin/CustomVersionManager#<init>()V
 # Covered: (247500801) nextflow/plugin/CustomPluginManager#getMetaClass():0 [0]
-# Covered: (272637954) nextflow/script/ExecutionStack$pop$0#call():0 [0]
-# Covered: (272637955) nextflow/script/ExecutionStack$pop$0#call():0 --> nextflow/script/ExecutionStack#pop()Lnextflow/script/ExecutionContext;
-# Covered: (272646146) nextflow/script/ExecutionStack$pop$0#call():0 [0]
-# Covered: (272646147) nextflow/script/ExecutionStack$pop$0#call():0 --> nextflow/script/ExecutionStack#pop()Lnextflow/script/ExecutionContext;
+# Covered: (268443650) nextflow/script/ExecutionStack$pop$1#call():0 [0]
+# Covered: (268443651) nextflow/script/ExecutionStack$pop$1#call():0 --> nextflow/script/ExecutionStack#pop()Lnextflow/script/ExecutionContext;
+# Covered: (268451842) nextflow/script/ExecutionStack$pop$1#call():0 [0]
+# Covered: (268451843) nextflow/script/ExecutionStack$pop$1#call():0 --> nextflow/script/ExecutionStack#pop()Lnextflow/script/ExecutionContext;
 # Covered: (281022465) nextflow/config/ConfigBuilder$_buildConfig0_closure4#<init>():0 --> nextflow/config/ConfigBuilder$_buildConfig0_closure4#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
 # Covered: (281047041) nextflow/config/ConfigBuilder$_buildConfig0_closure4#$createCallSiteArray():0 --> nextflow/config/ConfigBuilder$_buildConfig0_closure4#$createCallSiteArray_1([Ljava/lang/String;)V
 # Covered: (281051137) nextflow/config/ConfigBuilder$_buildConfig0_closure4#$getCallSiteArray():0 [0]
@@ -1797,6 +1991,39 @@
 # Covered: (281051139) nextflow/config/ConfigBuilder$_buildConfig0_closure4#$getCallSiteArray():0 [1]
 # Covered: (281051140) nextflow/config/ConfigBuilder$_buildConfig0_closure4#$getCallSiteArray():0 --> nextflow/config/ConfigBuilder$_buildConfig0_closure4#$createCallSiteArray()Lorg/codehaus/groovy/runtime/callsite/CallSiteArray;
 # Covered: (301993987) nextflow/trace/WorkflowStats#<init>():47 --> nextflow/trace/WorkflowStats#$getStaticMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (302006273) nextflow/trace/WorkflowStats#gtz():93 [0]
+# Covered: (302006274) nextflow/trace/WorkflowStats#gtz():93 [0]
+# Covered: (302010369) nextflow/trace/WorkflowStats#gtz():97 [0]
+# Covered: (302010370) nextflow/trace/WorkflowStats#gtz():97 [0]
+# Covered: (302047233) nextflow/trace/WorkflowStats#makeDuration():137 --> nextflow/trace/WorkflowStats#gtz(J)J
+# Covered: (302047234) nextflow/trace/WorkflowStats#makeDuration():137 --> nextflow/util/Duration#<init>(J)V
+# Covered: (302051329) nextflow/trace/WorkflowStats#getSucceedDuration():143 --> nextflow/trace/WorkflowStats#makeDuration(J)Lnextflow/util/Duration;
+# Covered: (302055425) nextflow/trace/WorkflowStats#getFailedDuration():148 --> nextflow/trace/WorkflowStats#makeDuration(J)Lnextflow/util/Duration;
+# Covered: (302059521) nextflow/trace/WorkflowStats#getCachedDuration():153 --> nextflow/trace/WorkflowStats#makeDuration(J)Lnextflow/util/Duration;
+# Covered: (302067713) nextflow/trace/WorkflowStats#getSucceededCount():164 --> nextflow/trace/WorkflowStats#gtz(I)I
+# Covered: (302071809) nextflow/trace/WorkflowStats#getFailedCount():169 --> nextflow/trace/WorkflowStats#gtz(I)I
+# Covered: (302075905) nextflow/trace/WorkflowStats#getIgnoredCount():174 --> nextflow/trace/WorkflowStats#gtz(I)I
+# Covered: (302080001) nextflow/trace/WorkflowStats#getCachedCount():179 --> nextflow/trace/WorkflowStats#gtz(I)I
+# Covered: (302108673) nextflow/trace/WorkflowStats#getLoadMemory():193 --> nextflow/trace/WorkflowStats#gtz(J)J
+# Covered: (302112769) nextflow/trace/WorkflowStats#getLoadMemoryFmt():195 --> nextflow/trace/WorkflowStats#getLoadMemory()J
+# Covered: (302112770) nextflow/trace/WorkflowStats#getLoadMemoryFmt():195 --> nextflow/util/MemoryUnit#of(J)Lnextflow/util/MemoryUnit;
+# Covered: (302112771) nextflow/trace/WorkflowStats#getLoadMemoryFmt():195 --> nextflow/util/MemoryUnit#toString()Ljava/lang/String;
+# Covered: (302125057) nextflow/trace/WorkflowStats#getPeakMemory():201 --> nextflow/trace/WorkflowStats#gtz(J)J
+# Covered: (302129153) nextflow/trace/WorkflowStats#getPeakMemoryFmt():203 --> nextflow/trace/WorkflowStats#getPeakMemory()J
+# Covered: (302129154) nextflow/trace/WorkflowStats#getPeakMemoryFmt():203 --> nextflow/util/MemoryUnit#of(J)Lnextflow/util/MemoryUnit;
+# Covered: (302129155) nextflow/trace/WorkflowStats#getPeakMemoryFmt():203 --> nextflow/util/MemoryUnit#toString()Ljava/lang/String;
+# Covered: (302141441) nextflow/trace/WorkflowStats#toString():248 --> nextflow/trace/WorkflowStats#getSucceededCount()I
+# Covered: (302141445) nextflow/trace/WorkflowStats#toString():249 --> nextflow/trace/WorkflowStats#getFailedCount()I
+# Covered: (302141449) nextflow/trace/WorkflowStats#toString():250 --> nextflow/trace/WorkflowStats#getIgnoredCount()I
+# Covered: (302141453) nextflow/trace/WorkflowStats#toString():251 --> nextflow/trace/WorkflowStats#getCachedCount()I
+# Covered: (302141472) nextflow/trace/WorkflowStats#toString():257 --> nextflow/trace/WorkflowStats#getSucceedDuration()Lnextflow/util/Duration;
+# Covered: (302141474) nextflow/trace/WorkflowStats#toString():257 --> nextflow/util/Duration#toString()Ljava/lang/String;
+# Covered: (302141475) nextflow/trace/WorkflowStats#toString():258 --> nextflow/trace/WorkflowStats#getFailedDuration()Lnextflow/util/Duration;
+# Covered: (302141477) nextflow/trace/WorkflowStats#toString():258 --> nextflow/util/Duration#toString()Ljava/lang/String;
+# Covered: (302141478) nextflow/trace/WorkflowStats#toString():259 --> nextflow/trace/WorkflowStats#getCachedDuration()Lnextflow/util/Duration;
+# Covered: (302141480) nextflow/trace/WorkflowStats#toString():259 --> nextflow/util/Duration#toString()Ljava/lang/String;
+# Covered: (302141484) nextflow/trace/WorkflowStats#toString():261 --> nextflow/trace/WorkflowStats#getLoadMemoryFmt()Ljava/lang/String;
+# Covered: (302141493) nextflow/trace/WorkflowStats#toString():264 --> nextflow/trace/WorkflowStats#getPeakMemoryFmt()Ljava/lang/String;
 # Covered: (302190594) nextflow/trace/WorkflowStats#$getStaticMetaClass():0 [1]
 # Covered: (302190597) nextflow/trace/WorkflowStats#$getStaticMetaClass():0 [0]
 # Covered: (302190597) nextflow/trace/WorkflowStats#$getStaticMetaClass():0 [1]
@@ -1837,6 +2064,10 @@
 # Covered: (427888645) nextflow/secret/LocalSecretsProvider#$getStaticMetaClass():0 [0]
 # Covered: (427909121) nextflow/secret/LocalSecretsProvider#getMetaClass():0 [0]
 # Covered: (427921409) nextflow/secret/LocalSecretsProvider#load():0 --> nextflow/secret/LocalSecretsProvider#load()Lnextflow/secret/LocalSecretsProvider;
+# Covered: (486547458) nextflow/util/Duration$of$0#call():0 [0]
+# Covered: (486547459) nextflow/util/Duration$of$0#call():0 --> nextflow/util/Duration#of(Ljava/lang/String;)Lnextflow/util/Duration;
+# Covered: (486555650) nextflow/util/Duration$of$0#call():0 [0]
+# Covered: (486555651) nextflow/util/Duration$of$0#call():0 --> nextflow/util/Duration#of(Ljava/lang/String;)Lnextflow/util/Duration;
 # Covered: (511709185) nextflow/config/ConfigBuilder#<init>():0 --> nextflow/config/ConfigBuilder#$getCallSiteArray()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
 # Covered: (511709198) nextflow/config/ConfigBuilder#<init>():87 --> nextflow/config/ConfigBuilder#$getStaticMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (511709200) nextflow/config/ConfigBuilder#<init>():90 --> nextflow/config/ConfigBuilder#getMetaClass()Lgroovy/lang/MetaClass;
@@ -1956,7 +2187,8 @@
 # Covered: (511815832) nextflow/config/ConfigBuilder#configRunOptions():603 --> nextflow/cli/CmdBase#getMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (511815834) nextflow/config/ConfigBuilder#configRunOptions():603 [1]
 # Covered: (511815839) nextflow/config/ConfigBuilder#configRunOptions():607 --> nextflow/cli/CmdBase#getMetaClass()Lgroovy/lang/MetaClass;
-# Covered: (511815841) nextflow/config/ConfigBuilder#configRunOptions():607 [1]
+# Covered: (511815841) nextflow/config/ConfigBuilder#configRunOptions():607 [0]
+# Covered: (511815842) nextflow/config/ConfigBuilder#configRunOptions():608 --> nextflow/cli/CmdBase#getMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (511815845) nextflow/config/ConfigBuilder#configRunOptions():610 --> nextflow/cli/CmdBase#getMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (511815847) nextflow/config/ConfigBuilder#configRunOptions():610 [1]
 # Covered: (511815852) nextflow/config/ConfigBuilder#configRunOptions():613 --> nextflow/cli/CmdBase#getMetaClass()Lgroovy/lang/MetaClass;
@@ -2097,14 +2329,33 @@
 # Covered: (520130563) nextflow/script/WorkflowMetadata#setErrorAttributes():354 [1]
 # Covered: (520130584) nextflow/script/WorkflowMetadata#setErrorAttributes():364 --> nextflow/Session#getError()Ljava/lang/Throwable;
 # Covered: (520130586) nextflow/script/WorkflowMetadata#setErrorAttributes():364 [0]
+# Covered: (520130586) nextflow/script/WorkflowMetadata#setErrorAttributes():364 [1]
 # Covered: (520130587) nextflow/script/WorkflowMetadata#setErrorAttributes():365 --> nextflow/Session#getError()Ljava/lang/Throwable;
 # Covered: (520130590) nextflow/script/WorkflowMetadata#setErrorAttributes():365 [0]
+# Covered: (520134658) nextflow/script/WorkflowMetadata#invokeOnComplete():380 --> nextflow/util/Duration#between(Ljava/time/temporal/Temporal;Ljava/time/temporal/Temporal;)Lnextflow/util/Duration;
+# Covered: (520134659) nextflow/script/WorkflowMetadata#invokeOnComplete():381 --> nextflow/Session#isAborted()Z
+# Covered: (520134660) nextflow/script/WorkflowMetadata#invokeOnComplete():381 [0]
+# Covered: (520134660) nextflow/script/WorkflowMetadata#invokeOnComplete():381 [1]
+# Covered: (520134661) nextflow/script/WorkflowMetadata#invokeOnComplete():381 --> nextflow/Session#isCancelled()Z
+# Covered: (520134662) nextflow/script/WorkflowMetadata#invokeOnComplete():381 [1]
+# Covered: (520134663) nextflow/script/WorkflowMetadata#invokeOnComplete():381 [0]
+# Covered: (520134663) nextflow/script/WorkflowMetadata#invokeOnComplete():381 [1]
+# Covered: (520134664) nextflow/script/WorkflowMetadata#invokeOnComplete():382 --> nextflow/script/WorkflowMetadata#getWorkflowStats()Lnextflow/trace/WorkflowStats;
+# Covered: (520134665) nextflow/script/WorkflowMetadata#invokeOnComplete():384 --> nextflow/script/WorkflowMetadata#setErrorAttributes()V
+# Covered: (520134666) nextflow/script/WorkflowMetadata#invokeOnComplete():386 --> nextflow/script/WorkflowMetadata$_invokeOnComplete_closure4#<init>(Ljava/lang/Object;Ljava/lang/Object;)V
+# Covered: (520134668) nextflow/script/WorkflowMetadata#invokeOnComplete():396 --> nextflow/script/WorkflowMetadata#safeMailNotification()V
 # Covered: (520138754) nextflow/script/WorkflowMetadata#invokeOnError():401 --> nextflow/script/WorkflowMetadata#getWorkflowStats()Lnextflow/trace/WorkflowStats;
 # Covered: (520138755) nextflow/script/WorkflowMetadata#invokeOnError():402 --> nextflow/script/WorkflowMetadata#setErrorAttributes()V
 # Covered: (520138756) nextflow/script/WorkflowMetadata#invokeOnError():403 --> nextflow/script/WorkflowMetadata$_invokeOnError_closure5#<init>(Ljava/lang/Object;Ljava/lang/Object;Lgroovy/lang/Reference;)V
 # Covered: (520146945) nextflow/script/ScriptBinding#getSysEnv():0 --> nextflow/script/ScriptBinding$_closure1#doCall()Ljava/util/Map;
 # Covered: (520151041) nextflow/script/ScriptBinding#setParams():139 --> nextflow/config/ConfigMap#getMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (520151042) nextflow/script/ScriptBinding#setParams():139 [1]
+# Covered: (520151042) nextflow/script/WorkflowMetadata#safeMailNotification():457 --> nextflow/script/WorkflowNotifier#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (520151043) nextflow/script/WorkflowMetadata#safeMailNotification():458 --> nextflow/Session#getConfig()Ljava/util/Map;
+# Covered: (520151044) nextflow/script/WorkflowMetadata#safeMailNotification():458 --> nextflow/script/WorkflowNotifier#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (520151045) nextflow/script/WorkflowMetadata#safeMailNotification():459 --> nextflow/NF#getBinding()Lgroovy/lang/Binding;
+# Covered: (520151047) nextflow/script/WorkflowMetadata#safeMailNotification():459 --> nextflow/script/WorkflowNotifier#getMetaClass()Lgroovy/lang/MetaClass;
+# Covered: (520151048) nextflow/script/WorkflowMetadata#safeMailNotification():460 --> nextflow/script/WorkflowNotifier#sendNotification()V
 # Covered: (520155137) nextflow/script/WorkflowMetadata#getWorkflowStats():468 --> nextflow/Session#getStatsObserver()Lnextflow/trace/WorkflowStatsObserver;
 # Covered: (520155138) nextflow/script/WorkflowMetadata#getWorkflowStats():468 --> nextflow/trace/WorkflowStatsObserver#getStats()Lnextflow/trace/WorkflowStats;
 # Covered: (520155139) nextflow/script/ScriptBinding#setArgs():150 [1]
@@ -2113,13 +2364,16 @@
 # Covered: (520159237) nextflow/script/WorkflowMetadata#$getStaticMetaClass():0 [1]
 # Covered: (520159238) nextflow/script/ScriptBinding#getVariable():167 [1]
 # Covered: (520159241) nextflow/script/ScriptBinding#getVariable():170 --> nextflow/script/ScriptBinding#getSysEnv()Ljava/util/Map;
+# Covered: (520159243) nextflow/script/ScriptBinding#getVariable():170 [0]
 # Covered: (520159243) nextflow/script/ScriptBinding#getVariable():170 [1]
+# Covered: (520159244) nextflow/script/ScriptBinding#getVariable():171 --> nextflow/script/ScriptBinding#getSysEnv()Ljava/util/Map;
 # Covered: (520159247) nextflow/script/ScriptBinding#getVariable():173 --> nextflow/script/WorkflowBinding#getVariable(Ljava/lang/String;)Ljava/lang/Object;
 # Covered: (520167426) nextflow/script/ScriptBinding#setVariable():188 [1]
 # Covered: (520167432) nextflow/script/ScriptBinding#setVariable():193 [0]
 # Covered: (520167434) nextflow/script/ScriptBinding#setVariable():193 [0]
 # Covered: (520167435) nextflow/script/ScriptBinding#setVariable():193 [0]
 # Covered: (520167436) nextflow/script/ScriptBinding#setVariable():194 --> nextflow/script/WorkflowBinding#setVariable(Ljava/lang/String;Ljava/lang/Object;)V
+# Covered: (520171521) nextflow/script/WorkflowMetadata#getMetaClass():0 [0]
 # Covered: (524292098) nextflow/cli/Launcher#<init>():0 --> nextflow/cli/Launcher#$getStaticMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (524292099) nextflow/cli/Launcher#<init>():83 --> nextflow/cli/Launcher#init()V
 # Covered: (524296193) nextflow/cli/Launcher#init():88 --> nextflow/cli/CmdClean#<init>()V
@@ -2168,9 +2422,7 @@
 # Covered: (524304401) nextflow/cli/Launcher#makeCli():160 --> nextflow/util/Escape#cli([Ljava/lang/String;)Ljava/lang/String;
 # Covered: (524308481) nextflow/cli/Launcher#checkLogFileName():165 --> nextflow/cli/CliOptions#getLogFile()Ljava/lang/String;
 # Covered: (524308483) nextflow/cli/Launcher#checkLogFileName():165 [0]
-# Covered: (524308483) nextflow/cli/Launcher#checkLogFileName():165 [1]
 # Covered: (524308484) nextflow/cli/Launcher#checkLogFileName():165 [0]
-# Covered: (524308484) nextflow/cli/Launcher#checkLogFileName():165 [1]
 # Covered: (524308485) nextflow/cli/Launcher#checkLogFileName():166 --> nextflow/cli/Launcher#isDaemon()Z
 # Covered: (524308486) nextflow/cli/Launcher#checkLogFileName():166 [1]
 # Covered: (524308491) nextflow/cli/Launcher#checkLogFileName():168 [1]
@@ -2274,10 +2526,9 @@
 # Covered: (524365835) nextflow/cli/Launcher#run():491 --> nextflow/cli/Launcher#checkForHelp()V
 # Covered: (524365836) nextflow/cli/Launcher#run():494 [0]
 # Covered: (524365837) nextflow/cli/Launcher#run():494 --> nextflow/cli/CmdRun#run()V
+# Covered: (524365839) nextflow/cli/Launcher#run():496 [1]
 # Covered: (524365890) nextflow/cli/Launcher#run():528 [0]
 # Covered: (524365892) nextflow/cli/Launcher#run():528 --> nextflow/util/LoggerHelper$RollOnStartupPolicy#isTriggeringEvent(Ljava/io/File;Ljava/lang/Object;)Z
-# Covered: (524365905) nextflow/cli/Launcher#run():538 [0]
-# Covered: (524365907) nextflow/cli/Launcher#run():538 --> nextflow/util/LoggerHelper$RollOnStartupPolicy#isTriggeringEvent(Ljava/io/File;Ljava/lang/Object;)Z
 # Covered: (524365909) nextflow/cli/Launcher#run():543 --> nextflow/util/LoggerHelper$RollOnStartupPolicy#isTriggeringEvent(Ljava/io/File;Ljava/lang/Object;)Z
 # Covered: (524374018) nextflow/cli/Launcher#setupEnvironment():580 --> nextflow/cli/Launcher#setProxy(Ljava/lang/String;Ljava/util/Map;)V
 # Covered: (524374020) nextflow/cli/Launcher#setupEnvironment():581 --> nextflow/cli/Launcher#setProxy(Ljava/lang/String;Ljava/util/Map;)V
@@ -2465,31 +2716,37 @@
 # Covered: (813699079) nextflow/trace/WorkflowStatsObserver#<init>():43 --> nextflow/util/SimpleAgent#<init>(Ljava/lang/Object;)V
 # Covered: (813699080) nextflow/trace/WorkflowStatsObserver#<init>():43 --> nextflow/trace/WorkflowStatsObserver$_closure1#<init>(Ljava/lang/Object;Ljava/lang/Object;Lgroovy/lang/Reference;)V
 # Covered: (813699081) nextflow/trace/WorkflowStatsObserver#<init>():43 --> nextflow/util/SimpleAgent#onError(Lgroovy/lang/Closure;)Lnextflow/util/SimpleAgent;
+# Covered: (813703170) nextflow/trace/WorkflowStatsObserver#onFlowComplete():48 [0]
+# Covered: (813703172) nextflow/trace/WorkflowStatsObserver#onFlowComplete():48 --> nextflow/trace/WorkflowStats#toString()Ljava/lang/String;
+# Covered: (813703173) nextflow/trace/WorkflowStatsObserver#onFlowComplete():48 --> nextflow/util/LoggerHelper$RollOnStartupPolicy#isTriggeringEvent(Ljava/io/File;Ljava/lang/Object;)Z
 # Covered: (813735937) nextflow/trace/WorkflowStatsObserver#getStats():94 --> nextflow/util/SimpleAgent#getValue()Ljava/lang/Object;
 # Covered: (813752322) nextflow/trace/WorkflowStatsObserver#$getStaticMetaClass():0 [1]
 # Covered: (813752325) nextflow/trace/WorkflowStatsObserver#$getStaticMetaClass():0 [0]
 # Covered: (813752325) nextflow/trace/WorkflowStatsObserver#$getStaticMetaClass():0 [1]
 # Covered: (813756417) nextflow/trace/WorkflowStatsObserver#onFlowCreate():0 --> nextflow/trace/TraceObserver$Trait$Helper#onFlowCreate(Lnextflow/trace/TraceObserver;Lnextflow/Session;)V
+# Covered: (813764609) nextflow/trace/WorkflowStatsObserver#onFlowBegin():0 --> nextflow/trace/TraceObserver$Trait$Helper#onFlowBegin(Lnextflow/trace/TraceObserver;)V
 # Covered: (813805569) nextflow/trace/WorkflowStatsObserver#enableMetrics():0 --> nextflow/trace/TraceObserver$Trait$Helper#enableMetrics(Lnextflow/trace/TraceObserver;)Z
 # Covered: (813813761) nextflow/trace/WorkflowStatsObserver#onFlowError():0 --> nextflow/trace/TraceObserver$Trait$Helper#onFlowError(Lnextflow/trace/TraceObserver;Lnextflow/processor/TaskHandler;Lnextflow/trace/TraceRecord;)V
+# Covered: (813846529) nextflow/trace/WorkflowStatsObserver#getMetaClass():0 [0]
 # Covered: (826281986) nextflow/cache/DefaultCacheStore#<init>():0 --> nextflow/cache/DefaultCacheStore#$getStaticMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (826281987) nextflow/cache/DefaultCacheStore#<init>():64 --> nextflow/util/CacheHelper#hasher(Ljava/lang/Object;)Lcom/google/common/hash/Hasher;
 # Covered: (826281992) nextflow/cache/DefaultCacheStore#<init>():67 [1]
 # Covered: (826290177) nextflow/cache/DefaultCacheStore#openDb():74 --> nextflow/extension/FilesEx#mkdirs(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Z
-# Covered: (826290185) nextflow/cache/DefaultCacheStore#openDb():82 [1]
-# Covered: (826290188) nextflow/cache/DefaultCacheStore#openDb():82 [0]
-# Covered: (826290190) nextflow/cache/DefaultCacheStore#openDb():82 [1]
 # Covered: (826294273) nextflow/cache/DefaultCacheStore#open():106 --> nextflow/cache/DefaultCacheStore#openDb()V
 # Covered: (826294274) nextflow/cache/DefaultCacheStore#open():108 --> nextflow/extension/FilesEx#delete(Ljava/nio/file/Path;)Z
-# Covered: (826298369) nextflow/cache/DefaultCacheStore#openForRead():115 --> nextflow/cache/DefaultCacheStore#openDb()V
+# Covered: (826306561) nextflow/cache/DefaultCacheStore#close():129 --> nextflow/extension/FilesEx#closeQuietly(Ljava/io/Closeable;)V
+# Covered: (826306562) nextflow/cache/DefaultCacheStore#close():130 --> nextflow/extension/FilesEx#closeQuietly(Ljava/io/Closeable;)V
 # Covered: (826335234) nextflow/cache/DefaultCacheStore#$getStaticMetaClass():0 [1]
 # Covered: (826335237) nextflow/cache/DefaultCacheStore#$getStaticMetaClass():0 [0]
 # Covered: (826335237) nextflow/cache/DefaultCacheStore#$getStaticMetaClass():0 [1]
-# Covered: (826368001) nextflow/cache/DefaultCacheStore#openForRead():0 --> nextflow/cache/DefaultCacheStore#openForRead()Lnextflow/cache/DefaultCacheStore;
 # Covered: (826372097) nextflow/cache/DefaultCacheStore#open():0 --> nextflow/cache/DefaultCacheStore#open()Lnextflow/cache/DefaultCacheStore;
 # Covered: (859844609) nextflow/secret/SecretsProvider$load$0#call():0 --> nextflow/secret/LocalSecretsProvider#getMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (859844610) nextflow/secret/SecretsProvider$load$0#call():0 [0]
 # Covered: (859844611) nextflow/secret/SecretsProvider$load$0#call():0 --> nextflow/secret/LocalSecretsProvider#load()Lnextflow/secret/SecretsProvider;
+# Covered: (910172162) nextflow/script/ExecutionStack$binding#call():0 [0]
+# Covered: (910172163) nextflow/script/ExecutionStack$binding#call():0 --> nextflow/script/ExecutionStack#binding()Lnextflow/script/WorkflowBinding;
+# Covered: (910180354) nextflow/script/ExecutionStack$binding#call():0 [0]
+# Covered: (910180355) nextflow/script/ExecutionStack$binding#call():0 --> nextflow/script/ExecutionStack#binding()Lnextflow/script/WorkflowBinding;
 # Covered: (926945282) nextflow/script/ScriptFile#<init>():0 --> nextflow/script/ScriptFile#$getStaticMetaClass()Lgroovy/lang/MetaClass;
 # Covered: (926945285) nextflow/script/ScriptFile#<init>():92 --> nextflow/plugin/extension/PluginExtensionProvider#isExtensionMethod(Ljava/lang/Object;Ljava/lang/String;)Z
 # Covered: (926945286) nextflow/script/ScriptFile#<init>():92 [0]
@@ -2545,5 +2802,8 @@
 # Covered: (939872257) nextflow/extension/Bolts#$getCallSiteArray():0 [1]
 # Covered: (939872259) nextflow/extension/Bolts#$getCallSiteArray():0 [1]
 # Covered: (939872260) nextflow/extension/Bolts#$getCallSiteArray():0 --> nextflow/extension/Bolts#$createCallSiteArray()Lorg/codehaus/groovy/runtime/callsite/CallSiteArray;
+# Covered: (952135682) nextflow/extension/CH#broadcast():72 [0]
+# Covered: (952135684) nextflow/extension/CH#broadcast():72 [0]
+# Covered: (952135686) nextflow/extension/CH#broadcast():72 [1]
 # Covered: (973086722) nextflow/script/ScriptMeta$get#call():0 [0]
 # Covered: (973086723) nextflow/script/ScriptMeta$get#call():0 --> nextflow/script/ScriptMeta#get(Lnextflow/script/BaseScript;)Lnextflow/script/ScriptMeta;

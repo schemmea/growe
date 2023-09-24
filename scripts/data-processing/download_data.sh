@@ -1,12 +1,10 @@
 #!/bin/bash
 
-#remotepath="/home/alena/source/ma_test2/exp1/"
-remotepath="/home/alena/source/growe/expfinalfinal/"
-localpath="$HOME/source/repos/growe/expfinalfinal/"
-for prefix in "semantic-zest" "syntactic-zest" "semantic-noguidance" "syntactic-noguidance"; do
-#for prefix in "afl"; do
-    for ((i=32; i<=40; i++)); do
-        #dir="nextflow-${prefix}-${i}/fuzz-results"
+remotepath="/home/alena/source/growe/expfinal3/"
+localpath="$HOME/source/repos/growe/expfinal3/"
+for prefix in "semantic-zest" ; do
+#for prefix in "semantic-zest" "syntactic-zest" "semantic-noguidance" "syntactic-noguidance"; do
+    for ((i=20; i<=39; i++)); do
     	dir="nextflow-${prefix}-${i}/errorDir"
         mkdir -p "$localpath$dir"
         echo "~~Downloading $dir~~"

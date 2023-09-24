@@ -1,0 +1,8 @@
+nextflow.exception.AbortRunException;true;1;out1695400182769.nf;
+nextflow.exception.ScriptCompilationException;true;1;out1695400871332.nf;
+nextflow.exception.ScriptCompilationException;true;2;out1695401836625.nf;
+nextflow.exception.ScriptCompilationException;true;3;out1695402000130.nf;
+nextflow.exception.ScriptCompilationException;true;4;out1695402036330.nf;
+nextflow.exception.ScriptCompilationException;true;5;out1695402095020.nf;
+nextflow.exception.ScriptCompilationException;true;6;out1695402539905.nf;
+nextflow.exception.ScriptCompilationException;true;7;out1695403376365.nf;
