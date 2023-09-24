@@ -1,0 +1,33 @@
+#!/bin/bash
+
+if [ $# -lt 2 ]; then
+  echo "Usage: $0 ID-FROM ID-TO" 2>/dev/null
+  exit 1
+fi
+
+id1=$1
+id2=$2
+time=$((1*60*60))
+timeouts=$((time + 30))
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+for id in $(seq $id1 2 $id2); do
+
+  echo "semantic-zest-$id timeout ${timeouts}s "
+  screen -S "semantic-zest-$id" -dm -t "semantic-zest-$id"
+  sleep 1
+  screen -S "semantic-zest-$id" -p "semantic-zest-$id" -X stuff "timeout ${timeouts}s $SCRIPT_DIR/run_jqf \"semantic-zest\" $id ^M"
+
+
+  id2=$((id+1))
+  echo "semantic-zest-$id2 timeout ${timeouts}s "
+  screen -S "semantic-zest-$id2" -dm -t "semantic-zest-$id2"
+  sleep 1
+  screen -S "semantic-zest-$id2" -p "semantic-zest-$id2" -X stuff "timeout ${timeouts}s $SCRIPT_DIR/run_jqf \"semantic-zest\" $id2 ^M"
+
+
+  sleep $time
+  sleep 10
+
+done
