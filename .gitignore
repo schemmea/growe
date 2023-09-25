@@ -8,8 +8,7 @@
 .nextflow.log*
 /work
 */work
-*/work
-*~
+*.~
 
 /2023-*
 /fuzz-results/
@@ -25,3 +24,4 @@ scripts/data-processing/py/__pycache__/
 figs*
 
 .ipynb_checkpoints/
+afl*

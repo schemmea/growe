@@ -6,6 +6,8 @@ import de.schemmea.ma.generator.TestMiniGenerator
 import de.schemmea.ma.generator.WorkflowFileGenerator
 import edu.berkeley.cs.jqf.fuzz.Fuzz
 import edu.berkeley.cs.jqf.fuzz.JQF
+import nextflow.Global
+import nextflow.Session
 import nextflow.cli.CmdRun
 import nextflow.cli.Launcher
 import nextflow.plugin.Plugins
@@ -39,17 +41,61 @@ public class Test {
 
     @Fuzz
     public void testlauncher() {
-        String falseyFile = "C:\\Users\\Alena\\source\\repos\\growe\\src\\main\\resources\\seeds\\yesOrNo2.nf";
+        String falseyFile = "/home/alena/source/growe/src/main/resources/test/yesOrNo2.nf";
 
-        String filename = "C:\\Users\\Alena\\source\\repos\\growe\\src\\main\\resources\\seeds\\yesOrNo.nf";
+        String filename = "/home/alena/source/growe/src/main/resources/seeds/yesOrNo.nf";
 
         Launcher launcher1 = new Launcher().command('run', falseyFile)
 
         int status = launcher1.run()
 
+
+        def sess = (Session) Global.getSession()
+        if (sess != null) {
+            sess.cleanup()
+            sess.destroy()
+        }
+        //  Global.cleanUp()
+        //plugins won't stop after sriptcompilation exception
+        //   Plugins.stop()
+
         Launcher launcher2 = new Launcher().command('run', filename)
 
         int status2 = launcher2.run()
+    }
+
+
+    static long allmillis = 0;
+
+    @Fuzz
+    public void testtime() {
+
+        String filename = "/home/alena/source/growe/src/main/resources/test/hello.nf";
+        long millis = System.currentTimeMillis()
+        Launcher launcher1 = new Launcher().command('run', filename, "-cache", "false")
+
+        int status = launcher1.run()
+        long millis2 = System.currentTimeMillis()
+        def took = millis2 - millis
+        allmillis += took
+        iteration++
+
+        def avg = allmillis / iteration
+        println "iteration: " + iteration + " time: " + avg + " current: " + took + "(all)" + allmillis
+    }
+
+    @After
+    public void cleanUp() {
+        println("cleaning up $iteration")
+        def sess = (Session) Global.getSession()
+        if (sess != null) {
+            sess.cleanup()
+            sess.destroy()
+        }
+        Global.cleanUp()
+        //plugins won't stop after sriptcompilation exception
+        Plugins.stop()
+
     }
 
 }
