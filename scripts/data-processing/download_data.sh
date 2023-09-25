@@ -1,10 +1,10 @@
 #!/bin/bash
 
 remotepath="/home/alena/source/growe/expfinal3/"
-localpath="$HOME/source/repos/growe/expfinal3/"
+localpath="$HOME/source/repos/growe/expfinal3-semzest/"
 for prefix in "semantic-zest" ; do
 #for prefix in "semantic-zest" "syntactic-zest" "semantic-noguidance" "syntactic-noguidance"; do
-    for ((i=20; i<=39; i++)); do
+    for ((i=0; i<=19; i++)); do
     	dir="nextflow-${prefix}-${i}/errorDir"
         mkdir -p "$localpath$dir"
         echo "~~Downloading $dir~~"

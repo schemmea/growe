@@ -25,3 +25,5 @@ figs*
 
 .ipynb_checkpoints/
 afl*
+/runexps/
+/runexps./

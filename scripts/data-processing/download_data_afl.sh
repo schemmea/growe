@@ -11,14 +11,14 @@ for prefix in "afl"; do
         plot_data="$dir/plot_data"
         cov_all="$dir/cov-all.log"
         cov_valid="$dir/cov-valid.log"
-        #exceptions="$dir/exception_log.csv"
         stats="$dir/fuzzer_stats"
+        exceptions="nextflow-${prefix}-${i}/jqf.log"
 
-        scp alena@213.202.208.247:${remotepath}${plot_data} "${localpath}${plot_data}"
-        scp alena@213.202.208.247:${remotepath}${cov_all} "${localpath}${cov_all}"
-        scp alena@213.202.208.247:${remotepath}${cov_valid} "${localpath}${cov_valid}"
-       # scp alena@213.202.208.247:${remotepath}${exceptions} "${localpath}${exceptions}"
-        scp alena@213.202.208.247:${remotepath}${stats} "${localpath}${stats}"
+       # scp alena@213.202.208.247:${remotepath}${plot_data} "${localpath}${plot_data}"
+       # scp alena@213.202.208.247:${remotepath}${cov_all} "${localpath}${cov_all}"
+       # scp alena@213.202.208.247:${remotepath}${cov_valid} "${localpath}${cov_valid}"
+       # scp alena@213.202.208.247:${remotepath}${stats} "${localpath}${stats}"
+        scp alena@213.202.208.247:${remotepath}${exceptions} "${localpath}${exceptions}"
 
     done
 done
