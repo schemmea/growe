@@ -1,7 +1,7 @@
 #!/bin/bash
 
 remotepath="/home/alena/source/ma_test2/exp2/"
-localpath="$HOME/source/repos/growe/expfinalfinal/"
+localpath="$HOME/fulldownload/exp2/"
 for prefix in "afl"; do
     for ((i=0; i<=20; i++)); do
         dir="nextflow-${prefix}-${i}/fuzz-results"
@@ -17,7 +17,7 @@ for prefix in "afl"; do
        # scp alena@213.202.208.247:${remotepath}${plot_data} "${localpath}${plot_data}"
        # scp alena@213.202.208.247:${remotepath}${cov_all} "${localpath}${cov_all}"
        # scp alena@213.202.208.247:${remotepath}${cov_valid} "${localpath}${cov_valid}"
-       # scp alena@213.202.208.247:${remotepath}${stats} "${localpath}${stats}"
+        scp -r alena@213.202.208.247:${remotepath}${dir} "${localpath}${dir}"
         scp alena@213.202.208.247:${remotepath}${exceptions} "${localpath}${exceptions}"
 
     done
